@@ -1,0 +1,4 @@
+:block(icon):mod(close) {
+    background-image: url(../images/close.svg);
+    background-size: 55%;
+}

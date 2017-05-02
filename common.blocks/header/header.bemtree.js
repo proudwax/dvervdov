@@ -28,8 +28,7 @@ block('header').content()(function() {
             elem: 'search',
             content: [
                 {
-                    block: 'search',
-                    content: 'search'
+                    block: 'search'
                 }
             ]
         },
