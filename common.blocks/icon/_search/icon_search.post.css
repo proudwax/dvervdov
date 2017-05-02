@@ -1,0 +1,4 @@
+:block(icon):mod(search) {
+    background-image: url(../images/search.svg);
+    background-size: 60%;
+}

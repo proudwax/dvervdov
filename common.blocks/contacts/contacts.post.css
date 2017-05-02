@@ -1,0 +1,16 @@
+:block(contacts) {
+    &:elem(phone) {
+        color: #568549;
+        text-decoration: none;
+        white-space: nowrap;
+
+        &:mod(header) {
+            font-size: 24px;
+            font-weight: 300;
+        }
+    }
+}
+
+@media screen and (max-width: 40em) {
+
+}

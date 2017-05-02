@@ -1,0 +1,60 @@
+:block(header) {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 auto 16px;
+
+    background-color: #fff;
+
+    &:elem(logo) {
+        flex: 0 0;
+    }
+
+    &:elem(contacts) {
+        flex: 1 1;
+        margin-left: 16px;
+        text-align: center;
+    }
+
+    &:elem(search) {
+        flex: 0 0;
+        margin: 0 16px;
+    }
+
+    &:elem(cart) {
+        flex: 0 0;
+    }
+
+    &:elem(toggle) {
+        display: none;
+    }
+
+    &:elem(nav) {
+        flex: 0 0;
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    :block(header) {
+        &:elem(logo) {
+            display: none;
+        }
+
+        &:elem(contacts) {
+            margin-left: 16px;
+            text-align: left;
+        }
+
+        &:elem(toggle) {
+            display: inline-block;
+        }
+    }
+}
