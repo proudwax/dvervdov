@@ -19,7 +19,8 @@ block('form').mod('search', true).content()(function() {
                 },
                 {
                     block: 'button',
-                    mods: { theme: 'islands', size: 'l', type: 'link', 'close-popup': true },
+                    mix: { block: 'popup', elem: 'close' },
+                    mods: { theme: 'islands', size: 'l', type: 'link' },
                     icon: {
                         block: 'icon',
                         mods: { close: true }
