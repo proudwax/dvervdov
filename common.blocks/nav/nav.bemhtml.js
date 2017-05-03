@@ -1,4 +1,6 @@
 block('nav')(
+    js()(true),
+
     elem('item')(
         tag()('a'),
 

@@ -1,4 +1,6 @@
 :block(nav) {
+    display: block;
+
     &:elem(list) {
         display: flex;
         flex-flow: row nowrap;
@@ -25,6 +27,12 @@
 
 @media screen and (max-width: 40em) {
     :block(nav) {
+        display: none;
+
+        &:mod(opened) {
+            display: block;
+        }
+
         &:elem(list) {
             flex-flow: column nowrap;
             align-items: flex-start;

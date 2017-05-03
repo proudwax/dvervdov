@@ -57,8 +57,7 @@ block('header').content()(function() {
             elem: 'nav',
             content: [
                 {
-                    block: 'nav',
-                    content: 'nav'
+                    block: 'nav'
                 }
             ]
         }

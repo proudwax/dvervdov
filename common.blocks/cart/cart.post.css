@@ -1,5 +1,5 @@
 :block(cart) {
-
+    display: flex;
 }
 
 @media screen and (max-width: 40em) {
