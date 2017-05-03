@@ -13,6 +13,7 @@
     padding: 0 16px;
 
     background-color: #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 5px 10px -5px rgba(0, 0, 0, 0.4);
 
     &:elem(logo) {
         flex: 0 0;
@@ -24,17 +25,29 @@
         text-align: center;
     }
 
+    &:elem(action) {
+        flex: 0 0;
+
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        margin-left: 8px;
+    }
+
     &:elem(search) {
         flex: 0 0;
-        margin: 0 16px;
+        margin-right: 8px;
     }
 
     &:elem(cart) {
         flex: 0 0;
+        margin-right: 8px;
     }
 
     &:elem(toggle) {
         display: none;
+        margin-right: 8px;
     }
 
     &:elem(nav) {
@@ -51,7 +64,7 @@
         }
 
         &:elem(contacts) {
-            margin-left: 16px;
+            margin-left: 8px;
             text-align: left;
         }
 

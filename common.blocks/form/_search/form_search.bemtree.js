@@ -19,7 +19,7 @@ block('form').mod('search', true).content()(function() {
                 },
                 {
                     block: 'button',
-                    mods: { theme: 'islands', size: 'l', type: 'link', close: true },
+                    mods: { theme: 'islands', size: 'l', type: 'link', 'close-popup': true },
                     icon: {
                         block: 'icon',
                         mods: { close: true }

@@ -12,6 +12,7 @@
 
         padding: 0 8px;
 
+        line-height: 50px;
         color: #568549;
         white-space: nowrap;
         text-decoration: none;
@@ -28,6 +29,10 @@
             flex-flow: column nowrap;
             align-items: flex-start;
             padding: 0 8px;
+        }
+
+        &:elem(item) {
+            padding: 0;
         }
     }
 }

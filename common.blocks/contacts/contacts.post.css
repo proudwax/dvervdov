@@ -12,5 +12,9 @@
 }
 
 @media screen and (max-width: 40em) {
-
+    :block(contacts) {
+        &:elem(phone):mod(header) {
+            font-size: 18px;
+        }
+    }
 }

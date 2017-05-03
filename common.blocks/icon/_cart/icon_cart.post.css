@@ -1,5 +1,5 @@
-:block(icon):mod(close) {
-    background-image: url(../images/close.svg);
+:block(icon):mod(cart) {
+    background-image: url(../images/cart.svg);
     background-size: 55%;
     opacity: .7;
 

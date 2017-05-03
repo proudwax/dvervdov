@@ -25,28 +25,31 @@ block('header').content()(function() {
             ]
         },
         {
-            elem: 'search',
+            elem: 'action',
             content: [
                 {
-                    block: 'search'
-                }
-            ]
-        },
-        {
-            elem: 'cart',
-            content: [
+                    elem: 'search',
+                    content: [
+                        {
+                            block: 'search'
+                        }
+                    ]
+                },
                 {
-                    block: 'cart',
-                    content: 'cart'
-                }
-            ]
-        },
-        {
-            elem: 'toggle',
-            content: [
+                    elem: 'cart',
+                    content: [
+                        {
+                            block: 'cart'
+                        }
+                    ]
+                },
                 {
-                    block: 'toggle',
-                    content: 'toggle'
+                    elem: 'toggle',
+                    content: [
+                        {
+                            block: 'toggle'
+                        }
+                    ]
                 }
             ]
         },

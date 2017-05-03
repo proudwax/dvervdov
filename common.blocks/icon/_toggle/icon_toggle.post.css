@@ -1,5 +1,5 @@
-:block(icon):mod(search) {
-    background-image: url(../images/search.svg);
+:block(icon):mod(toggle) {
+    background-image: url(../images/toggle.svg);
     background-size: 60%;
     opacity: .7;
 

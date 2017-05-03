@@ -5,11 +5,16 @@ provide(bemDom.declBlock(this.name, {
         'js': {
             'inited': function() {
                 let search = this.domElem[0],
+                    button = this.findChildBlock({ block: Button, modName: 'close-popup', modVal: true }),
                     popup = this.findChildBlock(Popup);
 
                 this._initPosition(search, popup);
 
                 throttle(this._resizeWin(search, popup), 300);
+
+                button._events(Button).on('click', function() {
+                    popup.delMod('visible');
+                });
 
                 this._events(Button).on('click', function() {
                     popup.setMod('visible');
