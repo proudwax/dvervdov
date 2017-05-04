@@ -47,7 +47,6 @@
 
     &:elem(toggle) {
         display: none;
-        margin-right: 8px;
     }
 
     &:elem(nav) {

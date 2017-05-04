@@ -1,18 +1,16 @@
 modules.define('toggle', ['i-bem-dom', 'button'], function(provide, bemDom, Button) {
 
 provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        'js': {
-            'inited': function() {
-                // let nav = this.findParentBlock(Nav);
+    _onClick: function() {
+        console.log(this);
+        this._emit('click');
+    }
+},
+{
+    lazyInit: true,
 
-
-                this._events(Button).on('click', function () {
-                    // nav.toggleMod('opened');
-                    console.log(this);
-                });
-            }
-        }
+    onInit: function() {
+        this._events(Button).on('click', this.prototype._onClick);
     }
 }));
 
