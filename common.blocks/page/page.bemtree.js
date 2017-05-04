@@ -8,7 +8,10 @@ block('page').content()(function() {
 
     return [
         { block: 'header' },
-        { block: 'content' },
+        {
+            block: 'content',
+            mods: { main: true }
+        },
         { block: 'footer' }
     ];
 });

@@ -51,7 +51,6 @@
 
     &:elem(cart) {
         flex: 0 0;
-        margin-right: 8px;
     }
 
     &:elem(toggle) {
@@ -81,6 +80,10 @@
         &:elem(contacts) {
             margin-left: 8px;
             text-align: left;
+        }
+
+        &:elem(cart) {
+            margin-right: 8px;
         }
 
         &:elem(toggle) {
