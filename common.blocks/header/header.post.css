@@ -17,12 +17,21 @@
 
     &:elem(logo) {
         flex: 0 0;
+
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+
+        transition: all 0.1s ease-out;
     }
 
     &:elem(contacts) {
         flex: 1 1;
         margin-left: 16px;
         text-align: center;
+
+        position: relative;
+        z-index: 1;
     }
 
     &:elem(action) {
@@ -53,13 +62,20 @@
         flex: 0 0;
         flex-basis: 100%;
         max-width: 100%;
+
+        z-index: 0;
     }
 }
 
 @media screen and (max-width: 40em) {
     :block(header) {
+
         &:elem(logo) {
-            display: none;
+            position: absolute;
+
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
         }
 
         &:elem(contacts) {

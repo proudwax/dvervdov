@@ -1,8 +1,18 @@
 modules.define('toggle', ['i-bem-dom', 'button'], function(provide, bemDom, Button) {
 
 provide(bemDom.declBlock(this.name, {
+    onSetMod: {
+        'active': {
+            'true': function() {
+                this.findChildBlock(Button).setMod('view', 'action');
+            },
+            '': function() {
+                this.findChildBlock(Button).delMod('view');
+            }
+        }
+    },
+
     _onClick: function() {
-        console.log(this);
         this._emit('click');
     }
 },
