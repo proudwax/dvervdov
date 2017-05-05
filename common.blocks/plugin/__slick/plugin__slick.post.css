@@ -1,5 +1,5 @@
-@import url("../../libs/slick/css/slick.css");
-@import url("../../libs/slick/css/slick-theme.css");
+@import url(../../../libs/slick/css/slick.css);
+@import url(../../../libs/slick/css/slick-theme.css);
 
 :block(slider):mod(main) {
 }

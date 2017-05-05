@@ -11,6 +11,7 @@ npm-debug.log
 .bem/cache/
 .enb/tmp/
 *bundles*/*/*.*
+libs/**
 !*bundles*/*/*.bemdecl.js
 *bundles*/*/*.*.bemdecl.js
 !*bundles*/.bem/*
