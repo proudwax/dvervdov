@@ -5,9 +5,13 @@ provide(Slider.declMod({ modName: 'main', modVal: true }, {
         'js': {
             'inited': function() {
 
-                this.findChildElem('content').domElem.slick();
+                this._elem('content').domElem.slick({
+                    dots: true,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                });
 
-                // console.log();
+                this._elem('content').domElem.slick('reinit')
             }
         }
     }

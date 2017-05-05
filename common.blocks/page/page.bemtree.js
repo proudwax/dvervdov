@@ -9,6 +9,10 @@ block('page').content()(function() {
     return [
         { block: 'header' },
         {
+            block: 'promo',
+            mods: { main: true }
+        },
+        {
             block: 'content',
             mods: { main: true }
         },
