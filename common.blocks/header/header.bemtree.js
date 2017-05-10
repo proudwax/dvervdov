@@ -17,8 +17,8 @@ block('header').content()(function() {
                         {
                             elem: 'phone',
                             elemMods: { header: true },
-                            tel: this.data.phone,
-                            content: this.data.phone
+                            tel: this.data.contacts.phone,
+                            content: this.data.contacts.phone
                         }
                     ]
                 }

@@ -84,7 +84,7 @@ module.exports = function(config) {
             [require('sharps').enb, {
                 config: {
                     maxWidth: '1200px',
-                    gutter: '0',
+                    gutter: '16px',
                     flex: 'flex'
                 },
                 source: '?.no-grid.css'
