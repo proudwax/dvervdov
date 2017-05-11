@@ -1,50 +1,91 @@
 :block(tile):mod(main) {
+    max-width: 1200px;
+    margin: 0 auto;
+
     :block(tile) {
+
         &:elem(row) {
             display: flex;
-            flex-flow: row wrap;
 
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+            align-items: stretch;
+            flex-grow: 1;
+            flex-shrink: 1;
 
-        &:elem(canvas) {
+            &:mod(vertical) {
+                flex-direction: column;
 
+                margin-right: 16px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                > :block(tile):elem(item) {
+                    margin-right: 0;
+                }
+            }
+
+            @for $i from 1 to 12 {
+                &:mod(w $i){
+                    flex-basis: calc(99.99% * $i/12 - (16px - 16px * $i/12));
+                    max-width: calc(99.99% * $i/12 - (16px - 16px * $i/12));
+                }
+            }
         }
 
         &:elem(item) {
             box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
+            background-clip: padding-box;
+            display: block;
 
-            position: relative;
+            align-items: stretch;
+            flex-grow: 1;
+            flex-shrink: 1;
 
-            flex: 0 0 auto;
+            padding: 8px;
             background-color: #fff;
+            border: 0;
 
-            padding: 16px;
-            width: calc(99.99% * 4/12);
-            overflow: hidden;
-
-            &:mod(big) {
-                width: calc(99.99% * 8/12);
-            }
-        }
-
-        &:elem(image) {
-            position: absolute;
-            top: 16px;
-            left: 16px;
-
-            height: calc(100% - 32px);
-        }
-
-        &:elem(title) {
-            position: absolute;
-            top: 0;
-            left: 0;
+            margin-right: 16px;
+            margin-bottom: 16px;
+            margin-left: 0;
         }
     }
+}
+
+@custom-media --small screen;
+@custom-media --small-only screen and (max-width: 40em);
+
+@custom-media --medium screen and (min-width: 40.063em);
+@custom-media --medium-only screen and (min-width: 40.063em) and (max-width: 64em);
+
+@custom-media --large screen and (min-width: 64.063em);
+@custom-media --large-only screen and (min-width: 64.063em) and (max-width: 90em);
+
+@custom-media --xlarge screen and (min-width: 90.063em);
+@custom-media --xlarge-only screen and (min-width: 90.063em) and (max-width: 120em);
+
+@custom-media --xxlarge screen and (min-width: 120.063em);
+@custom-media --xxlarge-only screen and (min-width: 120.063em) and (max-width: 99999999em);
+
+@media (--small) {
+
+}
+
+@media (--medium) {
+
+}
+
+@media (--large) {
+
+}
+
+@media (--xlarge) {
+
+}
+
+@media (--xxlarge) {
+
 }
 
 @media screen and (max-width: 40em) {

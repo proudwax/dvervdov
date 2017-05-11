@@ -10,12 +10,33 @@ block('tile').mod('main')(
             }
         }),
 
-        content()(function () {
-            return [
-                { tag: 'canvas', cls: 'tile__canvas', attrs: { height: 400, width: 400 } },
-                applyNext()
-            ]
-        })
+        elemMod('size', 'wide')(
+            content()(function () {
+                return [
+                    { tag: 'canvas', cls: 'tile__canvas', attrs: { height: 400, width: 800 } },
+                    applyNext()
+                ]
+            })
+       ),
+
+       elemMod('size', 'tall')(
+           content()(function () {
+               return [
+                   { tag: 'canvas', cls: 'tile__canvas', attrs: { height: 800, width: 400 } },
+                   applyNext()
+               ]
+           })
+        )
+
+        // match(function () { return !this.ctx.elemMods.size; })(
+		// 	content()(function () {
+        //         return [
+        //             { tag: 'canvas', cls: 'tile__canvas', attrs: { height: 400, width: 400 } },
+        //             applyNext()
+        //         ]
+		// 	})
+		// )
+
     )
 
     // content()(function() {
