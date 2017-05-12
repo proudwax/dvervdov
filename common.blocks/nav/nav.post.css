@@ -12,7 +12,6 @@
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        justify-content: space-between;
     }
 
     &:elem(item) {
@@ -24,7 +23,13 @@
         white-space: nowrap;
         text-decoration: none;
 
+        margin-right: 32px;
+
         transition: opacity .1s ease-out;
+
+        &:last-child {
+            margin-right: 0;
+        }
 
         &:hover{
             opacity: .8;

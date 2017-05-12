@@ -1,0 +1,12 @@
+:block(row):mod(vertical) {
+    flex-direction: column;
+    align-items: stretch;
+
+    & > :block(row):elem(col){
+        margin-right: 0;
+    }
+}
+
+:block(row) :block(row){
+    height: 100%;
+}

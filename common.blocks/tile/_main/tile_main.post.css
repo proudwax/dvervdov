@@ -1,93 +1,66 @@
 :block(tile):mod(main) {
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-left: -8px;
+    margin-right: -8px;
+
+    & > :block(row) {
+        max-width: none;
+    }
 
     :block(tile) {
-
-        &:elem(row) {
-            display: flex;
-
-            align-items: stretch;
-            flex-grow: 1;
-            flex-shrink: 1;
-
-            &:mod(vertical) {
-                flex-direction: column;
-
-                margin-right: 16px;
-
-                &:last-child {
-                    margin-right: 0;
-                }
-
-                > :block(tile):elem(item) {
-                    margin-right: 0;
-                }
-            }
-
-            @for $i from 1 to 12 {
-                &:mod(w $i){
-                    flex-basis: calc(99.99% * $i/12 - (16px - 16px * $i/12));
-                    max-width: calc(99.99% * $i/12 - (16px - 16px * $i/12));
-                }
-            }
-        }
 
         &:elem(item) {
             box-sizing: border-box;
             background-clip: padding-box;
             display: block;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
 
             align-items: stretch;
             flex-grow: 1;
             flex-shrink: 1;
 
-            padding: 8px;
-            background-color: #fff;
-            border: 0;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            border: 8px solid transparent;
+            font-size: 0;
+            text-decoration: none;
 
-            margin-right: 16px;
-            margin-bottom: 16px;
-            margin-left: 0;
+            width: 100%;
+            height: 200px;
+
+            &:hover :block(tile):elem(banner) {
+                transform: scale(1.1);
+                z-index: 10;
+            }
+
+            &:mod(size tall) {
+                height: 300px;
+            }
+
+            &:mod(size low) {
+                height: 150px;
+            }
+        }
+
+        &:elem(title) {
+            position: absolute;
+            z-index: 100;
+            top: 20px;
+            left: 20px;
+            font-size: 18px;
+        }
+
+        &:elem(banner) {
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-size: cover;
+
+            transition: transform 0.3s ease-out;
         }
     }
-}
-
-@custom-media --small screen;
-@custom-media --small-only screen and (max-width: 40em);
-
-@custom-media --medium screen and (min-width: 40.063em);
-@custom-media --medium-only screen and (min-width: 40.063em) and (max-width: 64em);
-
-@custom-media --large screen and (min-width: 64.063em);
-@custom-media --large-only screen and (min-width: 64.063em) and (max-width: 90em);
-
-@custom-media --xlarge screen and (min-width: 90.063em);
-@custom-media --xlarge-only screen and (min-width: 90.063em) and (max-width: 120em);
-
-@custom-media --xxlarge screen and (min-width: 120.063em);
-@custom-media --xxlarge-only screen and (min-width: 120.063em) and (max-width: 99999999em);
-
-@media (--small) {
-
-}
-
-@media (--medium) {
-
-}
-
-@media (--large) {
-
-}
-
-@media (--xlarge) {
-
-}
-
-@media (--xxlarge) {
-
-}
-
-@media screen and (max-width: 40em) {
-
 }

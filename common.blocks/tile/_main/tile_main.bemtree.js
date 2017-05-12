@@ -1,13 +1,30 @@
 block('tile').mod('main', true).content()(function() {
 
-    let _block = this.ctx;
+    let _block = this.ctx,
+        i = 0;
 
     function getTileSize (i) {
-        return i == 0 ?  { 'size': 'wide' } : false;
+        switch (i) {
+            case 0:
+                return { 'size': 'tall' };
+                break;
+            case 1:
+                return { 'size': 'tall' };
+                break;
+            case 2:
+                return { 'size': 'low' };
+                break;
+            case 3:
+                return { 'size': 'low' };
+                break;
+            default:
+                return false;
+        }
     }
 
     let tile = this.data.promo.map(function (item, i) {
         return {
+            block: _block.block,
             elem: 'item',
             elemMods: getTileSize(i),
             url: item.path,
@@ -16,50 +33,72 @@ block('tile').mod('main', true).content()(function() {
                     elem: 'title',
                     content: item.text
                 },
-                {
-                    block: 'image',
-                    mix: { block: _block.block, elem: 'image' },
-                    alt: item.text,
-                    url: item.image + '?' + Math.random()
-                }
+                { tag: 'div', cls: 'tile__banner', attrs: { style: 'background-image: url(' + item.image + '?' + Math.random() +')' } },
             ]
         };
     });
 
-    // return {
-    //     elem: 'row',
-    //     content: tile
-    // };
+    function getTile() {
+        return i++;
+    }
 
     return {
-        elem: 'row',
+        block: 'row',
         content: [
             {
-                elem: 'row',
-                elemMods: { vertical: true, w: 8 },
+                elem: 'col',
+                elemMods: { mw: 8, sw: 12 },
                 content: [
                     {
-                        elem: 'item',
-                        content: 'text'
-                    },
-                    {
-                        elem: 'row',
+                        block: 'row',
+                        mods: { vertical: true },
                         content: [
                             {
-                                elem: 'item',
-                                content: 'text'
+                                elem: 'col',
+                                elemMods: { mw: 12 },
+                                content: tile[getTile()]
                             },
                             {
-                                elem: 'row',
-                                elemMods: { vertical: true },
+                                elem: 'col',
+                                elemMods: { mw: 12 },
                                 content: [
                                     {
-                                        elem: 'item',
-                                        content: 'text'
-                                    },
-                                    {
-                                        elem: 'item',
-                                        content: 'text'
+                                        block: 'row',
+                                        content: [
+                                            {
+                                                elem: 'col',
+                                                elemMods: { mw: 6, sw: 12 },
+                                                content: [
+                                                    {
+                                                        block: 'row',
+                                                        mods: { vertical: true },
+                                                        content: tile[getTile()]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                elem: 'col',
+                                                elemMods: { mw: 6, sw: 12 },
+                                                content: [
+                                                    {
+                                                        block: 'row',
+                                                        mods: { vertical: true },
+                                                        content: [
+                                                            {
+                                                                elem: 'col',
+                                                                elemMods: { mw: 12 },
+                                                                content: tile[getTile()]
+                                                            },
+                                                            {
+                                                                elem: 'col',
+                                                                elemMods: { mw: 12 },
+                                                                content: tile[getTile()]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -68,20 +107,20 @@ block('tile').mod('main', true).content()(function() {
                 ]
             },
             {
-                elem: 'row',
-                elemMods: { vertical: true },
+                elem: 'col',
+                elemMods: { mw: 4, sw: 12 },
                 content: [
                     {
-                        elem: 'item',
-                        content: 'text'
-                    },
-                    {
-                        elem: 'item',
-                        content: 'text'
+                        block: 'row',
+                        mods: { vertical: true },
+                        content: [
+                            tile[getTile()],
+                            tile[getTile()]
+                        ]
                     }
                 ]
             }
         ]
-    }
+    };
 
 });

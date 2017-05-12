@@ -1,17 +1,5 @@
 :block(promo):mod(main) {
-    margin-bottom: 16px;
-    
-    :block(promo) {
-        &:elem(slider) {
-            margin-right: .3%;
-        }
-
-        &:elem(banner) {
-            margin-left: .2%;
-        }
-    }
-}
-
-@media screen and (max-width: 40em) {
-
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto 16px;
 }
