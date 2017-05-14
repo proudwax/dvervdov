@@ -4,7 +4,7 @@ block('content').mod('main', true).content()(function() {
             elem: 'similar-products',
             content: [
                 {
-                    block: 'similar-products',
+                    block: 'similar',
                     content: 'similar-products'
                 }
             ]

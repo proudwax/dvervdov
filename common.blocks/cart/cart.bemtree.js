@@ -2,7 +2,7 @@ block('cart').content()(function() {
     return [
         {
             block: 'button',
-            mods: { theme: 'islands', size: 'm' },
+            mods: { theme: 'islands', size: 'l' },
             icon: {
                 block: 'icon',
                 mods: { cart: true }

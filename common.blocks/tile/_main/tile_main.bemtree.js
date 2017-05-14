@@ -18,7 +18,7 @@ block('tile').mod('main', true).content()(function() {
                 return { 'size': 'low' };
                 break;
             default:
-                return false;
+                return { 'size': 'tall' };
         }
     }
 
@@ -31,23 +31,29 @@ block('tile').mod('main', true).content()(function() {
             content: [
                 {
                     elem: 'title',
-                    content: item.text
+                    content: item.title
                 },
-                { tag: 'div', cls: 'tile__banner', attrs: { style: 'background-image: url(' + item.image + '?' + Math.random() +')' } },
+                {
+                    elem: 'description',
+                    content: item.description
+                },
+                {
+                    tag: 'div',
+                    cls: 'tile__banner',
+                    attrs: {
+                        style: 'background-image: url(' + item.image + '?' + Math.random() +')'
+                    }
+                }
             ]
         };
     });
-
-    function getTile() {
-        return i++;
-    }
 
     return {
         block: 'row',
         content: [
             {
                 elem: 'col',
-                elemMods: { mw: 8, sw: 12 },
+                elemMods: { mw: (tile.length > 4 ? 8 : 12), sw: 12 },
                 content: [
                     {
                         block: 'row',
@@ -56,7 +62,7 @@ block('tile').mod('main', true).content()(function() {
                             {
                                 elem: 'col',
                                 elemMods: { mw: 12 },
-                                content: tile[getTile()]
+                                content: tile[i++]
                             },
                             {
                                 elem: 'col',
@@ -72,7 +78,7 @@ block('tile').mod('main', true).content()(function() {
                                                     {
                                                         block: 'row',
                                                         mods: { vertical: true },
-                                                        content: tile[getTile()]
+                                                        content: tile[i++]
                                                     }
                                                 ]
                                             },
@@ -87,12 +93,12 @@ block('tile').mod('main', true).content()(function() {
                                                             {
                                                                 elem: 'col',
                                                                 elemMods: { mw: 12 },
-                                                                content: tile[getTile()]
+                                                                content: tile[i++]
                                                             },
                                                             {
                                                                 elem: 'col',
                                                                 elemMods: { mw: 12 },
-                                                                content: tile[getTile()]
+                                                                content: tile[i++]
                                                             }
                                                         ]
                                                     }
@@ -114,8 +120,8 @@ block('tile').mod('main', true).content()(function() {
                         block: 'row',
                         mods: { vertical: true },
                         content: [
-                            tile[getTile()],
-                            tile[getTile()]
+                            tile[i++],
+                            tile[i++]
                         ]
                     }
                 ]
