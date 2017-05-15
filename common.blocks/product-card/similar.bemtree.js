@@ -10,7 +10,7 @@ block('similar').content()(function() {
                     src: item.image,
                     path: item.path,
                     name: item.name,
-                    price: item.price
+                    price: item.price    
                 }
             ]
         };

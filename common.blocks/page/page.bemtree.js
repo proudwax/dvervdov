@@ -24,6 +24,11 @@ block('page').content()(function() {
             { image: 'http://lorempixel.com/400/200/', title: 'Text 4', description: 'description text', path: '#4' },
             { image: 'http://lorempixel.com/400/400/', title: 'Text 5', description: 'description text', path: '#5' },
             { image: 'http://lorempixel.com/400/400/', title: 'Text 6', description: 'description text', path: '#6' }
+        ],
+        products: [
+            { name: 'Александрия', price: 9000, vendor: 'Бонавери', collection: 'Domenico', material: 'Шпон', 'veneer-color': 'Дуб светлый', 'glass-color': 'Светлое', image: 'http://dvervdom.yazvyazda.ru/netcat_files/images/bonaveri/domenico/products/alexandriya_big_44_3.jpg', path: 'http://dvervdom.yazvyazda.ru/mezhkomnatnye-dveri/bonaveri/domenico/alexandriya-dub-svetlyy-svetloe.html' },
+            { name: 'Александрия', price: 9000, vendor: 'Бонавери', collection: 'Domenico', material: 'Шпон', 'veneer-color': 'Дуб светлый', 'glass-color': 'Светлое', image: 'http://dvervdom.yazvyazda.ru/netcat_files/images/bonaveri/domenico/products/alexandriya_big_44_3.jpg', path: 'http://dvervdom.yazvyazda.ru/mezhkomnatnye-dveri/bonaveri/domenico/alexandriya-dub-svetlyy-svetloe.html' },
+            { name: 'Александрия', price: 9000, vendor: 'Бонавери', collection: 'Domenico', material: 'Шпон', 'veneer-color': 'Дуб светлый', 'glass-color': 'Светлое', image: 'http://dvervdom.yazvyazda.ru/netcat_files/images/bonaveri/domenico/products/alexandriya_big_44_3.jpg', path: 'http://dvervdom.yazvyazda.ru/mezhkomnatnye-dveri/bonaveri/domenico/alexandriya-dub-svetlyy-svetloe.html' }
         ]
     };
 
