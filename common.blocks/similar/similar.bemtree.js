@@ -10,15 +10,22 @@ block('similar').content()(function() {
                     src: item.image,
                     path: item.path,
                     name: item.name,
+                    vendor: item.vendor,
                     price: item.price
                 }
             ]
         };
     });
 
-    return {
-        block: 'row',
-        content: products
-    };
+    return [
+        {
+            elem: 'title',
+            content: 'Рекомендуемые товары'
+        },
+        {
+            block: 'row',
+            content: products
+        }
+    ];
 
 });

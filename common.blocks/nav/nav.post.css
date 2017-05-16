@@ -32,7 +32,7 @@
         }
 
         &:hover{
-            opacity: .8;
+            color: #89c225;
         }
     }
 }

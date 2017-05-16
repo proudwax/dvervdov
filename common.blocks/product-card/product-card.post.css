@@ -1,0 +1,59 @@
+:block(product-card) {
+    box-sizing: border-box;
+    display: block;
+    margin: 8px;
+    padding: 16px;
+
+    color: #568549;
+    text-align: center;
+    text-decoration: none;
+
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 10px -5px rgba(0, 0, 0, 0.4);
+    transition: color .15s ease-out, box-shadow .15s ease-out;
+
+    &:hover {
+        color: #89c225;
+        box-shadow: 0 3px 9px rgba(0,0,0,.28);
+    }
+
+    &:elem(image) {
+        &  > :block(image) {
+            max-height: 200px;
+        }
+    }
+
+    &:elem(vendor) {
+        position: relative;
+        top: 8px;
+        
+        font-size: 12px;
+        line-height: 15px;
+        color: #7f7f7f;
+    }
+
+    &:elem(title) {
+        width: 100%;
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &:elem(price) {
+        position: relative;
+
+        font-weight: 600;
+        color: #333;
+    }
+
+    &:elem(old) {
+        position: relative;
+        top: 8px;
+
+        font-size: 10px;
+        line-height: 12px;
+        color: #7f7f7f;
+        text-decoration: line-through;
+    }
+
+}
