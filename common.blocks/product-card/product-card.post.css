@@ -1,39 +1,68 @@
 :block(product-card) {
-    box-sizing: border-box;
-    display: block;
+    position: relative;
     margin: 8px;
-    padding: 16px;
-
-    color: #568549;
-    text-align: center;
-    text-decoration: none;
 
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 10px -5px rgba(0, 0, 0, 0.4);
-    transition: color .15s ease-out, box-shadow .15s ease-out;
+
+    transition: box-shadow .25s ease-out;
 
     &:hover {
-        color: #89c225;
         box-shadow: 0 3px 9px rgba(0,0,0,.28);
     }
 
+    &:elem(inner) {
+        box-sizing: border-box;
+        display: block;
+        margin: 8px;
+        padding: 16px;
+
+        color: #568549;
+        text-align: center;
+        text-decoration: none;
+
+        transition: color .25s ease-out;
+
+        &:hover {
+            cursor: pointer;
+            color: #89c225;
+        }
+    }
+
     &:elem(image) {
+        margin-bottom: 8px;
+
         &  > :block(image) {
             max-height: 200px;
         }
     }
 
     &:elem(vendor) {
-        position: relative;
-        top: 8px;
-        
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        bottom: 88px;
+
+        text-align: center;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        color: #77432a;
         font-size: 12px;
         line-height: 15px;
-        color: #7f7f7f;
+        transition: color .25s ease-out;
+
+        &:hover {
+            color: #89c225;
+        }
     }
 
     &:elem(title) {
         width: 100%;
 
+        font-size: 18px;
+        line-height: 36px;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;

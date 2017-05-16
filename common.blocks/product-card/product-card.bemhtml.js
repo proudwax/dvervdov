@@ -1,63 +1,50 @@
 block('product-card')(
-    js()(true),
+    // js()(true),
 
-    tag()('a'),
-
-    addAttrs()(function () {
-        return {
-            href: this.ctx.path
-        }
-    }),
-
-    content()(function () {
-        let ctx = this.ctx;
-
-        return [
-            {
-                elem: 'image',
-                src: ctx.src
-            },
-            {
-                elem: 'vendor',
-                path: ctx.vendor.path,
-                content: ctx.vendor.name
-            },
-            {
-                elem: 'title',
-                content: ctx.name
-            },
-            {
-                elem: 'price',
-                content: [
-                    {
-                        elem: 'old',
-                        content: ctx.price.old + ' руб.'
-                    },
-                    {
-                        elem: 'current',
-                        content: ctx.price.current + ' руб.'
-                    }
-                ]
+    content()((ctx, json) => {
+        return applyNext().reduce((prev, cur) => {
+            if (cur.elem !== 'vendor') {
+                prev[0].content.push(cur);
+            } else {
+                prev.push(cur);
             }
-        ]
+            return prev;
+        }, [{ elem: 'inner', url: json.url ? json.url : false, content: [] }]);
     }),
 
-    elem('image').content()(function (){
-        return {
-            block: 'image',
-            url: this.ctx.src
-        }
-    }),
+    elem('inner')(
+        tag()('span'),
 
-    elem('vendor')(
-        // tag()('a'),
+        match((ctx, json) => { return json.url })(
+            tag()('a'),
 
-        addAttrs()(function () {
+            addAttrs()((ctx, json) => {
+                return {
+                    href: json.url
+                }
+            })
+        )
+    ),
+
+    elem('image')(
+        content()((ctx, json) => {
             return {
-                href: this.ctx.path
+                block: 'image',
+                url: json.url
             }
         })
+    ),
+
+    elem('vendor')(
+        match((ctx, json) => { return json.url })(
+            tag()('a'),
+
+            addAttrs()((ctx, json) => {
+                return {
+                    href: json.url
+                }
+            })
+        )
+
     )
-
-
 );

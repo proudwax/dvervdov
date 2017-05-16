@@ -7,11 +7,35 @@ block('similar').content()(function() {
             content: [
                 {
                     block: 'product-card',
-                    src: item.image,
-                    path: item.path,
-                    name: item.name,
-                    vendor: item.vendor,
-                    price: item.price
+                    url: item.path,
+                    content: [
+                        {
+                            elem: 'image',
+                            url: item.image
+                        },
+                        {
+                            elem: 'title',
+                            content: item.name
+                        },
+                        {
+                            elem: 'price',
+                            content: [
+                                {
+                                    elem: 'old',
+                                    content: item.price.old + ' руб.'
+                                },
+                                {
+                                    elem: 'current',
+                                    content: item.price.current + ' руб.'
+                                }
+                            ]
+                        },
+                        {
+                            elem: 'vendor',
+                            url: item.vendor.path,
+                            content: item.vendor.name
+                        }
+                    ]
                 }
             ]
         };
