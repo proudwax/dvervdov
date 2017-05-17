@@ -1,6 +1,13 @@
+$text_def: #333;
+$text_active: #568549;
+$text_hover: #89c225;
+$text_light: #7f7f7f;
+$text_dark: #77432a;
+
+
 :block(page) {
     font: 16px/2 'Open Sans',Arial,sans-serif;
-    color: #333;
+    color: $text_def;
 
     background-color: #f3f1ed;
     margin: 0;

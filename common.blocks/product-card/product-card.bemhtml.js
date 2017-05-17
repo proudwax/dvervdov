@@ -30,7 +30,7 @@ block('product-card')(
         content()((ctx, json) => {
             return {
                 block: 'image',
-                url: json.url
+                url: json.url + '?' + Math.random()
             }
         })
     ),

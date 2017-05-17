@@ -1,4 +1,4 @@
-modules.define('search', ['i-bem-dom', 'button', 'popup', 'functions__throttle'], function(provide, bemDom, Button, Popup, throttle) {
+modules.define('search', ['i-bem-dom', 'button', 'popup', 'header', 'functions__throttle'], function(provide, bemDom, Button, Popup, Header, throttle) {
 
 provide(bemDom.declBlock(this.name, {
     onSetMod: {
@@ -21,9 +21,7 @@ provide(bemDom.declBlock(this.name, {
 
     _initPosition: function (search, popup) {
         let top = search.offsetHeight + search.offsetTop,
-            left = (window.innerWidth - 1200) / 2;
-
-        left = left > 0 ? left : 0;
+            left = Header.getPositionLeft();
 
         return popup.setPosition(left, top);
     },

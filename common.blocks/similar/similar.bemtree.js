@@ -44,7 +44,7 @@ block('similar').content()(function() {
     return [
         {
             elem: 'title',
-            content: 'Рекомендуемые товары'
+            content: 'Recomended products'
         },
         {
             block: 'row',

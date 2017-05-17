@@ -16,7 +16,7 @@
         margin: 8px;
         padding: 16px;
 
-        color: #568549;
+        color: $text_active;
         text-align: center;
         text-decoration: none;
 
@@ -24,7 +24,7 @@
 
         &:hover {
             cursor: pointer;
-            color: #89c225;
+            color: $text_hover;
         }
     }
 
@@ -48,13 +48,13 @@
         white-space: nowrap;
         overflow: hidden;
 
-        color: #77432a;
+        color: $text_dark;
         font-size: 12px;
         line-height: 15px;
         transition: color .25s ease-out;
 
         &:hover {
-            color: #89c225;
+            color: $text_hover;
         }
     }
 
@@ -72,7 +72,7 @@
         position: relative;
 
         font-weight: 600;
-        color: #333;
+        color: $text_def;
     }
 
     &:elem(old) {
@@ -81,7 +81,7 @@
 
         font-size: 10px;
         line-height: 12px;
-        color: #7f7f7f;
+        color: $text_light;
         text-decoration: line-through;
     }
 
