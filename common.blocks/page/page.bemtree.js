@@ -25,6 +25,12 @@ block('page').content()(function() {
             { image: 'http://lorempixel.com/400/400/', title: 'Text 5', description: 'description text', path: '#5' },
             { image: 'http://lorempixel.com/400/400/', title: 'Text 6', description: 'description text', path: '#6' }
         ],
+        brands: [
+            { name: 'Vendor 1', path: '#vendor-1', image: 'http://lorempixel.com/300/200/' },
+            { name: 'Vendor 2', path: '#vendor-2', image: 'http://lorempixel.com/300/200/' },
+            { name: 'Vendor 3', path: '#vendor-3', image: 'http://lorempixel.com/300/200/' },
+            { name: 'Vendor 4', path: '#vendor-4', image: 'http://lorempixel.com/300/200/' }
+        ],
         products: [
             { name: 'Text 1', price: { current: 9000, old: 10000 }, vendor: { name: 'Vendor', path: '#vendor' }, collection: 'Domenico', material: 'Шпон', 'veneer-color': 'Дуб светлый', 'glass-color': 'Светлое', image: 'http://lorempixel.com/200/400/', path: '#product-1' },
             { name: 'Text 2', price: { current: 9000, old: 10000 }, vendor: { name: 'Vendor', path: '#vendor' }, collection: 'Domenico', material: 'Шпон', 'veneer-color': 'Дуб светлый', 'glass-color': 'Светлое', image: 'http://lorempixel.com/200/400/', path: '#product-2' },
