@@ -1,11 +1,35 @@
 block('content').mod('main', true).content()(function() {
     return [
         {
-            elem: 'similar-products',
+                block: 'row',
+                content: [
+                    {
+                        elem: 'col',
+                        elemMods: { lw: 6, mw: 6, sw: 12 },
+                        content: [
+                            {
+                                block: 'filter',
+                                content: 'filter'
+                            }
+                        ]
+                    },
+                    {
+                        elem: 'col',
+                        elemMods: { lw: 6, mw: 6, sw: 12 },
+                        content: [
+                            {
+                                block: 'brands',
+                                content: 'brands'
+                            }
+                        ]
+                    }
+                ]
+        },
+        {
+            elem: 'similar',
             content: [
                 {
-                    block: 'similar',
-                    content: 'similar-products'
+                    block: 'similar'
                 }
             ]
 

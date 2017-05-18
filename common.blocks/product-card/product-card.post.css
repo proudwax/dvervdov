@@ -14,7 +14,7 @@
         box-sizing: border-box;
         display: block;
         margin: 8px;
-        padding: 16px;
+        padding: 24px;
 
         color: $text_active;
         text-align: center;
@@ -40,7 +40,7 @@
         position: absolute;
         left: 16px;
         right: 16px;
-        bottom: 88px;
+        bottom: 96px;
 
         text-align: center;
         text-decoration: none;

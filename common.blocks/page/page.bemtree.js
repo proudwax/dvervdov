@@ -30,10 +30,10 @@ block('page').content()(function() {
             { name: 'Text 2', price: { current: 9000, old: 10000 }, vendor: { name: 'Vendor', path: '#vendor' }, collection: 'Domenico', material: 'Шпон', 'veneer-color': 'Дуб светлый', 'glass-color': 'Светлое', image: 'http://lorempixel.com/200/400/', path: '#product-2' },
             { name: 'Text 3', price: { current: 9000, old: 10000 }, vendor: { name: 'Vendor', path: '#vendor' }, collection: 'Domenico', material: 'Шпон', 'veneer-color': 'Дуб светлый', 'glass-color': 'Светлое', image: 'http://lorempixel.com/200/400/', path: '#product-3' },
             { name: 'Text 4', price: { current: 9000, old: 10000 }, vendor: { name: 'Vendor', path: '#vendor' }, collection: 'Domenico', material: 'Шпон', 'veneer-color': 'Дуб светлый', 'glass-color': 'Светлое', image: 'http://lorempixel.com/200/400/', path: '#product-4' },
-            { name: 'Text 5', price: { current: 9000, old: 10000 }, vendor: { name: 'Vendor', path: '#vendor' }, collection: 'Domenico', material: 'Шпон', 'veneer-color': 'Дуб светлый', 'glass-color': 'Светлое', image: 'http://lorempixel.com/200/400/', path: '#product-5' },
+            { name: 'Long name Text 5', price: { current: 9000, old: 10000 }, vendor: { name: 'Vendor', path: '#vendor' }, collection: 'Domenico', material: 'Шпон', 'veneer-color': 'Дуб светлый', 'glass-color': 'Светлое', image: 'http://lorempixel.com/200/400/', path: '#product-5' },
             { name: 'Text 6', price: { current: 9000, old: 10000 }, vendor: { name: 'Vendor', path: '#vendor' }, collection: 'Domenico', material: 'Шпон', 'veneer-color': 'Дуб светлый', 'glass-color': 'Светлое', image: 'http://lorempixel.com/200/400/', path: '#product-6' },
             { name: 'Text 7', price: { current: 9000, old: 10000 }, vendor: { name: 'Vendor', path: '#vendor' }, collection: 'Domenico', material: 'Шпон', 'veneer-color': 'Дуб светлый', 'glass-color': 'Светлое', image: 'http://lorempixel.com/200/400/', path: '#product-7' },
-            { name: 'Text 8', price: { current: 9000, old: 10000 }, vendor: { name: 'Vendor', path: '#vendor' }, collection: 'Domenico', material: 'Шпон', 'veneer-color': 'Дуб светлый', 'glass-color': 'Светлое', image: 'http://lorempixel.com/200/400/', path: '#product-8' }
+            { name: 'Very very very long name Text 8', price: { current: 9000, old: 10000 }, vendor: { name: 'Vendor', path: '#vendor' }, collection: 'Domenico', material: 'Шпон', 'veneer-color': 'Дуб светлый', 'glass-color': 'Светлое', image: 'http://lorempixel.com/200/400/', path: '#product-8' }
         ]
     };
 

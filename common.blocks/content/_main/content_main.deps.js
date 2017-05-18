@@ -1,5 +1,7 @@
 ({
     shouldDeps: [
-        'similar'
+        'similar',
+        'filter',
+        'brands'
     ]
 })
