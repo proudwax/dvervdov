@@ -9,7 +9,7 @@ block('product-card')(
                 prev.push(cur);
             }
             return prev;
-        }, [{ elem: 'inner', url: json.url ? json.url : false, content: [] }]);
+        }, [{ elem: 'inner', url: json.url ? json.url : false, title: json.title ? json.title : false, content: [] }]);
     }),
 
     elem('inner')(
@@ -20,7 +20,8 @@ block('product-card')(
 
             addAttrs()((ctx, json) => {
                 return {
-                    href: json.url
+                    href: json.url,
+                    title: json.title
                 }
             })
         )

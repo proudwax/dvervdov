@@ -8,6 +8,7 @@ block('similar').content()(function() {
                 {
                     block: 'product-card',
                     url: item.path,
+                    title: item.name,
                     content: [
                         {
                             elem: 'image',

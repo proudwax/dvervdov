@@ -2,6 +2,6 @@
     shouldDeps: [
         'similar',
         'filter',
-        'brands'
+        'brands-list'
     ]
 })

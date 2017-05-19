@@ -18,8 +18,7 @@ block('content').mod('main', true).content()(function() {
                         elemMods: { lw: 6, mw: 6, sw: 12 },
                         content: [
                             {
-                                block: 'brands',
-                                content: 'brands'
+                                block: 'brands-list'
                             }
                         ]
                     }
