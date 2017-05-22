@@ -1,0 +1,7 @@
+:block(input):mod(type search) {
+    &:block(input):mod(focused) {
+        &:before {
+            box-shadow: 0 0 0 1px #89c225, inset 0 0 0 1px #89c225;
+        }
+    }
+}

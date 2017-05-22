@@ -1,4 +1,5 @@
 :block(brands-list) {
+    box-sizing: border-box;
     padding: 8px 8px 32px;
     background-color: #f3f1ed;
 

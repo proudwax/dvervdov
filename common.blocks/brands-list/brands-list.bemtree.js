@@ -33,6 +33,7 @@ block('brands-list').content()(function() {
         },
         {
             block: 'row',
+            mods: { sac: true },
             content: brands
         }
     ];
