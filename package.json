@@ -39,6 +39,7 @@
     "gulp-postcss": "^6.2.0",
     "gulp-uglify": "^2.0.0",
     "merge2": "^1.0.2",
+    "nouislider": "^9.2.0",
     "postcss-calc": "^5.3.1",
     "postcss-each": "^0.9.3",
     "postcss-for": "^2.1.1",
@@ -47,8 +48,8 @@
     "postcss-reporter": "^3.0.0",
     "postcss-simple-vars": "^3.0.0",
     "postcss-url": "^5.1.2",
-    "sharps": "^3.0.3",
     "rebem-css": "^0.2.0",
+    "sharps": "^3.0.3",
     "through2-filter": "^2.0.0",
     "ym": "^0.1.2"
   },

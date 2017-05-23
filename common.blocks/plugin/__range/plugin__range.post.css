@@ -1,0 +1,5 @@
+@import url(../../../node_modules/nouislider/distribute/nouislider_theme_dver.css);
+
+:block(plugin):elem(range) {
+
+}

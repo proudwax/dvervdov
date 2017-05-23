@@ -5,6 +5,7 @@ block('content').mod('main', true).content()(function() {
                 content: [
                     {
                         block: 'filter',
+                        mods: { main: true },
                         mix: {
                             block: 'row',
                             elem: 'col',

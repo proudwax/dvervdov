@@ -1,7 +1,7 @@
 ({
     shouldDeps: [
         'similar',
-        'filter',
+        { block: 'filter', mods: { main: true } },
         'brands-list'
     ]
 })
