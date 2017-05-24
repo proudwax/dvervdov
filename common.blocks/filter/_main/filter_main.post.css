@@ -1,0 +1,9 @@
+:block(filter):mod(main) {
+    :block(filter):elem(field) {
+        margin: 8px 16px;
+    }
+    
+    :block(filter):elem(action) {
+        margin: 8px 16px;
+    }
+}

@@ -1,5 +1,22 @@
 block('filter').mod('main', true).content()(function() {
+
     return [
+        {
+            elem: 'field',
+            content: [
+                {
+                    block: 'colors'
+                }
+            ]
+        },
+        {
+            elem: 'field',
+            content: [
+                {
+                    block: 'glasses'
+                }
+            ]
+        },
         {
             elem: 'field',
             content: [
@@ -15,8 +32,29 @@ block('filter').mod('main', true).content()(function() {
             ]
         },
         {
-            elem: 'field',
-            content: 'colors'
+            elem: 'action',
+            content: [
+                {
+                    block: 'button',
+                    mods: {
+                        theme: 'dver',
+                        size: 'l',
+                        type: 'submit'
+                    },
+                    val: 'Reset',
+                    text: 'Reset'
+                },
+                {
+                    block: 'button',
+                    mods: {
+                        theme: 'dver',
+                        size: 'l',
+                        type: 'submit',
+                        view: 'action'
+                    },
+                    text: 'Search'
+                }
+            ]
         }
     ];
 });
