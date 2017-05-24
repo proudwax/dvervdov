@@ -2,36 +2,51 @@ block('range')(
     js()((ctx, json) => {
         return {
             start: json.start,
-            range: { 'min': json.min, 'max': json.max }
+            range: { 'min': json.min, '50%': (json.max - json.min)/2, 'max': json.max }
         }
     }),
+
+    match((ctx, json) => { return json.title; })(
+        content()((ctx, json) => {
+            return [
+                {
+                    elem: 'title',
+                    content: json.title
+                },
+                applyNext()
+            ]
+        })
+    ),
 
     content()((ctx, json) => {
 
         let inputs = json.start.map((item) => {
             return {
                 elem: 'input',
+                mix: { block: 'row', elem: 'col', elemMods: { s: true }, },
                 content: [
                     {
                         block: 'input',
                         mods: {
-                            theme: 'islands',
-                            size: 'm'
+                            theme: 'dver',
+                            size: 'l'
                         },
-                         val: item
+                        name: json.name,
+                        val: item
                     }
                 ]
             };
         })
 
         return [
-            {
-                elem: 'control',
-                content: applyNext()
-            },
+            applyNext(),
             {
                 elem: 'box',
+                mix: { block: 'row' },
                 content: inputs
+            },
+            {
+                elem: 'control'
             }
         ]
     })

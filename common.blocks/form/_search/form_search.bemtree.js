@@ -6,7 +6,7 @@ block('form').mod('search', true).content()(function() {
             content: [
                 {
                     block: 'input',
-                    mods: { theme: 'islands', size: 'l', type: 'search', width: 'available', focused : true },
+                    mods: { theme: 'dver', size: 'l', type: 'search', width: 'available', focused : true },
                     placeholder: 'Введите запрос'
                 },
                 {

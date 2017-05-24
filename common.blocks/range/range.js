@@ -6,11 +6,16 @@ provide(bemDom.declBlock(this.name, {
             'inited': function() {
 
                 var inputRange = this._elem('control').domElem[0],
-                    inputList = this.findChildBlocks(Input)._entities;
+                    inputList = this.findChildBlocks(Input)._entities,
+                    inputValues = [];
 
                 Range.create(inputRange, {
+                    pips: {
+                		mode: 'range',
+                		density: 50
+                	},
                 	connect: true,
-                    tooltips: true,
+                    // tooltips: true,
                     step: 1,
                     start: this.params.start,
                 	range: this.params.range,
@@ -24,26 +29,19 @@ provide(bemDom.declBlock(this.name, {
                     inputList[index].setVal(values[index]);
                 });
 
+                for (var i = 0; i < inputList.length; i++) {
+                    inputValues.push(null);
+                }
+
                 inputList.map(function (item, index) {
-                    var inputValues = [];
 
-                    for (var i = 0; i < inputList.length; i++) {
-                        inputValues.push(null);
-                    }
-                    console.log(item);
-
-                    item._events().on('change', inputValues, function () {
+                    item._domEvents().on('change', inputValues, function () {
 
                         inputValues[index] = this.getVal();
 
                         inputRange.noUiSlider.set(inputValues);
-                        // console.log(inputValues);
-                        console.log(index);
                     });
                 });
-                // inputFormat.addEventListener('change', function(){
-                // 	sliderFormat
-                // });
             }
         }
     }
