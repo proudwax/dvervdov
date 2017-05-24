@@ -42,7 +42,7 @@ block('page').content()(function() {
             { name: 'Very very very long name Text 8', price: { current: 9000, old: 10000 }, vendor: { name: 'Vendor', path: '#vendor' }, collection: 'Domenico', material: 'Шпон', 'veneer-color': 'Дуб светлый', 'glass-color': 'Светлое', image: 'http://lorempixel.com/200/400/', path: '#product-8' }
         ],
         filter: {
-            "data":[
+            "data":  [
                 {
                     "color_filter":[
                         {
