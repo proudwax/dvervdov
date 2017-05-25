@@ -1,4 +1,11 @@
 :block(image) {
     max-width: 100%;
     object-fit: cover;
+
+    &:mod(lazy) {
+        width: 100%;
+        height: 100%;
+        background-color: #eee;
+        font-size: 0;
+    }
 }
