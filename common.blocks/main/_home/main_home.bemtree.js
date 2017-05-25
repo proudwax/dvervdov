@@ -17,7 +17,7 @@ block('main').mod('home', true).content()(function() {
                             mix: {
                                 block: 'row',
                                 elem: 'col',
-                                elemMods: { lw: 6, mw: 6, sw: 12 },
+                                elemMods: { lw: 6, mw: 12, sw: 12 },
                             }
                         },
                         {
@@ -25,7 +25,7 @@ block('main').mod('home', true).content()(function() {
                             mix: {
                                 block: 'row',
                                 elem: 'col',
-                                elemMods: { lw: 6, mw: 6, sw: 12 }
+                                elemMods: { lw: 6, mw: 0, sw: 0 }
                             }
                         }
                     ]

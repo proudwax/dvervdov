@@ -7,14 +7,20 @@
     }
 
     :block(filter):elem(action) {
-        margin: 16px;
+        margin: 16px 8px;
     }
 
     :block(filter):elem(reset) {
+        box-sizing: border-box;
         margin: 8px 0;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 
     :block(filter):elem(submit) {
+        box-sizing: border-box;
         margin: 8px 0;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 }

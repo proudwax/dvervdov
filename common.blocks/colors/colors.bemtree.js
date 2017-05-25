@@ -6,7 +6,7 @@ block('colors').content()(function() {
     color_base = colors_base.map(function (item) {
         return {
             elem: 'item',
-            mix: { block: 'row', elem: 'col', elemMods : { sw : 12, mw : 6 } },
+            mix: { block: 'row', elem: 'col', elemMods : { sw : 12, mw : 4, lw: 6 } },
             content: [
                 {
                     block: 'checkbox',
@@ -30,7 +30,7 @@ block('colors').content()(function() {
     color = colors.map(function (item) {
         return {
             elem: 'item',
-            mix: { block: 'row', elem: 'col', elemMods : { sw : 12, mw : 6 } },
+            mix: { block: 'row', elem: 'col', elemMods : { sw : 12, mw : 4, lw: 6 } },
             content: [
                 {
                     block: 'checkbox',

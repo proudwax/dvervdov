@@ -53,7 +53,7 @@ block('tile').mod('main', true).content()(function() {
         content: [
             {
                 elem: 'col',
-                elemMods: { mw: (tile.length > 4 ? 8 : 12), sw: 12 },
+                elemMods: { lw: (tile.length > 4 ? 8 : 12), mw: 12, sw: 12 },
                 content: [
                     {
                         block: 'row',
@@ -84,7 +84,7 @@ block('tile').mod('main', true).content()(function() {
                                             },
                                             {
                                                 elem: 'col',
-                                                elemMods: { mw: 6, sw: 12 },
+                                                elemMods: { mw: 6, sw: 0 },
                                                 content: [
                                                     {
                                                         block: 'row',
@@ -114,7 +114,7 @@ block('tile').mod('main', true).content()(function() {
             },
             {
                 elem: 'col',
-                elemMods: { mw: 4, sw: 12 },
+                elemMods: { lw: 4, mw: 0, sw: 0 },
                 content: [
                     {
                         block: 'row',

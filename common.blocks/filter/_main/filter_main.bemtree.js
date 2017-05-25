@@ -11,6 +11,7 @@ block('filter').mod('main', true).content()(function() {
         },
         {
             elem: 'field',
+            mix: { block: 'row', elem: 'col', elemMods : { sw : 0 } },
             content: [
                 {
                     block: 'glasses'
@@ -33,25 +34,11 @@ block('filter').mod('main', true).content()(function() {
         },
         {
             elem: 'action',
+            mix: { block: 'row' },
             content: [
                 {
-                    elem: 'submit',
-                    content: [
-                        {
-                            block: 'button',
-                            mods: {
-                                theme: 'dver',
-                                size: 'l',
-                                type: 'submit',
-                                view: 'action',
-                                width: 'available'
-                            },
-                            text: 'Search'
-                        }
-                    ]
-                },
-                {
                     elem: 'reset',
+                    mix: { block: 'row', elem: 'col', elemMods : { sw : 12, mw : 6, lw: 6, sol : true } },
                     content: [
                         {
                             block: 'button',
@@ -63,6 +50,23 @@ block('filter').mod('main', true).content()(function() {
                             },
                             val: 'Reset',
                             text: 'Reset'
+                        }
+                    ]
+                },
+                {
+                    elem: 'submit',
+                    mix: { block: 'row', elem: 'col', elemMods : { sw : 12, mw : 6, lw: 6 } },
+                    content: [
+                        {
+                            block: 'button',
+                            mods: {
+                                theme: 'dver',
+                                size: 'l',
+                                type: 'submit',
+                                view: 'action',
+                                width: 'available'
+                            },
+                            text: 'Search'
                         }
                     ]
                 }
