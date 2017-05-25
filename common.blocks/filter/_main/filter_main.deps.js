@@ -3,7 +3,7 @@
         'range',
         'colors',
         'glasses',
-        { block: 'button', mods: { theme: 'dver', size: 'l', type: 'submit', view: 'action' }
+        { block: 'button', mods: { theme: 'dver', size: 'l', type: 'submit', view: ['action', 'plain'] }
     }
     ]
 })

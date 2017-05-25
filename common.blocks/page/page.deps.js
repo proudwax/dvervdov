@@ -1,8 +1,7 @@
 ({
     shouldDeps: [
         { block: 'header' },
-        { block: 'promo', mods: { main:true } },
-        { block: 'content', mods: { main:true } },
+        { block: 'main', mods: { home: true } },
         { block: 'footer' }
     ]
 })

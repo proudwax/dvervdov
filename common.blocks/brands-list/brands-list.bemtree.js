@@ -28,13 +28,18 @@ block('brands-list').content()(function() {
 
     return [
         {
-            elem: 'title',
-            content: 'List brands'
-        },
-        {
-            block: 'row',
-            mods: { sac: true },
-            content: brands
+            elem: 'inner',
+            content: [
+                {
+                    elem: 'title',
+                    content: 'List brands'
+                },
+                {
+                    block: 'row',
+                    mods: { sac: true },
+                    content: brands
+                }
+            ]
         }
     ];
 

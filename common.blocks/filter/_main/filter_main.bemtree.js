@@ -35,24 +35,36 @@ block('filter').mod('main', true).content()(function() {
             elem: 'action',
             content: [
                 {
-                    block: 'button',
-                    mods: {
-                        theme: 'dver',
-                        size: 'l',
-                        type: 'submit'
-                    },
-                    val: 'Reset',
-                    text: 'Reset'
+                    elem: 'submit',
+                    content: [
+                        {
+                            block: 'button',
+                            mods: {
+                                theme: 'dver',
+                                size: 'l',
+                                type: 'submit',
+                                view: 'action',
+                                width: 'available'
+                            },
+                            text: 'Search'
+                        }
+                    ]
                 },
                 {
-                    block: 'button',
-                    mods: {
-                        theme: 'dver',
-                        size: 'l',
-                        type: 'submit',
-                        view: 'action'
-                    },
-                    text: 'Search'
+                    elem: 'reset',
+                    content: [
+                        {
+                            block: 'button',
+                            mods: {
+                                theme: 'dver',
+                                size: 'l',
+                                type: 'submit',
+                                width: 'available'
+                            },
+                            val: 'Reset',
+                            text: 'Reset'
+                        }
+                    ]
                 }
             ]
         }

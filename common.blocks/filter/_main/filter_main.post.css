@@ -1,9 +1,20 @@
 :block(filter):mod(main) {
     :block(filter):elem(field) {
         margin: 8px 16px;
+        padding-bottom: 32px;
+
+        border-bottom: 1px solid rgba(0,0,0,.2);
     }
-    
+
     :block(filter):elem(action) {
-        margin: 8px 16px;
+        margin: 16px;
+    }
+
+    :block(filter):elem(reset) {
+        margin: 8px 0;
+    }
+
+    :block(filter):elem(submit) {
+        margin: 8px 0;
     }
 }

@@ -6,4 +6,8 @@
         margin: 16px 0;
         color: $text_dark;
     }
+
+    &:elem(item) {
+        
+    }
 }

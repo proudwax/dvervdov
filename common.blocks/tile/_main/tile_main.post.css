@@ -1,6 +1,5 @@
 :block(tile):mod(main) {
-    margin-left: -8px;
-    margin-right: -8px;
+    margin: -8px;
 
     & > :block(row) {
         max-width: none;

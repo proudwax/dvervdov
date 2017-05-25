@@ -1,5 +1,5 @@
-/*@import url(../../../node_modules/nouislider/distribute/nouislider_theme_dver.css);*/
-@import url(../../../node_modules/nouislider/distribute/nouislider.css);
+@import url(nouislider_theme_dver.css);
+/*@import url(../../../node_modules/nouislider/distribute/nouislider.css);*/
 
 :block(plugin):elem(range) {
 

@@ -162,7 +162,7 @@ block('page').content()(function() {
                             },
                             "name":"filter_Color[]",
                             "type":"checkbox",
-                            "checked":"false",
+                            "checked":"true",
                             "val":"9",
                             "text":""
                         },
@@ -1152,12 +1152,8 @@ block('page').content()(function() {
     return [
         { block: 'header' },
         {
-            block: 'promo',
-            mods: { main: true }
-        },
-        {
-            block: 'content',
-            mods: { main: true }
+            block: 'main',
+            mods: { home: true }
         },
         { block: 'footer' }
     ];

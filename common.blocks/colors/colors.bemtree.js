@@ -5,23 +5,49 @@ block('colors').content()(function() {
 
     color_base = colors_base.map(function (item) {
         return {
-            block: 'color',
-            image: 'http://lorempixel.com/100/100/?' + Math.random(),
-            type: item.type,
-            name: item.name,
-            val: item.val,
-            text: item.text
+            elem: 'item',
+            mix: { block: 'row', elem: 'col', elemMods : { sw : 12, mw : 6 } },
+            content: [
+                {
+                    block: 'checkbox',
+                    mods: {
+                        theme: 'dver',
+                        size: 'l',
+                        image: true,
+                        checked: item.checked
+                    },
+                    image: {
+                        url: 'http://lorempixel.com/100/100/?' + Math.random()
+                    },
+                    name: item.name,
+                    val: item.val,
+                    text: item.text
+                }
+            ]
         };
     });
 
     color = colors.map(function (item) {
         return {
-            block: 'color',
-            image: 'http://lorempixel.com/100/100/?' + Math.random(),
-            type: item.type,
-            name: item.name,
-            val: item.val,
-            text: item.text
+            elem: 'item',
+            mix: { block: 'row', elem: 'col', elemMods : { sw : 12, mw : 6 } },
+            content: [
+                {
+                    block: 'checkbox',
+                    mods: {
+                        theme: 'dver',
+                        size: 'l',
+                        image: true,
+                        checked: item.checked
+                    },
+                    image: {
+                        url: 'http://lorempixel.com/100/100/?' + Math.random()
+                    },
+                    name: item.name,
+                    val: item.val,
+                    text: item.fields.Name
+                }
+            ]
         };
     });
 
@@ -32,6 +58,7 @@ block('colors').content()(function() {
         },
         {
             elem: 'list',
+            mix: { block: 'row' },
             content: color_base
         },
         {
@@ -40,6 +67,7 @@ block('colors').content()(function() {
         },
         {
             elem: 'list',
+            mix: { block: 'row' },
             content: color
         }
     ];
