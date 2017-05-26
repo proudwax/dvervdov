@@ -4,14 +4,14 @@ block('image')(
     addAttrs()((ctx, json) => {
         return {
             'data-url': json.url,
-            src: ''
-        };
-    }),
-
-    mods()((ctx, json) => {
-        return {
-            lazy: true
+            src: false
         };
     })
+
+    // mods()((ctx, json) => {
+    //     return {
+    //         lazy: true
+    //     };
+    // })
 
 );
