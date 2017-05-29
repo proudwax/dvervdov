@@ -21,12 +21,30 @@ block('main').mod('home', true).content()(function() {
                             }
                         },
                         {
-                            block: 'brands-list',
-                            mix: {
-                                block: 'row',
-                                elem: 'col',
-                                elemMods: { lw: 6, mw: 0, sw: 0 }
-                            }
+                            elem: 'col',
+                            elemMods: { lw: 6, mw: 12, sw: 0 },
+                            mix: { block: 'row' },
+                            content: [
+                                {
+                                    block: 'brands-list',
+                                    mix: {
+                                        block: 'row',
+                                        elem: 'col',
+                                        elemMods: { lw: 12, mw: 6 }
+                                    }
+                                },
+                                {
+                                    block: 'row',
+                                    elem: 'col',
+                                    elemMods: { lw: 12, mw: 6 },
+                                    content: [
+                                        {
+                                            block: 'form',
+                                            mods: { callback: true }
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }

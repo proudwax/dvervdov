@@ -1,4 +1,7 @@
 :block(filter):mod(main) {
+    box-sizing: border-box;
+    border-right: 1px solid rgba(0,0,0,.2);
+
     :block(filter):elem(field) {
         margin: 8px 16px;
         padding-bottom: 32px;
@@ -22,5 +25,12 @@
         margin: 8px 0;
         padding-left: 8px;
         padding-right: 8px;
+    }
+}
+
+@media screen and (max-width: 64em) {
+    :block(filter):mod(main) {
+        border-right: 0;
+        border-bottom: 1px solid rgba(0,0,0,.2);
     }
 }
