@@ -1,0 +1,11 @@
+:block(icon):mod(price) {
+    background-image: url(../images/price.svg);
+    background-size: 55%;
+    opacity: .7;
+
+    transition: opacity .1s ease-out;
+
+    &:hover{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,24 @@
+:block(service-offers) {
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto 16px;
+
+    &:elem(list) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &:elem(item) {
+        box-sizing: border-box;
+        flex: 1 1;
+
+        padding: 16px;
+        text-align: center;
+    }
+
+    &:elem(icon) {
+        width: 64px;
+        height: 64px;
+    }
+}

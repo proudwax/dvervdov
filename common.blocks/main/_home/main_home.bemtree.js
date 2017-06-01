@@ -51,6 +51,9 @@ block('main').mod('home', true).content()(function() {
             ]
         },
         {
+            block: 'service-offers'
+        },
+        {
             block: 'content',
             content: [
                 {
