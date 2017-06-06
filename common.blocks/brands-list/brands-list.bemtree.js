@@ -3,7 +3,8 @@ block('brands-list').content()(function() {
     let brands = this.data.brands.map(function (item) {
         return {
             elem: 'col',
-            elemMods: { lw: 6, mw: 6, sw: 12 },
+            // elemMods: { lw: 6, mw: 6, sw: 12 },
+            elemMods: { l:true, m: true, sw: 0 },
             content: [
                 {
                     block: 'brands',
