@@ -5,6 +5,7 @@
         { block: 'form', mods: { callback: true } },
         'service-offers',
         'content',
+        'article',
         'similar',
         'brands-list'
     ]

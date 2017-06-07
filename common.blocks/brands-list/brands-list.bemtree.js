@@ -3,7 +3,7 @@ block('brands-list').content()(function() {
     let brands = this.data.brands.map(function (item) {
         return {
             elem: 'col',
-            elemMods: { lw: 6, mw: 6, sw: 12 },
+            elemMods: { s: true },
             content: [
                 {
                     block: 'brands',
@@ -35,9 +35,14 @@ block('brands-list').content()(function() {
                     content: 'List brands'
                 },
                 {
-                    block: 'row',
-                    mods: { sac: true },
-                    content: brands
+                    elem: 'content',
+                    content: [
+                        {
+                            block: 'row',
+                            mods: { sac: true },
+                            content: brands
+                        }
+                    ]
                 }
             ]
         }

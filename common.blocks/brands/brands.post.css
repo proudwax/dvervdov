@@ -1,6 +1,7 @@
 :block(brands) {
     display: inline-block;
     margin: 8px;
+    min-width: 200px;
 
     font-size: 0;
     opacity: .8;

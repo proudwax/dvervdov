@@ -6,53 +6,73 @@ block('main').mod('home', true).content()(function() {
             mods: { main: true }
         },
         {
-            block: 'content',
+            block: 'row',
             content: [
                 {
-                    block: 'row',
+                    block: 'brands-list',
+                    mix: {
+                        block: 'row',
+                        elem: 'col',
+                        elemMods: { lw: 8, mw: 6, sw: 12 },
+                    }
+                },
+                {
+                    elem: 'col',
+                    elemMods: { lw: 4, mw: 6, sw: 12 },
                     content: [
                         {
-                            block: 'filter',
-                            mods: { main: true },
-                            mix: {
-                                block: 'row',
-                                elem: 'col',
-                                elemMods: { lw: 6, mw: 12, sw: 12 },
-                            }
-                        },
-                        {
-                            elem: 'col',
-                            elemMods: { lw: 6, mw: 12, sw: 0 },
-                            mix: { block: 'row' },
-                            content: [
-                                {
-                                    block: 'brands-list',
-                                    mix: {
-                                        block: 'row',
-                                        elem: 'col',
-                                        elemMods: { lw: 12, mw: 6 }
-                                    }
-                                },
-                                {
-                                    block: 'row',
-                                    elem: 'col',
-                                    elemMods: { lw: 12, mw: 6 },
-                                    content: [
-                                        {
-                                            block: 'form',
-                                            mods: { callback: true }
-                                        }
-                                    ]
-                                }
-                            ]
+                            block: 'form',
+                            mods: { callback: true }
                         }
                     ]
                 }
             ]
         },
-        {
-            block: 'service-offers'
-        },
+        // {
+        //     block: 'content',
+        //     content: [
+        //         {
+        //             block: 'row',
+        //             content: [
+        //                 {
+        //                     block: 'filter',
+        //                     mods: { main: true },
+        //                     mix: {
+        //                         block: 'row',
+        //                         elem: 'col',
+        //                         elemMods: { lw: 6, mw: 12, sw: 12 },
+        //                     }
+        //                 },
+        //                 {
+        //                     elem: 'col',
+        //                     elemMods: { lw: 6, mw: 12, sw: 0 },
+        //                     mix: { block: 'row' },
+        //                     content: [
+        //                         {
+        //                             block: 'brands-list',
+        //                             mix: {
+        //                                 block: 'row',
+        //                                 elem: 'col',
+        //                                 elemMods: { lw: 12, mw: 6 }
+        //                             }
+        //                         },
+        //                         {
+        //                             block: 'row',
+        //                             elem: 'col',
+        //                             elemMods: { lw: 12, mw: 6 },
+        //                             content: [
+        //                                 {
+        //                                     block: 'form',
+        //                                     mods: { callback: true }
+        //                                 }
+        //                             ]
+        //                         }
+        //                     ]
+        //                 }
+        //             ]
+        //         }
+        //     ]
+        // },
         {
             block: 'content',
             content: [
@@ -62,9 +82,12 @@ block('main').mod('home', true).content()(function() {
                 {
                     block: 'article',
                     mods: { main: true },
-                    content: 'article'
+                    content: { html: '<p> Вас приветствует компания «Дверь в&nbsp;Дом»: поставка и&nbsp;монтаж межкомнатных, входных дверей и&nbsp;арок. Уважаемые посетители, наша компания работает с&nbsp;клиентами из&nbsp;Санкт-Петербурга, Москвы, а&nbsp;так&nbsp;же Ленинградской и&nbsp;Московской областей. Заказать и&nbsp;купить дверь Вы&nbsp;можете, связавшись с&nbsp;нашими менеджерами по&nbsp;телефону, электронной почтой, либо посетив наш офис по&nbsp;указанному в&nbsp;контактах адресу. </p><h2> Наши модели никого не&nbsp;оставят равнодушными! </h2><p> Предлагаем Вашему вниманию каталог с&nbsp;нашими моделями. Надежность продукции от&nbsp;ведущих производителей, проверенная временем, и&nbsp;гарантия на&nbsp;весь ассортимент, надеемся, никого не&nbsp;оставит равнодушным. Мы&nbsp;всегда рекомендуем нашим клиентам только товар высшего качества. Если Вы&nbsp;живете в&nbsp;СПБ или в&nbsp;Москве, то&nbsp;купить двери можно именно у&nbsp;нас. Кроме обычных моделей, мы&nbsp;предлагаем Вам так&nbsp;же нестандартные двери и&nbsp;двери из&nbsp;массива. </p><h2> Менеджер посетит непосредственно место монтажа! </h2><p> Для заключения контракта, возможен выезд менеджера непосредственно на&nbsp;место монтажа с&nbsp;каталогами, и&nbsp;образцами шпона или полотном в&nbsp;сборе. В&nbsp;спектр предлагаемых нашей компаний услуг входят не&nbsp;только реализация и&nbsp;монтаж, но&nbsp;также и&nbsp;предварительный замер, профессиональные консультации клиентов по&nbsp;выбору продукции и&nbsp;доставка дверей по&nbsp;указанному адресу. Мы&nbsp;всегда рады клиентам и&nbsp;уверены, что Вам понравятся условия сотрудничества. </p><p><i>Команда «Дверь в&nbsp;Дом» ждет Вас!</i></p>' }
                 }
             ]
+        },
+        {
+            block: 'service-offers'
         }
     ];
 });
