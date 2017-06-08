@@ -1,12 +1,17 @@
 block('form').mod('callback', true).content()(function() {
     return [
         {
-            elem: 'title',
-            content: 'Заказ обратного звонка'
-        },
-        {
-            elem: 'desc',
-            content: 'Не можете определиться?! Мы поможем Вам.'
+            elem: 'header',
+            content: [
+                {
+                    elem: 'title',
+                    content: 'Заказ обратного звонка'
+                },
+                {
+                    elem: 'desc',
+                    content: 'Не можете определиться?! Мы поможем Вам.'
+                }
+            ]
         },
         {
             elem: 'field',

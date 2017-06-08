@@ -6,28 +6,24 @@ block('main').mod('home', true).content()(function() {
             mods: { main: true }
         },
         {
-            block: 'row',
-            content: [
-                // {
-                //     block: 'brands-list',
-                //     mix: {
-                //         block: 'row',
-                //         elem: 'col',
-                //         elemMods: { lw: 8, mw: 6, sw: 12 },
-                //     }
-                // },
-                {
-                    elem: 'col',
-                    elemMods: { lw: 4, mw: 6, sw: 12 },
-                    content: [
-                        {
-                            block: 'form',
-                            mods: { callback: true }
-                        }
-                    ]
-                }
-            ]
+            block: 'brands-list'
         },
+        // {
+        //     block: 'row',
+        //     content: [
+
+        //         {
+        //             elem: 'col',
+        //             elemMods: { lw: 4, mw: 6, sw: 12 },
+        //             content: [
+        //                 {
+        //                     block: 'form',
+        //                     mods: { callback: true }
+        //                 }
+        //             ]
+        //         }
+        //     ]
+        // },
         // {
         //     block: 'content',
         //     content: [
@@ -78,10 +74,54 @@ block('main').mod('home', true).content()(function() {
             content: [
                 {
                     block: 'similar'
+                }
+            ]
+        },
+
+        {
+            block: 'row',
+            content: [
+                {
+                    block: 'content',
+                    mix: {
+                        block: 'row',
+                        elem: 'col',
+                        elemMods: { lw: 8, mw: 7, sw: 12 },
+                    },
+                    content: [
+                        {
+                            block: 'article',
+                            mods: { main: true },
+                        }
+                    ]
                 },
                 {
-                    block: 'article',
-                    mods: { main: true }
+                    elem: 'col',
+                    elemMods: { lw: 4, mw: 5, sw: 12 },
+                    content: [
+                        {
+                            block: 'form',
+                            mods: { callback: true }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            block: 'tabs',
+            mods: { theme: 'islands' },
+            tabs: [
+                {
+                   title : 'First',
+                   content : 'First tab content'
+                },
+                {
+                   title : 'Second',
+                   content : 'Second tab content'
+                },
+                {
+                   title : 'Third',
+                   content : 'Third tab content'
                 }
             ]
         },

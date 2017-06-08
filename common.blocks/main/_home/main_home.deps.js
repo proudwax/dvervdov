@@ -7,6 +7,7 @@
         'content',
         'article',
         'similar',
+        'tabs',
         'brands-list'
     ]
 })

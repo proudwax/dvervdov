@@ -1,5 +1,6 @@
 :block(similar) {
     padding: 8px;
+    margin-bottom: 16px;
 
     &:elem(title) {
         margin-left: 8px;
