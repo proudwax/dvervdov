@@ -48,6 +48,21 @@ block('service-offers').content()(function() {
                             content: 'Низкие цены'
                         }
                     ]
+                },
+                {
+                    elem: 'item',
+                    elemMods: { price: true },
+                    content: [
+                        {
+                            block: 'icon',
+                            mix: { block: this.block, elem: 'icon' },
+                            mods: { masters: true }
+                        },
+                        {
+                            elem: 'text',
+                            content: 'Профессиональные мастера'
+                        }
+                    ]
                 }
             ]
         }

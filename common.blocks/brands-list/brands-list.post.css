@@ -1,13 +1,19 @@
 :block(brands-list) {
     box-sizing: border-box;
+    margin-bottom: 16px;
     /*border-left: 1px solid rgba(0,0,0,.2);*/
 
     &:elem(inner) {
-        margin: 8px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &:elem(content) {
+        margin: 0 8px;
     }
 
     &:elem(title) {
-        margin-left: 8px;
+        margin-left: 16px;
 
         font-size: 18px;
         font-weight: 600;

@@ -5,7 +5,7 @@
 
     &:elem(list) {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
     }
 
@@ -20,5 +20,9 @@
     &:elem(icon) {
         width: 64px;
         height: 64px;
+    }
+
+    &:elem(text) {
+        line-height: 18px;
     }
 }

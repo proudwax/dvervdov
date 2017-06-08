@@ -6,7 +6,27 @@ block('main').mod('home', true).content()(function() {
             mods: { main: true }
         },
         {
-            block: 'brands-list'
+            block: 'row',
+            content: [
+                // {
+                //     block: 'brands-list',
+                //     mix: {
+                //         block: 'row',
+                //         elem: 'col',
+                //         elemMods: { lw: 8, mw: 6, sw: 12 },
+                //     }
+                // },
+                {
+                    elem: 'col',
+                    elemMods: { lw: 4, mw: 6, sw: 12 },
+                    content: [
+                        {
+                            block: 'form',
+                            mods: { callback: true }
+                        }
+                    ]
+                }
+            ]
         },
         // {
         //     block: 'content',
@@ -61,8 +81,7 @@ block('main').mod('home', true).content()(function() {
                 },
                 {
                     block: 'article',
-                    mods: { main: true },
-                    content: 'article'
+                    mods: { main: true }
                 }
             ]
         },
