@@ -109,7 +109,7 @@ block('main').mod('home', true).content()(function() {
         },
         {
             block: 'tabs',
-            mods: { theme: 'islands' },
+            mods: { theme: 'islands', type: 'button', size: 'l' },
             tabs: [
                 {
                    title : 'First',

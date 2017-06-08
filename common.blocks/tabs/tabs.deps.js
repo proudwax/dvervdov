@@ -2,8 +2,7 @@
     {
         mustDeps : { block : 'i-bem', elems : 'dom' },
         shouldDeps : [
-            { block : 'radio-group', mods : { theme : ['islands', 'simple'], type : ['button', 'line'] } },
-            { elem : 'box', mods : { selected : true } }
+            { block : 'radio-group', mods : { theme : ['islands'], type : ['button', 'line'], size: 'm' } }
         ]
     }
 ])

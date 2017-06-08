@@ -1,5 +1,5 @@
 block('article')(
     elem('title')(
-        tag()('h3')
+        tag()('h2')
     )
 );
