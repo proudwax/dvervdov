@@ -101,7 +101,7 @@ block('main').mod('home', true).content()(function() {
                     content: [
                         {
                             block: 'tabs',
-                            mods: { theme: 'dver', type: 'button', size: 'l' },
+                            mods: { theme: 'islands', type: 'button', size: 'l' },
                             tabs: [
                                 {
                                    title: 'Заказ звонка',

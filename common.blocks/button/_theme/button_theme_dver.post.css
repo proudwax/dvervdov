@@ -271,13 +271,13 @@
 }
 
 :block(control-group) {
-    :block(button):mod(checked) + :block(button):mod(theme islands):before,
-    :block(radio):mod(checked) + :block(radio) :block(button):mod(theme islands):before,
-    :block(checkbox):mod(checked) + :block(checkbox) :block(button):mod(theme islands):before {
+    :block(button):mod(checked) + :block(button):mod(theme dver):before,
+    :block(radio):mod(checked) + :block(radio) :block(button):mod(theme dver):before,
+    :block(checkbox):mod(checked) + :block(checkbox) :block(button):mod(theme dver):before {
         left: 0;
     }
 
-    :block(button):mod(theme islands) {
+    :block(button):mod(theme dver) {
         border-radius: 0;
 
         &:before {
@@ -295,9 +295,9 @@
         }
     }
 
-    > :block(button):mod(theme islands):first-child,
-    > :first-child :block(button):mod(theme islands),
-    > :first-child:block(popup) + :block(button):mod(theme islands) {
+    > :block(button):mod(theme dver):first-child,
+    > :first-child :block(button):mod(theme dver),
+    > :first-child:block(popup) + :block(button):mod(theme dver) {
         border-radius: 3px 0 0 3px;
 
         &:before {
@@ -309,8 +309,8 @@
         }
     }
 
-    > :block(button):mod(theme islands):last-child,
-    > :last-child :block(button):mod(theme islands) {
+    > :block(button):mod(theme dver):last-child,
+    > :last-child :block(button):mod(theme dver) {
         border-radius: 0 3px 3px 0;
 
         &:before {
@@ -319,7 +319,7 @@
         }
     }
 
-    > :only-child :block(button):mod(theme islands) {
+    > :only-child :block(button):mod(theme dver) {
         border-radius: 3px;
 
         &:before {
