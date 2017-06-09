@@ -1,8 +1,7 @@
 ([
     {
         shouldDeps : [
-            { block: 'radio-group', mods: { theme: 'islands', type: ['button', 'line'], size: 'm' } },
-            { block: 'form', omds: { callback: true } }
+            { block: 'radio-group', mods: { theme: 'dver', type: ['button', 'line'], size: 'm' } }
         ]
     }
 ])

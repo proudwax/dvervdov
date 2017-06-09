@@ -100,36 +100,28 @@ block('main').mod('home', true).content()(function() {
                     elemMods: { lw: 4, mw: 5, sw: 12 },
                     content: [
                         {
-                            block: 'form',
-                            mods: { callback: true }
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            block: 'content',
-            content: [
-                {
-                    block: 'tabs',
-                    mods: { theme: 'islands', type: 'button', size: 'l' },
-                    tabs: [
-                        {
-                           title : 'First',
-                           content : { html: 'First  tab content' }
-                        },
-                        {
-                           title : 'Second',
-                           content : [
-                               {
-                                   block: 'form',
-                                   mods: { callback: true },
-                               }
-                           ]
-                        },
-                        {
-                           title : 'Third',
-                           content : 'Third tab content'
+                            block: 'tabs',
+                            mods: { theme: 'dver', type: 'button', size: 'l' },
+                            tabs: [
+                                {
+                                   title: 'Заказ звонка',
+                                   content: applyCtx(
+                                       {
+                                           block: 'form',
+                                           mods: { callback: true },
+                                       }
+                                   )
+                                },
+                                {
+                                   title: 'Заказ звонка',
+                                   content: applyCtx(
+                                       {
+                                           block: 'form',
+                                           mods: { callback: true },
+                                       }
+                                   )
+                                }
+                            ]
                         }
                     ]
                 }
