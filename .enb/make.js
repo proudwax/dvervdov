@@ -59,6 +59,10 @@ var techs = {
         { path: 'node_modules/bem-components/desktop.blocks', check: false },
         { path: 'node_modules/bem-components/design/common.blocks', check: false },
         { path: 'node_modules/bem-components/design/desktop.blocks', check: false },
+        { path: 'node_modules/bem-calendar/common.blocks', check: false },
+        { path: 'node_modules/bem-calendar/desktop.blocks', check: false },
+        { path: 'node_modules/bem-calendar/touch-phone.blocks', check: false },
+        { path: 'node_modules/bem-calendar/touch.blocks', check: false },
         'common.blocks',
         'desktop.blocks'
     ];

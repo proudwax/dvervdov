@@ -1,5 +1,6 @@
 :block(button):mod(theme dver) {
     position: relative;
+    font-family: 'Open Sans',Arial,sans-serif;
 
     display: inline-block;
 
@@ -82,14 +83,15 @@
     }
 
     &:block(button):mod(checked) {
-        background: rgba(153, 122, 0, 0.5);
+        color: #fff;
+        background: rgba(86,133,73, 0.6);
 
         &:before {
-            background: #ffeba0;
+            background: $text_hover;
         }
 
         &:block(button):mod(pressed) {
-            background: rgba(129, 103, 0, 0.6);
+            background: rgba(86,133,73, 0.8);
 
             &:before {
                 background: #fee481;
@@ -97,7 +99,7 @@
         }
 
         &:block(button):mod(hovered) {
-            background: rgba(129, 103, 0, 0.6);
+            background: rgba(86,133,73, 0.8);
         }
     }
 

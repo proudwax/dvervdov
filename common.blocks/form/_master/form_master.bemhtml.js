@@ -1,4 +1,4 @@
-block('form').mod('callback', true)(
+block('form').mod('master', true)(
     js()(true),
 
     elem('title')(

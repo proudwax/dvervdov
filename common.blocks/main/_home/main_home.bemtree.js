@@ -8,67 +8,6 @@ block('main').mod('home', true).content()(function() {
         {
             block: 'brands-list'
         },
-        // {
-        //     block: 'row',
-        //     content: [
-
-        //         {
-        //             elem: 'col',
-        //             elemMods: { lw: 4, mw: 6, sw: 12 },
-        //             content: [
-        //                 {
-        //                     block: 'form',
-        //                     mods: { callback: true }
-        //                 }
-        //             ]
-        //         }
-        //     ]
-        // },
-        // {
-        //     block: 'content',
-        //     content: [
-        //         {
-        //             block: 'row',
-        //             content: [
-        //                 {
-        //                     block: 'filter',
-        //                     mods: { main: true },
-        //                     mix: {
-        //                         block: 'row',
-        //                         elem: 'col',
-        //                         elemMods: { lw: 6, mw: 12, sw: 12 },
-        //                     }
-        //                 },
-        //                 {
-        //                     elem: 'col',
-        //                     elemMods: { lw: 6, mw: 12, sw: 0 },
-        //                     mix: { block: 'row' },
-        //                     content: [
-        //                         {
-        //                             block: 'brands-list',
-        //                             mix: {
-        //                                 block: 'row',
-        //                                 elem: 'col',
-        //                                 elemMods: { lw: 12, mw: 6 }
-        //                             }
-        //                         },
-        //                         {
-        //                             block: 'row',
-        //                             elem: 'col',
-        //                             elemMods: { lw: 12, mw: 6 },
-        //                             content: [
-        //                                 {
-        //                                     block: 'form',
-        //                                     mods: { callback: true }
-        //                                 }
-        //                             ]
-        //                         }
-        //                     ]
-        //                 }
-        //             ]
-        //         }
-        //     ]
-        // },
         {
             block: 'content',
             content: [
@@ -101,7 +40,7 @@ block('main').mod('home', true).content()(function() {
                     content: [
                         {
                             block: 'tabs',
-                            mods: { theme: 'islands', type: 'button', size: 'l' },
+                            mods: { theme: 'dver', type: 'button', size: 'l' },
                             tabs: [
                                 {
                                    title: 'Заказ звонка',
@@ -113,11 +52,11 @@ block('main').mod('home', true).content()(function() {
                                    )
                                 },
                                 {
-                                   title: 'Заказ звонка',
+                                   title: 'Заказ мастера',
                                    content: applyCtx(
                                        {
                                            block: 'form',
-                                           mods: { callback: true },
+                                           mods: { master: true },
                                        }
                                    )
                                 }

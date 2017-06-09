@@ -1,15 +1,15 @@
-block('form').mod('callback', true).content()(function() {
+block('form').mod('master', true).content()(function() {
     return [
         {
             elem: 'header',
             content: [
                 {
                     elem: 'title',
-                    content: 'Заказ обратного звонка'
+                    content: 'Заказ замерщика'
                 },
                 {
                     elem: 'desc',
-                    content: 'Не можете определиться?! Мы поможем Вам.'
+                    content: 'Вызов мастера бесплатно! Мы поможем Вам.'
                 }
             ]
         },
