@@ -108,20 +108,30 @@ block('main').mod('home', true).content()(function() {
             ]
         },
         {
-            block: 'tabs',
-            mods: { theme: 'islands', type: 'button', size: 'l' },
-            tabs: [
+            block: 'content',
+            content: [
                 {
-                   title : 'First',
-                   content : 'First tab content'
-                },
-                {
-                   title : 'Second',
-                   content : 'Second tab content'
-                },
-                {
-                   title : 'Third',
-                   content : 'Third tab content'
+                    block: 'tabs',
+                    mods: { theme: 'islands', type: 'button', size: 'l' },
+                    tabs: [
+                        {
+                           title : 'First',
+                           content : { html: 'First  tab content' }
+                        },
+                        {
+                           title : 'Second',
+                           content : [
+                               {
+                                   block: 'form',
+                                   mods: { callback: true },
+                               }
+                           ]
+                        },
+                        {
+                           title : 'Third',
+                           content : 'Third tab content'
+                        }
+                    ]
                 }
             ]
         },
