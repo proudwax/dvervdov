@@ -1,4 +1,4 @@
-modules.define('form', ['i-bem-dom', 'button'], function(provide, bemDom, Button) {
+modules.define('form', ['i-bem-dom', 'BEMHTML', 'button'], function(provide, bemDom, BEMHTML, Button) {
 
 provide(bemDom.declBlock(this.name, {
     onSetMod: {
@@ -10,7 +10,10 @@ provide(bemDom.declBlock(this.name, {
 
         'waiting': {
             true: function () {
-                console.log('re');
+                var wait = BEMHTML.apply({ block: 'form', elem: 'waiting' }),
+                    thisNode = this.domElem[0];
+
+                bemDom.append(thisNode, wait);
                 // добавить подгрузку из BEMHTML спиннера с ожиданием, запустить проверку полей + отправку сообщения
             }
         }
