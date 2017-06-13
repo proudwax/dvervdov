@@ -8,15 +8,15 @@ block('search').content()(function() {
                 mods: { search: true }
             }
         },
-        {
-            block: 'popup',
-            mods: { theme: 'islands', target: 'position', autoclosable: true, search: true },
-            content: [
-                {
-                    block: 'form',
-                    mods: { search: true }
-                }
-            ]
-        }
+        // {
+        //     block: 'popup',
+        //     mods: { theme: 'islands', target: 'position', autoclosable: true, search: true },
+        //     content: [
+        //         {
+        //             block: 'form',
+        //             mods: { search: true }
+        //         }
+        //     ]
+        // }
     ];
 });

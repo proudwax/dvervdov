@@ -70,78 +70,94 @@ block('main').mod('home', true).content()(function() {
             block: 'service-offers'
         },
         {
-            block : 'form',
-            mods : { theme : 'islands', message : 'popup' },
-            directions : ['right-top'],
-            method : 'GET',
-            content : [
-                {
-                    elem : 'header',
-                    content : 'Simple form example'
-                },
-                {
-                    elem : 'content',
-                    content : [
-                        {
-                            block : 'form-field',
-                            name : 'radioGroup',
-                            mods : {
-                                type : 'radio-group',
-                                required : true,
-                                message : 'text'
-                            },
-                            content : [
-                                {
-                                    block : 'radio-group',
-                                    mods : { theme : 'islands', size : 'l' },
-                                    options : [
-                                        { text : 'Radio 1', val : '1' },
-                                        { text : 'Radio 2', val : '2' },
-                                        { text : 'Radio 3', val : '3' }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            block : 'fieldset',
-                            legend : {
-                                tag : 'h4',
-                                content : 'form part'
-                            },
-                            content : [
-                                {
-                                    block : 'form-field',
-                                    name : 'input',
-                                    mods : {
-                                        theme : 'islands',
-                                        type : 'input'
-                                    },
-                                    content : [
-                                        {
-                                            elem : 'label',
-                                            content : [
-                                                {
-                                                    block : 'label',
-                                                    content : 'Input'
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            elem : 'control',
-                                            content : [
-                                                {
-                                                    block : 'input',
-                                                    mods : { theme : 'islands', size : 'l' }
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                            ]
-                        }
-                    ]
-                }
-            ]
+            block: 'form-callback'
         }
+        // {
+        //     block : 'app',
+        //     js : true,
+        //     content : [
+        //         {
+        //             block: 'form',
+        //             mods: {
+        //                 theme : 'islands',
+        //                 'has-validation' : true
+        //             },
+        //             action: 'get',
+        //             method: 'GET',
+        //             content: [
+        //                 {
+        //                     block : 'form-field',
+        //                     name : 'input',
+        //                     mods : {
+        //                         theme: 'islands',
+        //                         type : 'input',
+        //                         required : true,
+        //                         message : 'popup'
+        //                     },
+        //                     directions : ['top-left'],
+        //                     js: {
+        //                         required: {
+        //                            message: 'Super required Name!'
+        //                        }
+        //                     },
+        //                     content : [
+        //                         {
+        //                             block : 'label',
+        //                             content : 'Name'
+        //                         },
+        //                         {
+        //                             block : 'input',
+        //                             mods : {
+        //                                 theme : 'islands',
+        //                                 size : 'l'
+        //                             },
+        //                             name : 'firstName'
+        //                         }
+        //                     ]
+        //                 },
+        //                 {
+        //                     block : 'form-field',
+        //                     name : 'input',
+        //                     mods : {
+        //                         theme: 'islands',
+        //                         type : 'input',
+        //                         required : true,
+        //                         message : 'popup'
+        //                     },
+        //                     directions : ['top-left'],
+        //                     js: {
+        //                         required: {
+        //                            message: 'Super required Phone!'
+        //                        }
+        //                     },
+        //                     content : [
+        //                         {
+        //                             block : 'label',
+        //                             content : 'Phone'
+        //                         },
+        //                         {
+        //                             block : 'input',
+        //                             mods : {
+        //                                 theme : 'islands',
+        //                                 size : 'l'
+        //                             },
+        //                             name : 'firstName'
+        //                         }
+        //                     ]
+        //                 },
+        //                 {
+        //                     block : 'button',
+        //                     mods : {
+        //                         theme : 'dver',
+        //                         size : 'l',
+        //                         type : 'submit',
+        //                         view : 'action'
+        //                     },
+        //                     text : 'Submit'
+        //                 }
+        //             ]
+        //         }
+        //     ]
+        // }
     ];
 });

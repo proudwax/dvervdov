@@ -67,7 +67,8 @@ var techs = {
         { path: 'node_modules/bem-forms/common.blocks', check: false },
 
         'common.blocks',
-        'desktop.blocks'
+        'desktop.blocks',
+        'theme.blocks'
     ];
 
 module.exports = function(config) {

@@ -1,6 +1,6 @@
 ({
     shouldDeps: [
-        { mods: { search: true } },
+        // { mods: { search: true } },
         { elem: 'waiting' }
     ]
 })
