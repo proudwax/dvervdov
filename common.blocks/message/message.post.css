@@ -7,12 +7,12 @@
 
     &:elem(control):block(popup):mod(size s) {
         font-size: 13px;
-        line-height: 24px;
+        line-height: 16px;
     }
 
     &:elem(control):block(popup):mod(size m) {
         font-size: 13px;
-        line-height: 28px;
+        line-height: 16px;
     }
 
     &:elem(control):block(popup):mod(size l) {

@@ -30,25 +30,25 @@ block('header').content()(function() {
                 {
                     elem: 'search',
                     content: [
-                        {
-                            block: 'search'
-                        }
+                        // {
+                        //     block: 'search'
+                        // }
                     ]
                 },
                 {
                     elem: 'cart',
                     content: [
-                        {
-                            block: 'cart'
-                        }
+                        // {
+                        //     block: 'cart'
+                        // }
                     ]
                 },
                 {
                     elem: 'toggle',
                     content: [
-                        {
-                            block: 'toggle'
-                        }
+                        // {
+                        //     block: 'toggle'
+                        // }
                     ]
                 }
             ]
