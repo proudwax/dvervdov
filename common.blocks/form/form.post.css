@@ -26,12 +26,4 @@
         line-height: 15px;
         color: $text_light;
     }
-
-    &:elem(field) {
-        margin: 8px 0;
-    }
-
-    &:elem(action) {
-        margin: 8px 0;
-    }
 }

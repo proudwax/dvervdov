@@ -1,6 +1,6 @@
-modules.define('form', ['i-bem-dom', 'BEMHTML', 'button'], function(provide, bemDom, BEMHTML, Button) {
+modules.define('form', ['i-bem-dom', 'BEMHTML', 'button'], function(provide, bemDom, BEMHTML, Button, Form) {
 
-provide(bemDom.declBlock(this.name, {
+provide(bemDom.declBlock(Form, {
     onSetMod: {
         'js': {
             'inited' : function() {
@@ -17,21 +17,6 @@ provide(bemDom.declBlock(this.name, {
                 // добавить подгрузку из BEMHTML спиннера с ожиданием, запустить проверку полей + отправку сообщения
             }
         }
-    },
-
-    _onClick: function(e) {
-        console.log(this);
-
-        this.setMod('waiting');
-        // выполняется при каждом DOM-событии "click"
-    }
-}, {
-    lazyInit : true,
-
-    onInit : function() {
-        this._events(Button).on(
-            'click',
-            this.prototype._onClick);  // в момент клика будет создан экземпляр блока и вызван его метод _onClick
     }
 }));
 

@@ -1,25 +1,24 @@
 /**
- * @module app
+ * @module form-callback
  */
 modules.define('form-callback',
-    ['i-bem-dom', 'form'],
-    function(provide, bemDom, Form) {
+    ['i-bem-dom', 'BEMHTML', 'form'],
+    function(provide, bemDom, BEMHTML, Form) {
 /**
- * app block
+ * form-callback block
  */
-provide(bemDom.declBlock(this.name, /** @lends app.prototype */{
+provide(bemDom.declBlock(this.name, {
 
     onSetMod : {
         'js' : {
             'inited' : function() {
                 this._form = this.findChildBlock(Form);
                 this._form._domEvents().on('submit', function(e, val) {
-                    console.log(this);
                     this._form.validate()
                         .then(function (fieldsStatuses) {
                             if(this._form.checkFields(fieldsStatuses)) {
+                                this.setMod('waiting');
                                 this._form.getMessage().hide();
-                                console.log(val);
                             } else {
                                 this._form.getInvalidFields().then(function (invalidFields) {
                                     invalidFields[0].getControl().setMod('focused');
@@ -29,6 +28,16 @@ provide(bemDom.declBlock(this.name, /** @lends app.prototype */{
                             }
                         }.bind(this));
                 }.bind(this));
+            }
+        },
+
+        'waiting': {
+            true: function () {
+                var wait = BEMHTML.apply({ block: this.__self._name, elem: 'waiting' }),
+                    thisNode = this.domElem[0];
+
+                bemDom.append(thisNode, wait);
+                // добавить подгрузку из BEMHTML спиннера с ожиданием, запустить проверку полей + отправку сообщения
             }
         }
     }

@@ -1,4 +1,4 @@
-block('form').elem('waiting')(
+block('form-callback').elem('waiting')(
     content()(function () {
         return {
             block: 'spin',

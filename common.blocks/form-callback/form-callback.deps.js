@@ -1,5 +1,6 @@
 ({
     shouldDeps: [
+        { elem: 'waiting' },
         { block: 'form', mods: { theme : 'islands', 'has-validation' : true } },
         { block: 'form-field', mods: { type : 'input', required : true, message : 'popup' } },
         { block: 'button', mods: { theme: 'dver', size: 'l', type: 'submit', view : 'action' } },
