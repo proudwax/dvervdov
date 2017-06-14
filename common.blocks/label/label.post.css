@@ -1,0 +1,25 @@
+:block(label) {
+    padding-right: 3px;
+
+    &:mod(size s) {
+        font-size: 13px;
+        line-height: 24px;
+    }
+
+    &:mod(size m) {
+        min-width: 60px;
+
+        font-size: 13px;
+        line-height: 28px;
+    }
+
+    &:mod(size l) {
+        font-size: 15px;
+        line-height: 32px;
+    }
+
+    &:mod(size xl) {
+        font-size: 18px;
+        line-height: 38px;
+    }
+}

@@ -1,6 +1,6 @@
 ({
     shouldDeps: [
-        { block: 'button', mods: { theme: 'islands', size: 'l' } },
+        { block: 'button', mods: { theme: 'dver', size: 'l' } },
         { block: 'icon', mods: { toggle: true } }
     ]
 })

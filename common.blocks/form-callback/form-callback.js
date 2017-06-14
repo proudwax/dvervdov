@@ -14,7 +14,7 @@ provide(bemDom.declBlock(this.name, /** @lends app.prototype */{
             'inited' : function() {
                 this._form = this.findChildBlock(Form);
                 this._form._domEvents().on('submit', function(e, val) {
-
+                    console.log(this);
                     this._form.validate()
                         .then(function (fieldsStatuses) {
                             if(this._form.checkFields(fieldsStatuses)) {

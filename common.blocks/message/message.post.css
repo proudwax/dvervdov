@@ -1,0 +1,27 @@
+:block(message) {
+    &:elem(control){
+        box-sizing: border-box;
+
+        padding: 4px;
+    }
+
+    &:elem(control):block(popup):mod(size s) {
+        font-size: 13px;
+        line-height: 24px;
+    }
+
+    &:elem(control):block(popup):mod(size m) {
+        font-size: 13px;
+        line-height: 28px;
+    }
+
+    &:elem(control):block(popup):mod(size l) {
+        font-size: 15px;
+        line-height: 32px;
+    }
+
+    &:elem(control):block(popup):mod(size xl) {
+        font-size: 18px;
+        line-height: 38px;
+    }
+}

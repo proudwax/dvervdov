@@ -9,3 +9,9 @@
         opacity: 1;
     }
 }
+
+:block(button):mod(view action){
+    :block(icon):mod(send) {
+        background-image: url(../images/send_white.svg);
+    }
+}

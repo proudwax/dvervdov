@@ -15,8 +15,13 @@
     }
 
     &:elem(content) {
+        box-sizing: border-box;
         position: absolute;
         top: 0;
+
+        background-color: #fff;
+        padding: 16px;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 10px -5px rgba(0, 0, 0, 0.4);
 
         visibility: hidden;
         opacity: 0;
