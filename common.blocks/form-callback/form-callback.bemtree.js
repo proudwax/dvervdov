@@ -1,8 +1,8 @@
 block('form-callback').content()(function() {
 
     var fields = [
-        { label: 'Имя', type: 'input', name: 'Name', placeholder: 'Ваше имя', required: 'Обязательно для заполнения' },
-        { label: 'Телефон', type: 'input', name: 'Phone', placeholder: 'Ваш номер телефона', required: 'Обязательно для заполнения' }
+        { label: 'Имя', type: 'input', name: 'Name', placeholder: 'Ваше имя', required: 'Обязательно для заполнения', validate: 'pattern', pattern: {pattern: { value: '/[a-zа-я_-]{3,}/gi', message: 'Заполните имя правильно' } } },
+        { label: 'Телефон', type: 'input', name: 'Phone', placeholder: 'Ваш номер телефона', required: 'Обязательно для заполнения', validate: 'phone', pattern: { phone: { mask: '+7(000)000-00-00', message: 'Заполните телефон правильно' } } }
     ];
 
     var bemjson = fields.map(function (item) {
@@ -13,16 +13,14 @@ block('form-callback').content()(function() {
                 theme: 'dver',
                 type : item.type,
                 required : true,
-                validate: item.name == 'Phone' ? 'phone' : 'numbers',
+                validate: item.validate,
                 message : 'popup',
                 size: 'm'
             },
             directions : ['top-left'],
             js: {
-                phone: {
-                    mask: '+7(000)000-00-00',
-                    message: 'phone'
-                },
+                pattern: item.pattern.pattern ? item.pattern.pattern : false,
+                phone: item.pattern.phone ? item.pattern.phone : false,
                 required: {
                     message: item.required
                }
@@ -42,6 +40,7 @@ block('form-callback').content()(function() {
                         size : 'm'
                     },
                     name: item.name,
+                    autocomplete: false,
                     placeholder: item.placeholder
                 }
             ]

@@ -1,4 +1,4 @@
-modules.define('form', ['i-bem-dom', 'BEMHTML', 'button'], function(provide, bemDom, BEMHTML, Button, Form) {
+modules.define('form', ['i-bem-dom', 'BEMHTML', 'form-field'], function(provide, bemDom, BEMHTML, FormField, Form) {
 
 provide(bemDom.declBlock(Form, {
     onSetMod: {
@@ -11,14 +11,18 @@ provide(bemDom.declBlock(Form, {
         'waiting': {
             true: function () {
                 var wait = BEMHTML.apply({ block: 'form', elem: 'waiting' }),
-                    thisNode = this.domElem[0];
+                    thisNode = this.domElem[0],
+                    fields = this.findChildBlocks(FormField);
+
+                fields._entities.map(function (field) {
+                    field.getMessage() && field.getMessage().hide();
+                });
 
                 bemDom.append(thisNode, wait);
                 // добавить подгрузку из BEMHTML спиннера с ожиданием, запустить проверку полей + отправку сообщения
             },
 
             '': function () {
-                // console.log(this.findChildElem('waiting'));
                 bemDom.destruct(this.findChildElem('waiting').domElem);
             }
         },
