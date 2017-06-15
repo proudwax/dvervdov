@@ -54,7 +54,7 @@ block('form-callback').content()(function() {
             theme : 'dver',
             'has-validation' : true
         },
-        action: 'get',
+        action: '/server.txt',
         method: 'GET',
         content: [
             {

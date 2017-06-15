@@ -1,6 +1,5 @@
 :block(form) {
     background-color: #fff;
-    margin-bottom: 16px;
 
     &:elem(header) {
         position: relative;

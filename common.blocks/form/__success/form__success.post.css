@@ -1,4 +1,4 @@
-:block(form-callback):elem(waiting) {
+:block(form):elem(success) {
     box-sizing: border-box;
     position: absolute;
     top: 0;
@@ -11,5 +11,10 @@
     align-items: center;
     justify-content: center;
 
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 1);
+
+    & h3 {
+        margin-top: 0;
+    }
+
 }
