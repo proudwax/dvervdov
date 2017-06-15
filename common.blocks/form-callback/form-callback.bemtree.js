@@ -13,14 +13,14 @@ block('form-callback').content()(function() {
                 theme: 'dver',
                 type : item.type,
                 required : true,
-                validate: item.name == 'Phone' ? 'pattern' : false,
+                validate: item.name == 'Phone' ? 'phone' : 'numbers',
                 message : 'popup',
                 size: 'm'
             },
             directions : ['top-left'],
             js: {
-                pattern: {
-                    value: '[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}',
+                phone: {
+                    mask: '+7(000)000-00-00',
                     message: 'phone'
                 },
                 required: {
