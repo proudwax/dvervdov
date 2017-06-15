@@ -13,13 +13,18 @@ block('form-callback').content()(function() {
                 theme: 'dver',
                 type : item.type,
                 required : true,
+                validate: item.name == 'Phone' ? 'pattern' : false,
                 message : 'popup',
                 size: 'm'
             },
             directions : ['top-left'],
             js: {
+                pattern: {
+                    value: '[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}',
+                    message: 'phone'
+                },
                 required: {
-                   message: item.required
+                    message: item.required
                }
             },
             content : [
