@@ -1,10 +1,10 @@
 /**
- * @module validation_email
+ * @module validation_pattern
  */
-modules.define('validation_phone', ['jquery_mask'], function(provide, jquery_mask) {
+modules.define('validation_pattern',
+    function(provide) {
 
-var DEFAULT_MESSAGE = 'Field requires phone inside';
-
+var DEFAULT_MESSAGE = 'Should match provided pattern "%s"';
 provide(function(field) {
     if(!field.params.pattern && !field.params.pattern.value) {
         return function () {
@@ -19,6 +19,7 @@ provide(function(field) {
             message : field.getValidationMessage('pattern') || DEFAULT_MESSAGE.replace(/%s/g, field.params.value)
         };
     };
+
 });
 
 });
