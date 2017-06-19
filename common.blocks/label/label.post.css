@@ -7,10 +7,20 @@
     }
 
     &:mod(size m) {
-        min-width: 60px;
+        min-width: 70px;
 
         font-size: 13px;
         line-height: 28px;
+
+        &:after {
+            content: ':';
+            display: inline-block;
+            padding-left: 2px;
+            padding-right: 3px;
+
+            font-size: 13px;
+            line-height: 28px;
+        }
     }
 
     &:mod(size l) {

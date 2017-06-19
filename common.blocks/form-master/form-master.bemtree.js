@@ -1,7 +1,8 @@
-block('form-callback').content()(function() {
+block('form-master').content()(function() {
 
     var fields = [
         { label: 'Имя', type: 'input', name: 'Name', placeholder: 'Ваше имя', required: 'Обязательно для заполнения', validate: 'pattern', pattern: {pattern: { value: '[a-zа-я_-]{3,}', message: 'Заполните имя правильно' } } },
+        { label: 'Email', type: 'input', name: 'Email', placeholder: 'Ваш  Email', required: 'Обязательно для заполнения', validate: 'email', pattern: { email: { message: 'Заполните email правильно' } } },
         { label: 'Телефон', type: 'input', name: 'Phone', placeholder: 'Ваш номер телефона', required: 'Обязательно для заполнения', validate: 'phone', pattern: { phone: { mask: '+7(000)000-00-00', message: 'Заполните телефон правильно' } } }
     ];
 
@@ -20,6 +21,7 @@ block('form-callback').content()(function() {
             directions : ['top-left'],
             js: {
                 pattern: item.pattern.pattern ? item.pattern.pattern : false,
+                email: item.pattern.email ? item.pattern.email : false,
                 phone: item.pattern.phone ? item.pattern.phone : false,
                 required: {
                     message: item.required
@@ -61,11 +63,11 @@ block('form-callback').content()(function() {
                 content: [
                     {
                         elem: 'title',
-                        content: 'Заказ обратного звонка'
+                        content: 'Вызов мастера'
                     },
                     {
                         elem: 'desc',
-                        content: 'Не можете определиться?! Мы поможем Вам.'
+                        content: 'Консультация и вызов мастера бесплатно!'
                     }
                 ]
             },

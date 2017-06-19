@@ -54,8 +54,7 @@ block('main').mod('home', true).content()(function() {
                                    title: 'Заказ мастера',
                                    content: applyCtx(
                                        {
-                                           block: 'form',
-                                           mods: { master: true },
+                                           block: 'form-master'
                                        }
                                    )
                                 }

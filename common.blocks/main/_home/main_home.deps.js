@@ -6,6 +6,7 @@
         'article',
         'similar',
         'form-callback',
+        'form-master',
         'tabs',
         'brands-list'
     ]
