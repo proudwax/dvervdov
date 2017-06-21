@@ -1153,7 +1153,7 @@ block('page').content()(function() {
         { block: 'header' },
         {
             block: 'main',
-            mods: { home: true }
+            mods: { catalog: true }
         },
         { block: 'footer' }
     ];

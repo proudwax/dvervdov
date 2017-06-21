@@ -30,9 +30,9 @@ block('header').content()(function() {
                 {
                     elem: 'search',
                     content: [
-                        // {
-                        //     block: 'search'
-                        // }
+                        {
+                            block: 'search'
+                        }
                     ]
                 },
                 {

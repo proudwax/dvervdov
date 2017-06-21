@@ -1,20 +1,27 @@
-:block(form):elem(success) {
-    box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: rgba(255, 255, 255, 1);
-
-    & h3 {
-        margin-top: 0;
+:block(form) {
+    &:elem(container) {
+        box-sizing: border-box;
+        padding: 16px;
     }
 
+    &:elem(success) {
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: rgba(255, 255, 255, 1);
+
+        & h3 {
+            margin-top: 0;
+        }
+
+    }
 }
