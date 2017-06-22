@@ -28,7 +28,7 @@ block('header').content()(function() {
             elem: 'action',
             content: [
                 {
-                    elem: 'search',
+                    elem: 'action-item',
                     content: [
                         {
                             block: 'search'
@@ -36,19 +36,19 @@ block('header').content()(function() {
                     ]
                 },
                 {
-                    elem: 'cart',
+                    elem: 'action-item',
                     content: [
-                        // {
-                        //     block: 'cart'
-                        // }
+                        {
+                            block: 'cart'
+                        }
                     ]
                 },
                 {
-                    elem: 'toggle',
+                    elem: 'action-item',
                     content: [
-                        // {
-                        //     block: 'toggle'
-                        // }
+                        {
+                            block: 'toggle'
+                        }
                     ]
                 }
             ]

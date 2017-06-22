@@ -2,7 +2,7 @@ block('cart').content()(function() {
     return [
         {
             block: 'button',
-            mods: { theme: 'islands', size: 'l' },
+            mods: { theme: 'dver', size: 'l' },
             icon: {
                 block: 'icon',
                 mods: { cart: true }
@@ -10,7 +10,7 @@ block('cart').content()(function() {
         },
         {
             block: 'popup',
-            mods: { theme: 'islands', target: 'anchor', autoclosable: true, cart: true },
+            mods: { theme: 'dver', target: 'anchor', autoclosable: true, cart: true },
             content: [
                 'cart'
             ]

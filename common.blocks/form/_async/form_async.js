@@ -1,6 +1,6 @@
 modules.define('form', ['i-bem-dom', 'BEMHTML', 'form-field'], function(provide, bemDom, BEMHTML, FormField, Form) {
 
-provide(bemDom.declBlock(Form, {
+provide(Form.declMod({ modName: 'async', modVal: true }, {
     onSetMod: {
         'js': {
             'inited' : function() {
@@ -58,7 +58,6 @@ provide(bemDom.declBlock(Form, {
         this.setMod('success');
         bemDom.append(thisNode, success);
     }
-
 }));
 
 });

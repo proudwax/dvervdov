@@ -1,5 +1,5 @@
 /**
- * @module form-callback
+ * @module form-master
  */
 modules.define('form-master',
     ['i-bem-dom', 'form'],

@@ -9,3 +9,7 @@
         opacity: 1;
     }
 }
+
+:block(button):mod(view action) :block(icon):mod(toggle) {
+    background-image: url(../images/toggle_white.svg);
+}

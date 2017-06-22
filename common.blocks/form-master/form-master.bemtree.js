@@ -53,7 +53,8 @@ block('form-master').content()(function() {
         block: 'form',
         mods: {
             theme : 'dver',
-            'has-validation' : true
+            'has-validation' : true,
+            async: true
         },
         action: '/server.txt',
         method: 'GET',

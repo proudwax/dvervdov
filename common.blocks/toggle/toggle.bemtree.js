@@ -2,7 +2,7 @@ block('toggle').content()(function() {
     return [
         {
             block: 'button',
-            mods: { theme: 'islands', size: 'l' },
+            mods: { theme: 'dver', size: 'l' },
             icon: {
                 block: 'icon',
                 mods: { toggle: true }

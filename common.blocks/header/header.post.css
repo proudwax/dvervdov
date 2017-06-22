@@ -45,6 +45,14 @@
         margin-left: 8px;
     }
 
+    &:elem(action-item) {
+        margin-right: 16px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
     &:elem(search) {
         flex: 0 0;
         margin-right: 8px;

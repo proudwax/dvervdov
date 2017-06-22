@@ -2,7 +2,7 @@ block('search').content()(function() {
     return [
         {
             block: 'button',
-            mods: { theme: 'islands', size: 'l' },
+            mods: { theme: 'dver', size: 'l' },
             icon: {
                 block: 'icon',
                 mods: { search: true }
@@ -10,11 +10,11 @@ block('search').content()(function() {
         },
         {
             block: 'popup',
-            mods: { theme: 'islands', target: 'position', autoclosable: true, search: true },
+            mods: { theme: 'dver', target: 'position', autoclosable: true, search: true },
+            mix : { block : 'z-index-group', mods : { level : 1 } },
             content: [
                 {
-                    block: 'form',
-                    mods: { search: true }
+                    block: 'form-search'
                 }
             ]
         }

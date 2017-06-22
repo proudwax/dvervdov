@@ -1,3 +1,8 @@
 .form-master {
     display: inline-block;
 }
+.form-master .form-field {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
