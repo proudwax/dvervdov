@@ -51,19 +51,10 @@
         &:last-child {
             margin-right: 0;
         }
-    }
 
-    &:elem(search) {
-        flex: 0 0;
-        margin-right: 8px;
-    }
-
-    &:elem(cart) {
-        flex: 0 0;
-    }
-
-    &:elem(toggle) {
-        display: none;
+        &:mod(toggle) {
+            display: none;
+        }
     }
 
     &:elem(nav) {
@@ -91,12 +82,10 @@
             text-align: left;
         }
 
-        &:elem(cart) {
-            margin-right: 8px;
-        }
-
-        &:elem(toggle) {
-            display: inline-block;
+        &:elem(action-item) {
+            &:mod(toggle) {
+                display: inline-block;
+            }
         }
     }
 }
