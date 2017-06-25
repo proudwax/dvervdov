@@ -1,12 +1,13 @@
-:block(tabs) {
+:block(accordion) {
     padding: 16px;
 
     &:elem(title) {
-        margin-left: 8px;
+        width: 100%;
 
-        font-size: 24px;
-        line-height: 32px;
-        color: #77432a;
+        & :block(button) {
+            text-align: left;
+            width: 100%;
+        }
     }
 
     &:elem(container) {

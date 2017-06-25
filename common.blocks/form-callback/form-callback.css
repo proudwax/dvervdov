@@ -1,5 +1,5 @@
 .form-callback {
-    display: inline-block;
+    display: block;
 }
 .form-callback .form-field {
     display: flex;

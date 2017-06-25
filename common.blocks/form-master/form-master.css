@@ -1,5 +1,5 @@
 .form-master {
-    display: inline-block;
+    display: block;
 }
 .form-master .form-field {
     display: flex;

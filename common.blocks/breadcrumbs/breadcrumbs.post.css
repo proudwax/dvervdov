@@ -1,0 +1,48 @@
+:block(breadcrumbs) {
+    box-sizing: border-box;
+    margin-bottom: 16px;
+
+    font-size: 13px;
+    line-height: 15px;
+
+    &:elem(item) {
+        position: relative;
+        color: $text_active;
+        text-decoration: none;
+
+        padding-right: 15px;
+
+        transition: color .25s ease-out;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            content: '';
+            height: 15px;
+            width: 15px;
+
+            background-image: url(../../theme.blocks/theme/_dver/arrow-s.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            transform: rotate(270deg);
+        }
+
+        &:last-child {
+            color: $text_light;
+
+            &:after{
+                content: none;
+            }
+
+            &:hover {
+                color: $text_light;
+            }
+        }
+
+        &:hover {
+            color: $text_hover;
+            cursor: pointer;
+        }
+    }
+
+}
