@@ -1,4 +1,7 @@
 :block(accordion) {
+    box-sizing: border-box;
+    padding: 8px;
+
     &:elem(title) {
         width: 100%;
 
