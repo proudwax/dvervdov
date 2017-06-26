@@ -1,6 +1,4 @@
 :block(accordion) {
-    padding: 16px;
-
     &:elem(title) {
         width: 100%;
 
@@ -8,11 +6,45 @@
             text-align: left;
             width: 100%;
         }
+
+        & :block(button):mod(size m):block(button):mod(theme dver) {
+            :block(button):elem(text) {
+                box-sizing: border-box;
+                width: 100%;
+                margin: 0;
+                padding: 0 13px;
+
+                &:after {
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    width: 12px;
+                    height: 6px;
+                    margin-top: -3px;
+                    content: '';
+                    cursor: pointer;
+                    text-align: center;
+                    background-image: url(../../theme.blocks/theme/_dver/arrow-s.svg);
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+
+                    transform: rotate(0deg);
+                    transition: rotate .25s ease-out;
+                }
+            }
+
+            &:block(button):mod(checked) {
+                :block(button):elem(text):after {
+                    transform: rotate(180deg);
+
+                    background-image: url(../../theme.blocks/theme/_dver/arrow-s-white.svg);
+                }
+            }
+        }
     }
 
     &:elem(container) {
         position: relative;
-        margin-top: 8px;
     }
 
     &:elem(content) {
@@ -22,9 +54,10 @@
 
         background-color: #fff;
         padding: 16px;
-        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 10px -5px rgba(0, 0, 0, 0.4);
+    }
 
-        &:mod(checked) {
+    &:elem(item):mod(checked) {
+        :block(accordion):elem(content) {
             display: block;
             animation: fadeEffectIn .25s;
             animation-timing-function: ease-out;
@@ -35,8 +68,11 @@
 @keyframes fadeEffectIn {
     0%      {
         opacity: 0;
+        height: 0;
     }
-
+    50%    {
+        height: auto;
+    }
     100%    {
         opacity: 1;
     }
