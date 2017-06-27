@@ -30,8 +30,12 @@ block('main').mod('catalog', true).content()(function() {
                                     )
                                 },
                                 {
-                                    title: 'second',
-                                    content: '2'
+                                    title: 'Glasses',
+                                    content: applyCtx(
+                                        {
+                                            block: 'glasses'
+                                        }
+                                    )
                                 },
                                 {
                                     title: 'third',

@@ -7,6 +7,7 @@
         { block: 'filter', mods: { main: true } },
         'content',
         'colors',
+        'glasses',
         'form-field',
         { block: 'row', elem: 'col', mods: { border: true } }
     ]

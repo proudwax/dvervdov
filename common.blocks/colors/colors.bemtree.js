@@ -45,6 +45,9 @@ block('colors').content()(function() {
             ]
         },
         {
+            elem: 'divider'
+        },
+        {
             block: 'form-field',
             mods : {
                 theme: 'dver',
