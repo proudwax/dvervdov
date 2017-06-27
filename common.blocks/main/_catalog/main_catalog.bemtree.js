@@ -21,12 +21,37 @@ block('main').mod('catalog', true).content()(function() {
                             mods: { theme: 'dver', size: 'm' },
                             items: [
                                 {
-                                    title: 'first',
-                                    content: '1'
+                                    title: 'Colors',
+                                    content: applyCtx(
+                                        {
+                                            block: 'colors'
+                                        }
+                                    )
                                 },
                                 {
                                     title: 'second',
-                                    content: '2'
+                                    content: applyCtx({
+                                        block: 'checkbox-group',
+                                        mods: {
+                                            theme: 'islands',
+                                            size: 'm',
+                                        },
+                                        name: 'checkbox-line',
+                                        options: [
+                                            {
+                                                val: 1,
+                                                text: 'Блок'
+                                            },
+                                            {
+                                                val: 2,
+                                                text: 'Элемент'
+                                            },
+                                            {
+                                                val: 3,
+                                                text: 'Модификатор'
+                                            }
+                                        ]
+                                    })
                                 },
                                 {
                                     title: 'third',

@@ -2,19 +2,19 @@ block('accordion')(
     js()(true),
 
     content()(function() {
+        var mods = this.mods;
 
-        var ctx = this.ctx,
-            container = [];
-
-        container =  ctx.items && ctx.items.map(function (item, i) {
-            return {
+        return {
+            elem: 'container',
+            content: (this.ctx.items || []).map(function (item, i) {
+                return {
                     elem: 'item',
                     content: [
                         {
                             block: 'checkbox',
-                            mods: { theme: ctx.mods && ctx.mods.theme, size: ctx.mods && ctx.mods.size, type: 'button' },
-                            mix: { block: ctx.block, elem: 'title' },
-                            name: ctx.block + '-' + i,
+                            mods: { theme: mods.theme, size: mods.size, type: 'button' },
+                            mix: { block: this.block, elem: 'title', js: true },
+                            name: this.block + '-' + i,
                             val: i,
                             text: item.title
                         },
@@ -24,11 +24,7 @@ block('accordion')(
                         }
                     ]
                 };
-        });
-
-        return {
-            elem: 'container',
-            content: container
+            }, this)
         };
     })
 );

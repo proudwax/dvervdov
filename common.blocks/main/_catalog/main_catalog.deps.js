@@ -6,6 +6,9 @@
         'similar',
         { block: 'filter', mods: { main: true } },
         'content',
-        { block: 'row', elem: 'col', mods: { border: true } }
+        'colors',
+        { block: 'row', elem: 'col', mods: { border: true } },
+        { block: 'checkbox-group', mods: { theme: 'islands', size: 'm', type: 'line' }
+    }
     ]
 })
