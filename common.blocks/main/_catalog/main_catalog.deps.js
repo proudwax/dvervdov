@@ -1,14 +1,13 @@
 ({
     shouldDeps: [
-        { block: 'accordion', mods: { theme: 'dver', size: 'm' } },
+        { block: 'accordion', mods: { theme: 'dver', size: 'l' } },
         'breadcrumbs',
         'service-offers',
         'similar',
         { block: 'filter', mods: { main: true } },
         'content',
         'colors',
-        { block: 'row', elem: 'col', mods: { border: true } },
-        { block: 'checkbox-group', mods: { theme: 'islands', size: 'm', type: 'line' }
-    }
+        'form-field',
+        { block: 'row', elem: 'col', mods: { border: true } }
     ]
 })

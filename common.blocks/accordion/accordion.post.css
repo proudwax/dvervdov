@@ -50,6 +50,10 @@
         position: relative;
     }
 
+    &:elem(item) {
+        margin-bottom: 8px;
+    }
+
     &:elem(content) {
         display: none;
 

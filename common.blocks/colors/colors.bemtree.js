@@ -5,70 +5,64 @@ block('colors').content()(function() {
 
     color_base = colors_base.map(function (item) {
         return {
-            elem: 'item',
-            mix: { block: 'row', elem: 'col', elemMods : { sw : 12, mw : 4, lw: 6 } },
-            content: [
-                {
-                    block: 'checkbox',
-                    mods: {
-                        theme: 'dver',
-                        size: 'l',
-                        image: true,
-                        checked: item.checked
-                    },
-                    image: {
-                        url: 'http://lorempixel.com/100/100/?' + Math.random()
-                    },
-                    name: item.name,
-                    val: item.val,
-                    text: item.text
-                }
-            ]
+            image: {
+                url: 'http://lorempixel.com/100/100/?' + Math.random()
+            },
+            val: item.val,
+            text: item.text
         };
     });
 
     color = colors.map(function (item) {
         return {
-            elem: 'item',
-            mix: { block: 'row', elem: 'col', elemMods : { sw : 12, mw : 4, lw: 6 } },
-            content: [
-                {
-                    block: 'checkbox',
-                    mods: {
-                        theme: 'dver',
-                        size: 'l',
-                        image: true,
-                        checked: item.checked
-                    },
-                    image: {
-                        url: 'http://lorempixel.com/100/100/?' + Math.random()
-                    },
-                    name: item.name,
-                    val: item.val,
-                    text: item.fields.Name
-                }
-            ]
+            image: {
+                url: 'http://lorempixel.com/100/100/?' + Math.random()
+            },
+            val: item.val,
+            text: item.fields.Name
         };
     });
 
     return [
         {
-            elem: 'title',
-            content: 'Colors base'
+            block: 'form-field',
+            mods : {
+                theme: 'dver',
+                type: 'checkbox-group',
+                size: 'l'
+            },
+            content : [
+                {
+                    block: 'checkbox-group',
+                    mods: {
+                        theme: 'dver',
+                        size: 'l',
+                        image: true
+                    },
+                    name: colors_base[0].name,
+                    options: color_base
+                }
+            ]
         },
         {
-            elem: 'list',
-            mix: { block: 'row' },
-            content: color_base
-        },
-        {
-            elem: 'title',
-            content: 'Colors'
-        },
-        {
-            elem: 'list',
-            mix: { block: 'row' },
-            content: color
+            block: 'form-field',
+            mods : {
+                theme: 'dver',
+                type: 'checkbox-group',
+                size: 'l'
+            },
+            content : [
+                {
+                    block: 'checkbox-group',
+                    mods: {
+                        theme: 'dver',
+                        size: 'l',
+                        image: true
+                    },
+                    name: colors[0].name,
+                    options: color
+                }
+            ]
         }
     ];
 

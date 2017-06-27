@@ -18,10 +18,11 @@ block('main').mod('catalog', true).content()(function() {
                         // }
                         {
                             block: 'accordion',
-                            mods: { theme: 'dver', size: 'm' },
+                            mods: { theme: 'dver', size: 'l' },
                             items: [
                                 {
                                     title: 'Colors',
+                                    checked: true,
                                     content: applyCtx(
                                         {
                                             block: 'colors'
@@ -30,28 +31,7 @@ block('main').mod('catalog', true).content()(function() {
                                 },
                                 {
                                     title: 'second',
-                                    content: applyCtx({
-                                        block: 'checkbox-group',
-                                        mods: {
-                                            theme: 'islands',
-                                            size: 'm',
-                                        },
-                                        name: 'checkbox-line',
-                                        options: [
-                                            {
-                                                val: 1,
-                                                text: 'Блок'
-                                            },
-                                            {
-                                                val: 2,
-                                                text: 'Элемент'
-                                            },
-                                            {
-                                                val: 3,
-                                                text: 'Модификатор'
-                                            }
-                                        ]
-                                    })
+                                    content: '2'
                                 },
                                 {
                                     title: 'third',

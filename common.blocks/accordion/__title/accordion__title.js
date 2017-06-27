@@ -1,14 +1,10 @@
-modules.define('accordion__title', ['i-bem-dom', 'checkbox', 'events'], function(provide, bemDom, Checkbox, Events) {
+modules.define('accordion__title', ['i-bem-dom', 'checkbox'], function(provide, bemDom, Checkbox) {
 
 provide(bemDom.declElem('accordion', 'title', {
     _onCheckboxChanged: function(e) {
-        var accordionEmitter = new Events.Emitter();
+        var checkbox = this.findMixedBlock(Checkbox);
 
-
-        // accordionEmitter.on('accordionChange', function (e) {
-        //     console.log(e);
-        // });
-        accordionEmitter.emit('accordionChange');
+        this._emit('accordionChange', { name: checkbox.getName(), flag: checkbox.hasMod('checked') });
     }
 }, {
     lazyInit : true,
