@@ -27,9 +27,6 @@ block('main').mod('catalog', true).content()(function() {
                     ]
                 }
             ]
-        },
-        {
-            block: 'service-offers'
         }
     ];
 });

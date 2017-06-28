@@ -1153,8 +1153,12 @@ block('page').content()(function() {
         { block: 'header' },
         {
             block: 'main',
-            mods: { catalog: true }
+            mods: { product: true }
+            // mods: { catalog: true }
             // mods: { home: true }
+        },
+        {
+            block: 'service-offers'
         },
         { block: 'footer' }
     ];
