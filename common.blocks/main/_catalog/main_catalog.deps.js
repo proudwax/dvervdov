@@ -1,14 +1,11 @@
 ({
     shouldDeps: [
-        { block: 'accordion', mods: { theme: 'dver', size: 'l' } },
+
         'breadcrumbs',
         'service-offers',
         'similar',
-        { block: 'filter', mods: { main: true } },
         'content',
-        'colors',
-        'glasses',
-        'form-field',
+        'form-filter',
         { block: 'row', elem: 'col', mods: { border: true } }
     ]
 })

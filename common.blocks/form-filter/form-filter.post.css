@@ -1,0 +1,12 @@
+:block(form-filter) {
+    box-sizing: border-box;
+    display: block;
+
+    padding: 8px;
+}
+
+/*.form-master .form-field {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}*/

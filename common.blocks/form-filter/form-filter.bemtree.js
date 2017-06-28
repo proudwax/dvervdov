@@ -1,87 +1,88 @@
 block('form-filter').content()(function() {
 
-
-    var bemjson = fields.map(function (item) {
-        return {
-            block: 'form-field',
-            name: item.type,
-            mods : {
-                theme: 'dver',
-                type : item.type,
-                required : true,
-                validate: item.validate,
-                message : 'popup',
-                size: 'm'
+    var content = {
+        block: 'accordion',
+        mods: { theme: 'dver', size: 'l' },
+        items: [
+            {
+                title: 'Colors',
+                checked: true,
+                content: applyCtx(
+                    {
+                        block: 'feild-colors'
+                    }
+                )
             },
-            directions : ['top-left'],
-            js: {
-                pattern: item.pattern.pattern ? item.pattern.pattern : false,
-                email: item.pattern.email ? item.pattern.email : false,
-                phone: item.pattern.phone ? item.pattern.phone : false,
-                required: {
-                    message: item.required
-               }
+            {
+                title: 'Glasses',
+                content: applyCtx(
+                    {
+                        block: 'feild-glasses'
+                    }
+                )
             },
-            content : [
-                {
-                    block: 'label',
-                    mods : { size : 'm' },
-                    content: item.label
-                },
-                {
-                    block: item.type,
-                    mods : {
-                        theme : 'dver',
-                        'has-clear': true,
-                        width: 'available',
-                        size : 'm'
-                    },
-                    name: item.name,
-                    autocomplete: false,
-                    placeholder: item.placeholder
-                }
-            ]
-        }
-    });
+            {
+                title: 'Price (RUR)',
+                checked: true,
+                content: applyCtx({
+                    block: 'range',
+                    name: 'filter_Price[]',
+                    start: [90, 200],
+                    text: ['from', 'to'],
+                    min: 50,
+                    max: 300
+                })
+            }
+        ]
+    };
 
     return {
         block: 'form',
         mods: {
-            theme : 'dver',
-            'has-validation' : true,
-            async: true
+            theme : 'dver'
         },
-        action: '/server.txt',
+        action: '#filter',
         method: 'GET',
         content: [
             {
-                elem: 'header',
-                content: [
-                    {
-                        elem: 'title',
-                        content: 'Вызов мастера'
-                    },
-                    {
-                        elem: 'desc',
-                        content: 'Консультация и вызов мастера бесплатно!'
-                    }
-                ]
-            },
-            {
                 elem: 'content',
-                content: bemjson
+                content: content
             },
             {
                 elem: 'footer',
                 content: [
                     {
-                        block: 'button',
-                        mods: { theme: 'dver', size: 'l', type: 'submit', view : 'action' },
-                        icon: {
-                            block: 'icon',
-                            mods: { send: true }
-                        },
-                        text: 'Отправить'
+                        elem: 'action',
+                        content: [
+                            {
+                                elem: 'action-item',
+                                content: [
+                                    {
+                                        block: 'button',
+                                        mods: { theme: 'dver', size: 'l', type: 'submit', view: 'action', width: 'available' },
+                                        icon: {
+                                            block: 'icon',
+                                            mods: { filter: true }
+                                        },
+                                        text: 'Отправить'
+                                    }
+                                ]
+                            },
+                            {
+                                elem: 'action-item',
+                                content: [
+                                    {
+                                        block: 'button',
+                                        mods: { theme: 'dver', size: 'l', width: 'available' },
+                                        icon: {
+                                            block: 'icon',
+                                            mods: { refresh: true }
+                                        },
+                                        text: 'Сбросить'
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             }

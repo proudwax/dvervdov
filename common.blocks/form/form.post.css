@@ -25,4 +25,15 @@
         line-height: 15px;
         color: $text_light;
     }
+
+    &:elem(action) {
+        box-sizing: border-box;
+        margin-top: 32px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    &:elem(action-item) {
+        margin-top: 8px;
+    }
 }

@@ -1,4 +1,11 @@
-:block(glasses) {
+:block(feild-colors) {
+    &:elem(divider) {
+        height: 1px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .2);
+        margin-bottom: 8px;
+    }
+
     & :block(checkbox-group) {
         display: inline-block;
         width: 100%;

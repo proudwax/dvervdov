@@ -1,4 +1,4 @@
-block('glasses').content()(function() {
+block('feild-glasses').content()(function() {
 
     let glasses = this.data.filter.data[2].glass;
 
@@ -15,6 +15,7 @@ block('glasses').content()(function() {
     return [
         {
             block: 'form-field',
+            name: glasses[0].name,
             mods : {
                 theme: 'dver',
                 type: 'checkbox-group',

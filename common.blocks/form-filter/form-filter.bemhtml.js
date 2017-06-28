@@ -1,4 +1,4 @@
-block('form-master')(
+block('form-filter')(
     js()(true),
 
     elem('title')(

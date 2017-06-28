@@ -1,7 +1,4 @@
 :block(accordion) {
-    box-sizing: border-box;
-    padding: 8px;
-
     &:elem(title) {
         width: 100%;
 
@@ -10,11 +7,11 @@
             width: 100%;
         }
 
-        & :block(button):mod(size m):block(button):mod(theme dver) {
+        & :block(button):mod(theme dver) {
             :block(button):elem(text) {
                 box-sizing: border-box;
                 width: 100%;
-                margin: 0;
+                margin: 0 !important;
                 padding: 0 13px;
 
                 &:after {
@@ -41,6 +38,18 @@
                     transform: rotate(180deg);
 
                     background-image: url(../../theme.blocks/theme/_dver/arrow-s-white.svg);
+                }
+            }
+
+            &:block(button):mod(size l) {
+                :block(button):elem(text):after {
+                    background-image: url(../../theme.blocks/theme/_dver/arrow.svg);
+                }
+
+                &:block(button):mod(checked) {
+                    :block(button):elem(text):after {
+                        background-image: url(../../theme.blocks/theme/_dver/arrow-white.svg);
+                    }
                 }
             }
         }

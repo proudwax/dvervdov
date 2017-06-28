@@ -1,4 +1,4 @@
-block('colors').content()(function() {
+block('feild-colors').content()(function() {
 
     let colors_base = this.data.filter.data[0].color_filter;
     let colors = this.data.filter.data[1].color;
@@ -26,6 +26,7 @@ block('colors').content()(function() {
     return [
         {
             block: 'form-field',
+            name: colors_base[0].name,
             mods : {
                 theme: 'dver',
                 type: 'checkbox-group',
@@ -49,6 +50,7 @@ block('colors').content()(function() {
         },
         {
             block: 'form-field',
+            name: colors[0].name,
             mods : {
                 theme: 'dver',
                 type: 'checkbox-group',
