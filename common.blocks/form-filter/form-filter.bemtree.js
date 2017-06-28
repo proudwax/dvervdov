@@ -74,6 +74,7 @@ block('form-filter').content()(function() {
                                     {
                                         block: 'button',
                                         mods: { theme: 'dver', size: 'l', width: 'available' },
+                                        mix: { block: this.block, elem: 'refresh' },
                                         icon: {
                                             block: 'icon',
                                             mods: { refresh: true }
