@@ -12,7 +12,7 @@ block('main').mod('home', true).content()(function() {
             block: 'content',
             content: [
                 {
-                    block: 'similar'
+                    block: 'catalog'
                 }
             ]
         },

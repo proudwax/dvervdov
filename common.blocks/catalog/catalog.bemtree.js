@@ -1,4 +1,4 @@
-block('similar').content()(function() {
+block('catalog').content()(function() {
 
     let products = this.data.products.map(function (item) {
         return {
@@ -50,6 +50,10 @@ block('similar').content()(function() {
         {
             block: 'row',
             content: products
+        },
+        {
+            block: 'pager',
+            mix: { block: this.block, elem: 'pager' }
         }
     ];
 

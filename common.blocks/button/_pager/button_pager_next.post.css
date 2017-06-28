@@ -1,0 +1,22 @@
+:block(button):mod(pager next) {
+    :block(button):elem(text) {
+        padding-right: 13px;
+    }
+
+    :block(button):elem(text):after {
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        width: 12px;
+        height: 6px;
+        margin-top: -2px;
+        content: '';
+        cursor: pointer;
+        text-align: center;
+        background-image: url(../../theme.blocks/theme/_dver/arrow-s.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
+        transform: rotate(270deg);
+    }
+}

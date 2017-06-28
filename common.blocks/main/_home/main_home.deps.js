@@ -4,7 +4,7 @@
         'service-offers',
         'content',
         'article',
-        'similar',
+        'catalog',
         'form-callback',
         'form-master',
         'tabs',
