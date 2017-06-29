@@ -1,0 +1,27 @@
+:block(list) {
+    box-sizing: border-box;
+    padding: 16px;
+    margin-bottom: 16px;
+
+    &:elem(title) {
+        font-size: 24px;
+        line-height: 32px;
+        color: #77432a;
+    }
+
+    &:elem(item) {
+        color: $text_active;
+        text-decoration: none;
+        margin-right: 16px;
+
+        transition: color .25s ease-out;
+
+        &:hover {
+            color: $text_hover;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

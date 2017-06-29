@@ -29,7 +29,7 @@
     }
 
     &:elem(image) {
-        margin-bottom: 8px;
+        margin-bottom: 16px;
 
         &  > :block(image) {
             max-height: 200px;
@@ -40,7 +40,7 @@
         position: absolute;
         left: 16px;
         right: 16px;
-        bottom: 96px;
+        bottom: 92px;
 
         text-align: center;
         text-decoration: none;
@@ -76,8 +76,10 @@
     }
 
     &:elem(old) {
-        position: relative;
-        top: 8px;
+        position: absolute;
+        top: -5px;
+        left: 0;
+        right: 0;
 
         font-size: 10px;
         line-height: 12px;

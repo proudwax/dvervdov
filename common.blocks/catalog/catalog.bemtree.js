@@ -3,7 +3,7 @@ block('catalog').content()(function() {
     let products = this.data.products.map(function (item) {
         return {
             elem: 'col',
-            elemMods: { lw: 3, mw: 4, sw: 12 },
+            elemMods: { lw: 4, mw: 6, sw: 12 },
             content: [
                 {
                     block: 'product-card',
