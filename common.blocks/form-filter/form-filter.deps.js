@@ -1,4 +1,5 @@
 ({
+    mustDeps : 'i-bem-dom',
     shouldDeps: [
         { block: 'form', mods: { theme: 'dver' } },
         { block: 'accordion', mods: { theme: 'dver', size: 'l' } },

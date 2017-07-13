@@ -9,6 +9,10 @@
         color: #77432a;
     }
 
+    &:elem(container) {
+        font-size: 13px;
+    }
+
     &:elem(item) {
         color: $text_active;
         text-decoration: none;

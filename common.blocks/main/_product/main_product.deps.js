@@ -1,5 +1,6 @@
 ({
     shouldDeps: [
-        'breadcrumbs'
+        'breadcrumbs',
+        'product'
     ]
 })
