@@ -9,6 +9,7 @@ var techs = {
     // css
     postcss: require('enb-postcss/techs/enb-postcss'),
     postcssPlugins: [
+        require('postcss-mixins'),
         require('postcss-import')(),
         require('postcss-each'),
         require('postcss-for'),
@@ -33,24 +34,6 @@ var techs = {
     // bemhtml
     bemhtml: require('enb-bemxjst/techs/bemhtml'),
     bemtreeToHtml: require('./techs/bemtree-to-html'),
-
-    // postcss
-    postcss: {
-        postcss: require('enb-postcss/techs/enb-postcss'),
-        plugins: function() {
-            return [
-                require('postcss-import')(),
-                require('postcss-each'),
-                require('postcss-for'),
-                require('postcss-simple-vars')(),
-                require('postcss-calc')(),
-                require('postcss-nested'),
-                require('rebem-css'),
-                require('postcss-url')({ url: 'rebase' }),
-                require('autoprefixer')([ 'ie >= 10', 'last 2 versions', 'opera 12.1', '> 2%' ])
-            ];
-        }
-    }
     },
     enbBemTechs = require('enb-bem-techs'),
     levels = [
@@ -84,7 +67,7 @@ module.exports = function(config) {
             [enbBemTechs.files],
 
             // css
-            [techs.postcss.postcss, {
+            [techs.postcss, {
                 target: '?.no-grid.css',
                 plugins: techs.postcssPlugins
             }],
