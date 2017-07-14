@@ -1,3 +1,44 @@
 :block(product) {
 
+    &:elem(details) {
+        display: flex;
+        flex-flow: row wrap;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &:elem(header) {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    &:elem(title) {
+        font-size: 24px;
+        line-height: 32px;
+        color: $text_dark;
+    }
+
+    &:elem(slider) {
+        box-sizing: border-box;
+        width: 50%;
+
+        height: 50px;
+    }
+
+    &:elem(options) {
+        width: 50%;
+    }
+}
+
+@media (--small-only) {
+    :block(product) {
+        &:elem(slider) {
+            width: 100%;
+        }
+
+        &:elem(options) {
+            width: 100%;
+        }
+    }
 }

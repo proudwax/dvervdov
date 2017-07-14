@@ -15,6 +15,7 @@ var techs = {
         require('postcss-simple-vars')(),
         require('postcss-calc')(),
         require('postcss-nested'),
+        require('postcss-custom-media'),
         require('rebem-css'),
         require('postcss-url')({ url: 'inline' }),
         require('autoprefixer')({

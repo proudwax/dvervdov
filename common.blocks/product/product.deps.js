@@ -1,5 +1,8 @@
 ({
+    mustDeps : [
+        'mq'
+    ],
     shouldDeps: [
-        
+
     ]
 })
