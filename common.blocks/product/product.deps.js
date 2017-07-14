@@ -3,6 +3,6 @@
         'mq'
     ],
     shouldDeps: [
-
+        'product-options'
     ]
 })

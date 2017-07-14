@@ -25,8 +25,6 @@ block('product').content()(function() {
         material: 'Шпон'
     };
 
-
-
     return [
         {
             elem: 'details',
@@ -51,7 +49,13 @@ block('product').content()(function() {
                 },
                 {
                     elem: 'options',
-                    content: 'options'
+                    content: [
+                        {
+                            block: 'product-options',
+                            title: 'Colors',
+                            options: this.data['colors-list']
+                        }
+                    ]
                 }
             ]
         },
