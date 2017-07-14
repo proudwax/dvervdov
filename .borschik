@@ -6,6 +6,5 @@
         "*.blocks/**/images/**": "static/images",
         "*.blocks/**": ":base64:",
         "*.blocks/**/*.svg": ":encodeURIComponent:"
-    },
-    "freeze_nesting_level": 1
+    }
 }

@@ -13,7 +13,7 @@
         content: '';
         cursor: pointer;
         text-align: center;
-        background-image: url(../../theme.blocks/theme/_dver/arrow-s.svg);
+        background-image: url(../../../theme.blocks/theme/_dver/arrow-s.svg);
         background-repeat: no-repeat;
         background-position: 50% 50%;
 

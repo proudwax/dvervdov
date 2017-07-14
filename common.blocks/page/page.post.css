@@ -5,6 +5,15 @@ $text_hover: #a3c62c;
 $text_light: #7f7f7f;
 $text_dark: #77432a;
 
+@define-mixin title $color: $text_dark {
+    &:elem(title) {
+        font-size: 24px;
+        line-height: 32px;
+        color: $color;
+        @mixin-content;
+    }
+}
+
 :block(page) {
     font: 16px/2 'Open Sans',Arial,sans-serif;
     color: $text_def;

@@ -1,39 +1,37 @@
-var techs = {
-    // essential
-    fileProvider: require('enb/techs/file-provider'),
-    fileMerge: require('enb/techs/file-merge'),
+const techs = {
+        // essential
+        fileProvider: require('enb/techs/file-provider'),
+        fileMerge: require('enb/techs/file-merge'),
 
-    // optimization
-    borschik: require('enb-borschik/techs/borschik'),
+        // optimization
+        borschik: require('enb-borschik/techs/borschik'),
 
-    // css
-    postcss: require('enb-postcss/techs/enb-postcss'),
-    postcssPlugins: [
-        require('postcss-mixins'),
-        require('postcss-import')(),
-        require('postcss-each'),
-        require('postcss-for'),
-        require('postcss-simple-vars')(),
-        require('postcss-calc')(),
-        require('postcss-nested'),
-        require('postcss-custom-media'),
-        require('rebem-css'),
-        require('postcss-url')({ url: 'inline' }),
-        require('autoprefixer')({
-            browsers: ['ie >= 10', 'last 2 versions', 'opera 12.1', '> 2%']
-        }),
-        require('postcss-reporter')()
-    ],
+        // css
+        postcss: require('enb-postcss/techs/enb-postcss'),
+        postcssPlugins: [
+            require('postcss-import')(),
+            require('postcss-each'),
+            require('postcss-for'),
+            require('postcss-mixins'),
+            require('postcss-custom-media'),
+            require('postcss-simple-vars')(),
+            require('postcss-calc')(),
+            require('postcss-nested'),
+            require('rebem-css'),
+            require('postcss-url')({ url: 'rebase' }),
+            require('autoprefixer')(),
+            require('postcss-reporter')()
+        ],
 
-    // js
-    browserJs: require('enb-js/techs/browser-js'),
+        // js
+        browserJs: require('enb-js/techs/browser-js'),
 
-    // bemtree
-    bemtree: require('enb-bemxjst/techs/bemtree'),
+        // bemtree
+        bemtree: require('enb-bemxjst/techs/bemtree'),
 
-    // bemhtml
-    bemhtml: require('enb-bemxjst/techs/bemhtml'),
-    bemtreeToHtml: require('./techs/bemtree-to-html'),
+        // bemhtml
+        bemhtml: require('enb-bemxjst/techs/bemhtml'),
+        bemtreeToHtml: require('./techs/bemtree-to-html'),
     },
     enbBemTechs = require('enb-bem-techs'),
     levels = [
@@ -69,6 +67,7 @@ module.exports = function(config) {
             // css
             [techs.postcss, {
                 target: '?.no-grid.css',
+                oneOfSourceSuffixes: ['post.css', 'css'],
                 plugins: techs.postcssPlugins
             }],
 
