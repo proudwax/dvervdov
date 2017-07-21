@@ -1,5 +1,5 @@
 /**
- * @module validation_email
+ * @module validation_phone
  */
 modules.define('validation_phone', ['jquery_mask', 'input'], function(provide, jquery_mask, Input) {
 

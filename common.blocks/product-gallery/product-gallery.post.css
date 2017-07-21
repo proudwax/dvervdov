@@ -1,0 +1,148 @@
+:block(product-gallery) {
+    max-width: 1200px;
+    margin: 0 auto 16px;
+    overflow: hidden;
+
+    &:elem(list) {
+        margin: 0 -8px;
+    }
+
+    &:elem(item) {
+        margin: 0 8px;
+    }
+
+    .slick-arrow {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        bottom: 0;
+
+        display: inline-block;
+
+        width: 32px;
+
+        margin: 0;
+        padding: 0;
+
+        user-select: none;
+
+        color: $text_def;
+        text-indent: -99999px;
+        border: 0;
+        outline: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+
+        text-align: center;
+        white-space: nowrap;
+
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+        &::-moz-focus-inner {
+            padding: 0;
+
+            border: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:before {
+            position: absolute;
+            top: calc(50% - 16px);
+            left: 0;
+
+            width: 32px;
+            height: 32px;
+
+            content: '';
+
+            background-image: url('../../theme.blocks/theme/_dver/arrow.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+
+    .slick-arrow.slick-disabled {
+        opacity: .2;
+    }
+
+    .slick-prev.slick-arrow {
+        left: 8px;
+
+        &:before {
+            transform:rotate(90deg);
+        }
+    }
+
+    .slick-next.slick-arrow {
+        right: 8px;
+
+        &:before {
+            transform:rotate(270deg);
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+
+        list-style: none;
+
+        margin: 0;
+        padding: 0;
+
+        & li {
+            display: inline-block;
+
+            width: 32px;
+            height: 32px;
+
+            text-align: center;
+        }
+
+        & button {
+            position: relative;
+
+            display: inline-block;
+
+            width: 8px;
+            height: 8px;
+
+            margin: 0;
+            padding: 0;
+
+            user-select: none;
+
+            color: $text_def;
+            text-indent: -99999px;
+            border: 0;
+            outline: 0;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.2);
+
+            text-align: center;
+            white-space: nowrap;
+
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transition: background ease-out .2s;
+
+            &::-moz-focus-inner {
+                padding: 0;
+
+                border: 0;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: $text_hover;
+            }
+        }
+
+        & .slick-active button {
+            background-color: $text_active;
+        }
+    }
+}

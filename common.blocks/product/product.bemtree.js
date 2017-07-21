@@ -6,19 +6,28 @@ block('product').content()(function() {
             'current': 5000
         },
         'slider': [
-            { image: 'http://lorempixel.com/800/400/', title: 'Text 1', description: 'description text', path: '#1' },
-            { image: 'http://lorempixel.com/800/400/', title: 'Text 2', description: 'description text', path: '#2' },
-            { image: 'http://lorempixel.com/800/400/', title: 'Text 3', description: 'description text', path: '#3' }
+            { image: '../../common.blocks/product/images/dver1.jpg', title: 'Text 1', description: 'description text', path: '#1' },
+            { image: '../../common.blocks/product/images/dver2.jpg', title: 'Text 2', description: 'description text', path: '#2' },
+            { image: '../../common.blocks/product/images/dver3.jpg', title: 'Text 3', description: 'description text', path: '#3' },
+            { image: '../../common.blocks/product/images/dver4.jpg', title: 'Text 4', description: 'description text', path: '#4' }
         ],
         'colors-list': [
-            { name: 'Color 1', path: 'http://lorempixel.com/400/400/', current: true, url: '#product-1' },
+            { name: 'Color long name 1', path: 'http://lorempixel.com/400/400/', current: true, url: '#product-1' },
             { name: 'Color 2', path: 'http://lorempixel.com/400/400/', current: false, url: '#product-2' },
             { name: 'Color 3', path: 'http://lorempixel.com/400/400/', current: false, url: '#product-3' }
         ],
         'glasses-list': [
-            { name: 'Glass 1', path: 'http://lorempixel.com/400/400/', current: true, url: '#product-1' },
-            { name: 'Glass 2', path: 'http://lorempixel.com/400/400/', current: false, url: '#product-2' },
+            { name: 'Glass 1', path: 'http://lorempixel.com/400/400/', current: false, url: '#product-1' },
+            { name: 'Glass 2', path: 'http://lorempixel.com/400/400/', current: true, url: '#product-2' },
             { name: 'Glass 3', path: 'http://lorempixel.com/400/400/', current: false, url: '#product-3' }
+        ],
+        gallery: [
+            { image: 'http://lorempixel.com/1024/1024/' },
+            { image: 'http://lorempixel.com/1024/1024/' },
+            { image: 'http://lorempixel.com/1024/1024/' },
+            { image: 'http://lorempixel.com/1024/1024/' },
+            { image: 'http://lorempixel.com/1024/1024/' },
+            { image: 'http://lorempixel.com/1024/1024/' }
         ],
         vendor: { name: 'Vendor', path: '#vendor' },
         collection: 'Collection 1',
@@ -43,7 +52,18 @@ block('product').content()(function() {
                     elem: 'slider',
                     content: [
                         {
-                            block: 'slider'
+                            elem: 'preview',
+                            content: [
+                                {
+                                    block: 'image',
+                                    url: 'http://dver.yazvyazda.ru/netcat_files/images/bonaveri/domenico/products/alexandriya_78_1.jpg',
+                                    alt: 'Previev'
+                                }
+                            ]
+                        },
+                        {
+                            block: 'product-slider',
+                            items: this.data.slider
                         }
                     ]
                 },
@@ -51,11 +71,63 @@ block('product').content()(function() {
                     elem: 'options',
                     content: [
                         {
-                            block: 'product-options',
-                            title: 'Colors',
-                            options: this.data['colors-list']
+                            elem: 'options-item',
+                            content: [
+                                {
+                                    elem: 'price',
+                                    content: [
+                                        {
+                                            elem: 'price-old',
+                                            content: this.data.price.old
+                                        },
+                                        {
+                                            elem: 'price-current',
+                                            content: this.data.price.current
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            elem: 'options-item',
+                            content: [
+                                {
+                                    block: 'product-list',
+                                    title: 'Features',
+                                    options: [this.data.vendor.name, this.data.collection, this.data.material]
+                                }
+                            ]
+                        },
+                        {
+                            elem: 'options-item',
+                            content: [
+                                {
+                                    block: 'product-options',
+                                    title: 'Colors',
+                                    options: this.data['colors-list']
+                                }
+                            ]
+                        },
+                        {
+                            elem: 'options-item',
+                            content: [
+                                {
+                                    block: 'product-options',
+                                    title: 'Glasses',
+                                    options: this.data['glasses-list']
+                                }
+                            ]
                         }
                     ]
+                }
+            ]
+        },
+        {
+            elem: 'gallery',
+            content: [
+                {
+                    block: 'product-gallery',
+                    items: this.data.gallery
                 }
             ]
         },

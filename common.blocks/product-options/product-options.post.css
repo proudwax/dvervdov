@@ -1,3 +1,78 @@
 :block(product-options) {
-    @mixin title {  }
+    font-size: 14px;
+    line-height: 28px;
+    color: #666;
+
+    @mixin title  $text_dark, 18px {  }
+
+    &:elem(container) {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    &:elem(item) {
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+        width: calc(50% - 4px);
+
+        text-decoration: none;
+        color: $text_def;
+
+        padding: 8px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+
+        transition: color .25s ease-out, border .25s ease-out;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        &:hover:not(&:mod(current)) {
+            border-color: $text_hover;
+            color: $text_hover;
+        }
+
+        &:mod(current) {
+            border-color: $text_active;
+            color: $text_active;
+        }
+    }
+
+    &:elem(image) {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+
+        overflow: hidden;
+        font-size: 0;
+        margin-right: 8px;
+
+        border-radius: 3px;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 10px -5px rgba(0, 0, 0, 0.4);
+    }
+
+    &:elem(text) {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (--small-only) {
+    :block(product-options) {
+        &:elem(item) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
 }

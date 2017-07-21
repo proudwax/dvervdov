@@ -4,16 +4,17 @@ block('product-options')(
     content()(function() {
         var ctx = this.ctx;
 
-        console.log(ctx.options);
-
         var items = ctx.options && ctx.options.map(function (item) {
             return {
                 elem: 'item',
-                url: ctx.url,
+                elemMods: { current: item.current },
+                url: item.url,
+                title: item.name,
                 content: [
                     {
                         elem: 'image',
-                        url: ctx.path
+                        alt: item.name,
+                        url: item.path
                     },
                     {
                         elem: 'text',
@@ -23,59 +24,55 @@ block('product-options')(
             }
         });
 
-        //     radioGroup = {
-        //         block: 'radio-group',
-        //         mix: { block: this.name, elem: 'group' },
-        //         mods: this.extend({ theme: 'islands', size: 'm', type: 'line' }, ctx.mods),
-        //         name: ctx.name || 'tabs',
-        //         options: []
-        //     },
-        //     hasChecked = false,
-        //     tabsContainer = [];
-        //
-        // ctx.tabs && ctx.tabs.forEach(function (item, i) {
-        //
-        //     var tabContent = {
-        //             elem: 'content',
-        //             js: { id: i },
-        //             elemMods: {},
-        //             content: item.content
-        //         };
-        //
-        //     radioGroup.options.push({
-        //         val: i,
-        //         text: item.title,
-        //         mix: { block: ctx.name, elem: 'tab' }
-        //     });
-        //
-        //     if (!hasChecked && item.checked === true) {
-        //         hasChecked = true;
-        //         radioGroup.val = i;
-        //         tabContent.elemMods.checked = true;
-        //     }
-        //
-        //     tabsContainer.push(tabContent);
-        //
-        // });
-        //
-        // if (!hasChecked) {
-        //     radioGroup.val = 0;
-        //     tabsContainer[0].elemMods.checked = true;
-        // }
-        //
-        // return [
-        //     radioGroup,
-        //     {
-        //         elem: 'container',
-        //         content: tabsContainer
-        //     }
-        // ];
+        return [
+            {
+                elem: 'title',
+                content: ctx.title
+            },
+            {
+                elem: 'container',
+                content: items
+            }
+        ];
     }),
 
+    elem('item')(
+        tag()('a'),
+
+        addAttrs()((ctx, json) => {
+            return {
+                href: json.url,
+                title: json.title
+            }
+        }),
+
+        match((ctx, json) => { return ctx.elemMods.current; })(
+            tag()('span'),
+
+            addAttrs()((ctx, json) => {
+                return {
+                    href: undefined,
+                    title: undefined
+                }
+            })
+        )
+    ),
+
+    elem('title')(
+        tag()('h3')
+    ),
+
+    elem('text')(
+        tag()('span')
+    ),
+
     elem('image')(
+        tag()('span'),
+
         content()((ctx, json) => {
             return {
                 block: 'image',
+                alt: json.alt,
                 url: json.url + '?' + Math.random()
             }
         })

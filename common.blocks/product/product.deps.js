@@ -3,6 +3,10 @@
         'mq'
     ],
     shouldDeps: [
-        'product-options'
+        'image',
+        'product-gallery',
+        'product-slider',
+        'product-options',
+        'product-list'
     ]
 })

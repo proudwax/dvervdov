@@ -5,11 +5,13 @@ $text_hover: #a3c62c;
 $text_light: #7f7f7f;
 $text_dark: #77432a;
 
-@define-mixin title $color: $text_dark {
+@define-mixin title $color: $text_dark, $font-size: 24px {
     &:elem(title) {
-        font-size: 24px;
-        line-height: 32px;
+        font-size: $font-size;
+        line-height: calc($font-size * 4 / 3);
         color: $color;
+        margin-top: calc($font-size * 2 / 3);
+        margin-bottom: calc($font-size * 2 / 3);
         @mixin-content;
     }
 }
