@@ -6,10 +6,6 @@ block('breadcrumbs')(
         }
     }),
 
-    elem('list')(
-        addMix()({ block: 'row' })
-    ),
-
     elem('item')(
         tag()('a'),
 

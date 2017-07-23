@@ -2,6 +2,6 @@
     mustDeps : 'i-bem-dom',
     shouldDeps: [
         'image',
-        { block: 'jquery', mods: { 'slick': true } }
+        { block: 'jquery', mods: { 'slick': true, 'colorbox': true } }
     ]
 })

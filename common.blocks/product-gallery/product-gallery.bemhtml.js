@@ -1,5 +1,8 @@
 block('product-gallery')(
-    js()(true),
+    // js()(true),
+    js()(function () {
+        return { id : this.generateId() };
+    }),
 
     content()((ctx, json) => {
         let list =  json.items && json.items.map((item) => {
@@ -22,7 +25,13 @@ block('product-gallery')(
     }),
 
     elem('image')(
-        tag()('span'),
+        tag()('a'),
+
+        addAttrs()((ctx, json) => {
+            return {
+                href: json.url + '?' + Math.random()
+            };
+        }),
 
         content()((ctx, json) => {
             return {

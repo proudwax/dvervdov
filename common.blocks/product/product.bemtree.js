@@ -22,6 +22,9 @@ block('product').content()(function() {
             { name: 'Glass 3', path: 'http://lorempixel.com/400/400/', current: false, url: '#product-3' }
         ],
         gallery: [
+            { image: '../../common.blocks/product/images/dver1.jpg' },
+            { image: '../../common.blocks/product/images/dver2.jpg' },
+            { image: '../../common.blocks/product/images/dver3.jpg' },
             { image: 'http://lorempixel.com/1024/1024/' },
             { image: 'http://lorempixel.com/1024/1024/' },
             { image: 'http://lorempixel.com/1024/1024/' },

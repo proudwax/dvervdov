@@ -1,14 +1,29 @@
 :block(breadcrumbs) {
     box-sizing: border-box;
+    width: 100%;
+    overflow-x: auto;
     margin-bottom: 16px;
 
     font-size: 13px;
     line-height: 15px;
 
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+
+    &:-webkit-scrollbar {
+        width: 0;
+    }
+
+    &:elem(list) {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
     &:elem(item) {
         position: relative;
         color: $text_active;
         text-decoration: none;
+        white-space: nowrap;
 
         padding-right: 15px;
 
@@ -16,7 +31,7 @@
 
         &:after {
             position: absolute;
-            top: 0;
+            top: 2px;
             content: '';
             height: 15px;
             width: 15px;
