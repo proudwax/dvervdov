@@ -1,5 +1,9 @@
 @import "../../../node_modules/jquery-colorbox/example2/colorbox.css";
 
+#cboxContent, #cboxLoadedContent, #cboxLoadingOverlay {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
 #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
     border:0;
     padding:0;

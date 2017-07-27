@@ -1,11 +1,11 @@
 :block(breadcrumbs) {
     box-sizing: border-box;
     width: 100%;
-    overflow-x: auto;
     margin-bottom: 16px;
+    overflow: hidden;
 
     font-size: 13px;
-    line-height: 15px;
+    line-height: 32px;
 
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;

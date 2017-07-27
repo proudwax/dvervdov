@@ -7,6 +7,7 @@
         'product-gallery',
         'product-slider',
         'product-options',
-        'product-list'
+        'product-list',
+        { block: 'jquery', mods: { 'colorbox': true } }
     ]
 })

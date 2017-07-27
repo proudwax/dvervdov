@@ -1,5 +1,5 @@
 block('product')(
-    // js()(true),
+    js()(true),
 
     elem('title')(
         tag()('h1')
@@ -21,6 +21,20 @@ block('product')(
                 ' руб.'
             ];
         })
+    ),
+
+    elem('preview')(
+        match(function () {
+            return this.ctx.url;
+        })(
+            tag()('a'),
+
+            addAttrs()(function () {
+                return {
+                    href: this.ctx.url
+                };
+            })
+        )
     )
 
 );

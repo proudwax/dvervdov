@@ -56,6 +56,7 @@ block('product').content()(function() {
                     content: [
                         {
                             elem: 'preview',
+                            url: 'http://dver.yazvyazda.ru/netcat_files/images/bonaveri/domenico/products/alexandriya_78_1.jpg',
                             content: [
                                 {
                                     block: 'image',

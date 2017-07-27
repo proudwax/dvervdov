@@ -72,7 +72,11 @@
         text-decoration: line-through;
     }
 
-    &:elem() {}
+    &:elem(description) {
+        box-sizing: border-box;
+        padding: 0 16px;
+    }
+
     &:elem() {}
 }
 

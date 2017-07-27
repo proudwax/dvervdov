@@ -37,7 +37,7 @@
             margin-right: 0;
         }
 
-        &:hover:not(&:mod(current)) {
+        &:hover:not(:block(product-options):elem(item):mod(current)) {
             border-color: $text_hover;
             color: $text_hover;
         }
