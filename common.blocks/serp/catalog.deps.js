@@ -1,0 +1,6 @@
+({
+    shouldDeps: [
+        'product-card',
+        'pager'
+    ]
+})
