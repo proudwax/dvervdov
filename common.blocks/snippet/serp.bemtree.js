@@ -11,14 +11,12 @@ block('serp').content()(function() {
     var list = data.map(function(item) {
         return {
             elem: 'item',
-            content: [
-                {
-                    block: 'snippet',
-                    url: item.url,
-                    title: item.title,
-                    content: item.text
-                }
-            ]
+            comtemt: {
+                block: 'snippet',
+                url: item.url,
+                title: item.title,
+                contet: item.text
+            }
         };
     });
 
