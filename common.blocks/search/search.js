@@ -1,11 +1,12 @@
-modules.define('search', ['i-bem-dom', 'button', 'popup', 'header', 'functions__throttle'], function(provide, bemDom, Button, Popup, Header, throttle) {
+modules.define('search', ['i-bem-dom', 'button', 'input', 'popup', 'form-search', 'header', 'functions__throttle'], function (provide, bemDom, Button, Input, Popup, FormSearch, Header, throttle) {
 
 provide(bemDom.declBlock(this.name, {
     onSetMod: {
         'js': {
             'inited': function() {
                 let search = this.domElem[0],
-                    popup = this.findChildBlock(Popup);
+                    popup = this.findChildBlock(Popup),
+                    inputSearch = this.findChildBlock(FormSearch).findChildBlock({ block: Input, modName: 'type', modVal: 'search' });
 
                 // popup.domElem[0].style.zIndex = 1001;
                 this._initPosition(search, popup);
@@ -14,6 +15,7 @@ provide(bemDom.declBlock(this.name, {
 
                 this._events(Button).on('click', function() {
                     popup.setMod('visible');
+                    inputSearch.setMod('focused');
                 });
             }
         }

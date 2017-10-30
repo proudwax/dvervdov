@@ -36,7 +36,7 @@ block('form-search').content()(function() {
                         content: [
                             {
                                 block: 'input',
-                                mods: { theme: 'dver', size: 'l', type: 'search', width: 'available', 'has-clear': true, focused : true },
+                                mods: { theme: 'dver', size: 'l', type: 'search', width: 'available', 'has-clear': true },
                                 name: 'search',
                                 autocomplete: false,
                                 placeholder: 'Введите запрос'

@@ -28,6 +28,14 @@ block('serp').content()(function() {
             content: 'Search'
         },
         {
+            elem: 'form',
+            content: [
+                {
+                    block: 'form-search'
+                }
+            ]
+        },
+        {
             elem: 'list',
             content: list
         },
