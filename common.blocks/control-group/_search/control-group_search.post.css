@@ -1,5 +1,4 @@
 :block(control-group):mod(search) {
     display: flex;
     box-sizing: border-box;
-    padding: 16px;
 }

@@ -28,7 +28,7 @@ block('serp').content()(function() {
             content: 'Search'
         },
         {
-            elem: 'form',
+            elem: 'form-search',
             content: [
                 {
                     block: 'form-search'

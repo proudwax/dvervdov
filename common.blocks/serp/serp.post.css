@@ -1,6 +1,4 @@
 :block(serp) {
-    padding: 8px;
-
     &:mod(type numb-list) {
         :block(serp) {
             &:elem(list){
@@ -14,7 +12,7 @@
                     content: counter(numb-list);
                     
                     position: absolute;
-                    left: -18px;
+                    left: -16px;
 
                     font-size: 18px;
                     line-height: 24px;
@@ -27,18 +25,23 @@
     }
 
     &:elem(title) {
-        margin-left: 8px;
+        margin: 16px;
 
         font-size: 24px;
         line-height: 32px;
         color: #77432a;
     }
 
+    &:elem(form-search){
+        margin: 0 16px 48px 16px;
+    }
+
     &:elem(list) {
-        margin: 8px;
+        margin: 0 16px 48px 16px;
     }
 
     &:elem(pager) {
-        margin: 8px;
+        margin: 0 16px 16px 16px;
+
     }
 }
