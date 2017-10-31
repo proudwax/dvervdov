@@ -1,6 +1,31 @@
 :block(serp) {
     padding: 8px;
 
+    &:mod(type numb-list) {
+        :block(serp) {
+            &:elem(list){
+                counter-reset: numb-list;
+                margin-left: 32px;
+            }
+
+            &:elem(item){
+                &:before {
+                    counter-increment: numb-list;
+                    content: counter(numb-list);
+                    
+                    position: absolute;
+                    left: -18px;
+
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: $text_light;
+                }
+                
+                position: relative;
+            }
+        }
+    }
+
     &:elem(title) {
         margin-left: 8px;
 

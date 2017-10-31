@@ -13,7 +13,8 @@ block('main').mod('serp', true).content()(function() {
                     elemMods: { lw: 12, mw: 12, sw: 12 },
                     content: [
                         {
-                            block: 'serp'
+                            block: 'serp',
+                            mods: { type: 'numb-list' }
                         }
                     ]
                 }
