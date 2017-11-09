@@ -10,10 +10,21 @@
     }
 
     &:elem(container) {
-        font-size: 13px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
     }
 
     &:elem(item) {
+        display: flex;
+        flex-direction: column;
+
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+
         color: $text_active;
         text-decoration: none;
         margin-right: 16px;
@@ -28,4 +39,10 @@
             margin-right: 0;
         }
     }
+
+    &:elem(image) {
+        display: inline-block;
+        width: 100%;
+    }
+
 }

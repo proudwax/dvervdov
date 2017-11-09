@@ -8,6 +8,7 @@
         line-height: 24px;
         white-space: nowrap;
         text-overflow: ellipsis;
+        overflow: hidden;
 
         margin-top: 0;
         margin-bottom: 0;

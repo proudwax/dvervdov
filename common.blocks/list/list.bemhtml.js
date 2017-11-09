@@ -13,9 +13,25 @@ block('list')(
         }),
 
         content()(function () {
+            var image = this.ctx.image ? { elem: 'image', url: this.ctx.image } : null;
+
+            return [
+                image,
+                {
+                    elem: 'text',
+                    content: this.ctx.text
+                }
+            ];
+        })
+    ),
+
+    elem('image')(
+        tag()('span'),
+        
+        content()( (ctx, json) => {
             return {
-                elem: 'text',
-                content: this.ctx.text
+                block: 'image',
+                url: json.url
             }
         })
     ),
