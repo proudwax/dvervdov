@@ -1,7 +1,6 @@
 :block(nav) {
     box-sizing: border-box;
     display: block;
-    background-color: #fff;
 
     transition-timing-function: ease-out;
     transition: all .1s;

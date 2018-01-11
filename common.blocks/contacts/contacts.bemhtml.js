@@ -10,5 +10,14 @@ block('contacts')(
 
             return attrs;
         })
-    )
+    ),
+
+    content()(function () {
+        return [
+            applyNext(),
+            {
+                elem: 'bg'
+            }
+        ];
+    })
 );

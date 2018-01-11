@@ -72,7 +72,7 @@ block('form-callback').content()(function() {
             },
             {
                 elem: 'content',
-                content: bemjson
+                content: bemjson           
             },
             {
                 elem: 'footer',

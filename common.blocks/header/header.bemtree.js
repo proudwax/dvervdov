@@ -29,6 +29,15 @@ block('header').content()(function() {
             content: [
                 {
                     elem: 'action-item',
+                    elemMods: { callback: true },
+                    content: [
+                        {
+                            block: 'callback'
+                        }
+                    ]
+                },
+                {
+                    elem: 'action-item',
                     elemMods: { search: true },
                     content: [
                         {
@@ -47,10 +56,9 @@ block('header').content()(function() {
                 },
                 {
                     elem: 'action-item',
-                    elemMods: { toggle: true },
                     content: [
                         {
-                            block: 'toggle'
+                            block: 'menu-burger'
                         }
                     ]
                 }

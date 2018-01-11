@@ -4,7 +4,7 @@ block('logo').content()(function() {
             block: 'image',
             title: 'Сайт',
             alt: 'Сайт',
-            url: '/common.blocks/logo/images/logo.png'
+            url: '/common.blocks/logo/images/logo_new.png'
         }
     ];
 });

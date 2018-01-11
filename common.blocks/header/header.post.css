@@ -13,7 +13,7 @@
     padding: 8px 16px;
     overflow: hidden;
 
-    background-color: #fff;
+    background-color: rgba(255,255,255,.7);
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 5px 10px -5px rgba(0, 0, 0, 0.4);
 
     &:elem(logo) {
@@ -23,6 +23,7 @@
         opacity: 1;
         visibility: visible;
 
+        font-size: 0;
         transition: all 0.1s ease-out;
     }
 

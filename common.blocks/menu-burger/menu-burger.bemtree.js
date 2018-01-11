@@ -4,13 +4,7 @@ block('menu-burger').content()(function() {
             elem: 'checkbox'
         },
         {
-            elem: 'burger-line'
-        },
-        {
-            elem: 'burger-line'
-        },
-        {
-            elem: 'burger-line'
+            elem: 'burger'
         },
         {
             elem: 'nav',

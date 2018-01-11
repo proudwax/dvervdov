@@ -4,7 +4,8 @@
         'logo',
         'contacts',
         'search',
+        'callback',
         'cart',
-        'toggle'
+        'menu-burger'
     ]
 })
