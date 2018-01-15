@@ -1,0 +1,30 @@
+:block(modal):mod(has-close) {
+    :block(modal) {
+        &:elem(content) {
+            box-sizing: border-box;
+            padding: 32px;
+        }
+
+        &:elem(close) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1001;
+            
+            display: block;
+            width: 32px;
+            height: 32px;
+            background-image: url('../../../theme.blocks/theme/_dver/close.svg');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+
+            opacity: 0.3;
+            transition: opacity 0.1s ease-out;
+            
+            &:hover {
+                cursor: pointer;
+                opacity: 1;
+            }
+        }
+    }
+}

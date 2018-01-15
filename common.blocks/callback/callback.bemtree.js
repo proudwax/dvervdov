@@ -9,12 +9,12 @@ block('callback').content()(function() {
             }
         },
         {
-            block: 'popup',
-            mods: { theme: 'dver', target: 'position', autoclosable: true, search: true },
+            block: 'modal',
+            mods: { theme: 'dver', autoclosable: true, 'has-close': true },
             mix : { block : 'z-index-group', mods : { level : 1 } },
             content: [
                 {
-                    block: 'form-search'
+                    block: 'form-callback'
                 }
             ]
         }

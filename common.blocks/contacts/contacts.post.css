@@ -20,7 +20,7 @@
     &:elem(bg) {
         display: block;
         content: '';
-        background-color: #ffffcc;
+        background-color: #ccc;
 
         position: absolute;
         z-index: 1;
