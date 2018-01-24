@@ -1,0 +1,8 @@
+({
+    mustDeps : [
+
+    ],
+    shouldDeps: [
+        'product-order'
+    ]
+})

@@ -76,9 +76,11 @@ block('product').content()(function() {
                     content: [
                         {
                             elem: 'options-item',
+                            mix: { elem: 'row' },
                             content: [
                                 {
                                     elem: 'price',
+                                    mix: { elem: 'col', elemMods: { half: true } },
                                     content: [
                                         {
                                             elem: 'price-old',
@@ -87,6 +89,15 @@ block('product').content()(function() {
                                         {
                                             elem: 'price-current',
                                             content: this.data.price.current
+                                        }
+                                    ]
+                                },
+                                {
+                                    elem: 'buy',
+                                    mix: { elem: 'col', elemMods: { half: true } },
+                                    content: [
+                                        {
+                                            block: 'product-buy'
                                         }
                                     ]
                                 }

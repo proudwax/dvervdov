@@ -1,0 +1,35 @@
+:block(product-order) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &:elem(image) {
+        width: 20%;
+    }
+
+    &:elem(container) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        align-items: center; 
+
+        width: 80%;  
+    }
+
+    &:elem(title) {
+        width: 35%;
+    }
+
+    &:elem(count) {
+        width: 20%;
+    }
+
+    &:elem(price) {
+        width: 30%
+    }
+
+    &:elem(remove) {
+        width: 15%
+    }
+}

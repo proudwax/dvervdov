@@ -1,0 +1,5 @@
+:block(order-confirm-list) {
+    &:elem(item) {
+        margin: 0 8px 8px;
+    }
+}

@@ -1155,8 +1155,9 @@ block('page').content()(function() {
             block: 'main',
             // mods: { serp: true }
             // mods: { product: true }
+            mods: { order: true }
             // mods: { catalog: true }
-            mods: { home: true }
+            // mods: { home: true }
         },
         {
             block: 'service-offers'
