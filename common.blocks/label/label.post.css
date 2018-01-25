@@ -7,7 +7,7 @@
     }
 
     &:mod(size m) {
-        min-width: 70px;
+        min-width: 100px;
 
         font-size: 13px;
         line-height: 28px;

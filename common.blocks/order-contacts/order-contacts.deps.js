@@ -3,5 +3,6 @@
         'mq'
     ],
     shouldDeps: [
+        'form-order'
     ]
 })
