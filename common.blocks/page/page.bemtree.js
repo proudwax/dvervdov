@@ -1150,18 +1150,25 @@ block('page').content()(function() {
     };
 
     return [
-        { block: 'header' },
+        // { 
+        //     block: 'header',
+        //     mods: { simple: true }
+        // },
         {
             block: 'main',
             // mods: { serp: true }
             // mods: { product: true }
-            mods: { order: true }
+            // mods: { order: true }
+            mods: { cart: true }
             // mods: { catalog: true }
             // mods: { home: true }
         },
-        {
-            block: 'service-offers'
-        },
-        { block: 'footer' }
+        // {
+        //     block: 'service-offers'
+        // },
+        // { 
+        //     block: 'footer',
+        //     mods: { simle: true }
+        // }
     ];
 });

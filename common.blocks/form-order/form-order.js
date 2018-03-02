@@ -17,8 +17,8 @@ provide(bemDom.declBlock(this.name, {
                     this._form.validate()
                         .then(function (fieldsStatuses) {
                             if(this._form.checkFields(fieldsStatuses)) {
-                                this._form.onSendForm();
-                                this._form.getMessage().hide();
+                                document.querySelector('input[name="posting"]').value = 1
+                                this._form.domElem[0].submit();
                             } else {
                                 this._form.getInvalidFields().then(function (invalidFields) {
                                     invalidFields[0].getControl().setMod('focused');
@@ -26,6 +26,7 @@ provide(bemDom.declBlock(this.name, {
                                 this._form.setMessageVal(fieldsStatuses.message);
                                 this._form.getMessage().show();
                             }
+
                         }.bind(this));
                 }.bind(this));
             }

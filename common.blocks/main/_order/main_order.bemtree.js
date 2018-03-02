@@ -1,4 +1,4 @@
-block('main').mod('order', true).content()(function() {
+block('main').mod('cart', true).content()(function() {
 
     return [
         {

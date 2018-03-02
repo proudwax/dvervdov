@@ -1,0 +1,14 @@
+:block(cart-action) {
+    box-sizing: border-box;
+    padding: 16px;
+
+    width: 100%;
+}
+
+@media (--large) {
+    :block(cart-action) {
+        float: right;
+        width: calc(100% - 16px);
+    }
+
+}

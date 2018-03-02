@@ -16,6 +16,17 @@
         margin-bottom: 0;
     }
 
+    &:elem(subtitle) {
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 18px;
+        color: $text_dark;
+
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 20px
+    }
+
     &:elem(desc) {
         position: relative;
         display: inline-block;

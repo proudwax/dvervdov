@@ -1,5 +1,6 @@
 ({
     shouldDeps: [
+        'sticky',
         'nav',
         'logo',
         'contacts',

@@ -1,12 +1,12 @@
 block('form-order').content()(function() {
 
     var fields = [
-        { label: 'Имя', type: 'input', name: 'Name', placeholder: 'Ваше имя', required: 'Обязательно для заполнения', validate: 'pattern', pattern: {pattern: { value: '[a-zа-я_-]{3,}', message: 'Заполните имя правильно' } } },
-        { label: 'Телефон', type: 'input', name: 'Phone', placeholder: 'Ваш номер телефона', required: 'Обязательно для заполнения', validate: 'phone', pattern: { phone: { mask: '+7(000)000-00-00', message: 'Заполните телефон правильно' } } },
-        { label: 'Email', type: 'input', name: 'Email', placeholder: 'Ваш  Email', required: 'Обязательно для заполнения', validate: 'email', pattern: { email: { message: 'Заполните email правильно' } } },
-        { label: 'Город', type: 'input', name: 'City', placeholder: 'Город доставки', required: 'Обязательно для заполнения', pattern: {} },
-        { label: 'Индекс', type: 'input', name: 'Index', placeholder: 'Индекс', required: 'Обязательно для заполнения', pattern: {} },
-        { label: 'Адрес', type: 'input', name: 'Address', placeholder: 'Адрес доставки', required: 'Обязательно для заполнения', pattern: {} },
+        { label: 'Имя', val: 'test', type: 'input', name: 'Name', placeholder: 'Ваше имя', required: 'Обязательно для заполнения', validate: 'pattern', pattern: {pattern: { value: '[a-zа-я_-]{3,}', message: 'Заполните имя правильно' } } },
+        { label: 'Телефон', val: '7(111)111-11-1', type: 'input', name: 'Phone', placeholder: 'Ваш номер телефона', required: 'Обязательно для заполнения', validate: 'phone', pattern: { phone: { mask: '+7(000)000-00-00', message: 'Заполните телефон правильно' } } },
+        { label: 'Email', val: 'test@test.ru', type: 'input', name: 'Email', placeholder: 'Ваш  Email', required: 'Обязательно для заполнения', validate: 'email', email: { message: 'Заполните email правильно' }, pattern: {} },
+        { label: 'Город', val: 'test', type: 'input', name: 'City', placeholder: 'Город доставки', required: 'Обязательно для заполнения', pattern: {} },
+        { label: 'Индекс', val: 'test', type: 'input', name: 'Index', placeholder: 'Индекс', required: 'Обязательно для заполнения', validate: 'pattern', pattern: { pattern: { value: '^[0-9]{6}$', message: 'Заполните индекс правильно' } } },
+        { label: 'Адрес', val: 'test', type: 'input', name: 'Address', placeholder: 'Адрес доставки', required: 'Обязательно для заполнения', pattern: {} },
     ];
 
     var bemjson = fields.map(function (item) {
@@ -45,7 +45,8 @@ block('form-order').content()(function() {
                     },
                     name: item.name,
                     autocomplete: false,
-                    placeholder: item.placeholder
+                    placeholder: item.placeholder,
+                    val: item.val || null
                 }
             ]
         }
@@ -56,7 +57,7 @@ block('form-order').content()(function() {
         mods: {
             theme : 'dver',
             'has-validation' : true,
-            async: true
+            // async: true
         },
         action: '/server.txt',
         method: 'GET',
@@ -77,6 +78,10 @@ block('form-order').content()(function() {
             {
                 elem: 'content',
                 content: [
+                    {
+                        tag: 'input',
+                        attrs: { name: 'posting', type: 'hidden', value: 0 }
+                    },
                     bemjson,
                     {
                         block: 'form-field',
