@@ -1,9 +1,12 @@
 block('count')(
-    js()(true),
+    addJs()(function (node, ctx) {
+        return {
+            range: this.ctx.range || [1, 99]
+        }
+    }),
 
     content()(function (node, ctx) {
-        var count = this.ctx.count,
-            units = this.ctx.units;
+        var count = this.ctx.count;
 
         return [
             {
@@ -28,7 +31,6 @@ block('count')(
                             size: 'm',
                             count: true,
                         },
-                        maxLength: 2,
                         name: 'count',
                         val: count || 1
                     },

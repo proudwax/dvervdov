@@ -1,5 +1,9 @@
 block('product-cart')(
-    // js()(true),
+    addJs()(function () {
+        return {
+            price: this.ctx.data.price.current
+        };
+    }),
 
     elem('title')(
         tag()('a'),

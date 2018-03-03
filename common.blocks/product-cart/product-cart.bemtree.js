@@ -1,4 +1,4 @@
-block('product-cart').content()(function() {
+block('product-cart').content()(function () {
     var data = this.data = this.ctx.data;
 
     return [
@@ -26,7 +26,7 @@ block('product-cart').content()(function() {
                         {
                             block: 'count',
                             count: data.count,
-                            units: 'шт.'
+                            range: [1, 30]
                         }
                     ]
                 },
