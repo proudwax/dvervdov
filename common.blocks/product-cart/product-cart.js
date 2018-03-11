@@ -1,4 +1,4 @@
-modules.define('product-cart', ['i-bem-dom', 'count'], function (provide, bemDom, Count) {
+modules.define('product-cart', ['i-bem-dom', 'count', 'product-cart-price'], function (provide, bemDom, Count, PriceCart) {
 
     provide(bemDom.declBlock(this.name, {
         onSetMod: {
@@ -9,7 +9,9 @@ modules.define('product-cart', ['i-bem-dom', 'count'], function (provide, bemDom
                     this._count._events(Count).on('change', function (e, data) {
                         console.log(e);
                         console.log(data);
-                    });
+
+                        this.findChildBlock(PriceCart).redraw(data.val);
+                    }.bind(this));
                 }
             }
         }

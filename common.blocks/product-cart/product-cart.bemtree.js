@@ -26,13 +26,37 @@ block('product-cart').content()(function () {
                         {
                             block: 'count',
                             count: data.count,
-                            range: [1, 30]
+                            range: [1, 30],
+                            name: 'cart[1][1]'
                         }
                     ]
                 },
                 {
                     elem: 'price',
-                    content: data.price.current + ' руб.'
+                    // content: data.price.current + ' руб.'
+                    content: [
+                        {
+                            block: 'product-cart-price',
+                            count: data.count,
+                            price: data.price.current,
+                            unit: 'руб.'
+                        }
+                    ]
+                },
+                {
+                    elem: 'remove',
+                    content: [
+                        {
+                            block: 'button',
+                            mods: { theme: 'dver', size: 'm', type: 'submit' },
+                            name: 'cart[1][1]',
+                            val: 0,
+                            icon: {
+                                block: 'icon',
+                                mods: { remove: true }
+                            }
+                        }
+                    ]
                 }
             ]
         }

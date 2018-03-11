@@ -1,0 +1,15 @@
+:block(product-cart-price) {
+    display: inline-block;
+
+    &:elem(total) {
+        display: block;
+        font-weight: 600;
+    }
+
+    &:elem(price-count) {
+        display: block;
+        color: $text_light;
+        font-size: 13px;
+        line-height: 15px;
+    }
+}

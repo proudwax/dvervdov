@@ -6,8 +6,6 @@ block('count')(
     }),
 
     content()(function (node, ctx) {
-        var count = this.ctx.count;
-
         return [
             {
                 block: 'control-group',
@@ -31,8 +29,8 @@ block('count')(
                             size: 'm',
                             count: true,
                         },
-                        name: 'count',
-                        val: count || 1
+                        name: this.ctx.name,
+                        val: this.ctx.count || 1
                     },
                     {
                         block: 'button',
