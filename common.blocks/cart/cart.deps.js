@@ -1,6 +1,7 @@
 ({
     shouldDeps: [
         'cart-list',
-        'cart-action'
+        'cart-action',
+        'form-simple'
     ]
 })
