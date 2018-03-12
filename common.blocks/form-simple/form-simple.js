@@ -19,6 +19,28 @@ modules.define('form-simple', ['i-bem-dom'], function (provide, bemDom) {
         },
 
         onSendForm: function () {
+
+            return new Promise(function (resolve, reject) {
+                var xhttp = new XMLHttpRequest();
+                xhttp.open('GET', url, true);
+
+                xhttp.onload = function () {
+                    if (this.status == 200) {
+                        resolve(this.response);
+                    } else {
+                        var error = new Error(this.statusText);
+                        error.code = this.status;
+                        reject(error);
+                    }
+                };
+
+                xhttp.onerror = function () {
+                    reject(new Error("Network Error"));
+                };
+
+                xhttp.send();
+            });
+
             var _this = this,
                 domForm = this.domElem,
                 data = this.onSerialize(this.domElem[0]),
