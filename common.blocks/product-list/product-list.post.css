@@ -1,0 +1,32 @@
+:block(product-list) {
+    font-size: 14px;
+    line-height: 28px;
+    color: #666;
+
+    @mixin title  $text_dark, 18px {  }
+
+    &:elem(container) {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &:elem(item) {
+        position: relative;
+
+        &:before {
+            position:absolute;
+            top: 50%;
+            left: -8px;
+            transform: translateY(-50%);
+
+            content: '';
+            width: 4px;
+            height: 4px;
+
+            border-radius: 50%;
+            background-color: $text_active;
+
+        }
+    }
+}

@@ -1,0 +1,14 @@
+:block(order-contacts) {
+    box-sizing: border-box;
+    padding: 16px;
+
+    width: 100%;
+}
+
+@media (--large) {
+    :block(order-contacts) {
+        float: right;
+        width: calc(100% - 16px);
+    }
+
+}

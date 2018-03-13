@@ -1,0 +1,17 @@
+:block(icon):mod(send) {
+    background-image: url(../images/send.svg);
+    background-size: 60%;
+    opacity: .7;
+
+    transition: opacity .1s ease-out;
+
+    &:hover{
+        opacity: 1;
+    }
+}
+
+:block(button):mod(view action){
+    :block(icon):mod(send) {
+        background-image: url(../images/send_white.svg);
+    }
+}

@@ -1,0 +1,15 @@
+:block(pager) {
+    &:elem(prev) {
+        display: inline-block;
+        margin-right: 16px;
+    }
+
+    &:elem(pages) {
+        display: inline-block;
+    }
+
+    &:elem(next) {
+        display: inline-block;
+        margin-left: 16px;
+    }
+}

@@ -6,12 +6,13 @@ const techs = {
         // optimization
         borschik: require('enb-borschik/techs/borschik'),
 
-        // postcss
+        // css
         postcss: require('enb-postcss/techs/enb-postcss'),
         postcssPlugins: [
             require('postcss-import')(),
             require('postcss-each'),
             require('postcss-for'),
+            require('postcss-mixins'),
             require('postcss-custom-media'),
             require('postcss-simple-vars')(),
             require('postcss-calc')(),
@@ -21,6 +22,7 @@ const techs = {
             require('autoprefixer')(),
             require('postcss-reporter')()
         ],
+
         // js
         browserJs: require('enb-js/techs/browser-js'),
 
@@ -29,9 +31,8 @@ const techs = {
 
         // bemhtml
         bemhtml: require('enb-bemxjst/techs/bemhtml'),
-        bemtreeToHtml: require('./techs/bemtree-to-html')
-    }
-
+        bemtreeToHtml: require('./techs/bemtree-to-html'),
+    },
     enbBemTechs = require('enb-bem-techs'),
     levels = [
         { path: 'node_modules/bem-core/common.blocks', check: false },
@@ -40,13 +41,20 @@ const techs = {
         { path: 'node_modules/bem-components/desktop.blocks', check: false },
         { path: 'node_modules/bem-components/design/common.blocks', check: false },
         { path: 'node_modules/bem-components/design/desktop.blocks', check: false },
+
+        { path: 'node_modules/bem-calendar/common.blocks', check: false },
+        { path: 'node_modules/bem-calendar/desktop.blocks', check: false },
+        { path: 'node_modules/bem-calendar/touch.blocks', check: false },
+
+        { path: 'node_modules/bem-forms/common.blocks', check: false },
+
         'common.blocks',
         'desktop.blocks',
-        'themes.blocks'
+        'theme.blocks'
     ];
 
 module.exports = function(config) {
-    const isProd = process.env.YENV === 'production';
+    var isProd = process.env.YENV === 'production';
 
     config.nodes('*.bundles/*', function(nodeConfig) {
         nodeConfig.addTechs([
@@ -58,9 +66,19 @@ module.exports = function(config) {
 
             // css
             [techs.postcss, {
-                target: '?.css',
+                target: '?.no-grid.css',
                 oneOfSourceSuffixes: ['post.css', 'css'],
                 plugins: techs.postcssPlugins
+            }],
+
+            // sharps
+            [require('sharps').enb, {
+                config: {
+                    maxWidth: '1200px',
+                    gutter: '0',
+                    flex: 'flex'
+                },
+                source: '?.no-grid.css'
             }],
 
             // bemtree
@@ -118,7 +136,7 @@ module.exports = function(config) {
                 target: '?.browser.bemhtml.js',
                 filesTarget: '?.bemhtml.files',
                 sourceSuffixes: ['bemhtml', 'bemhtml.js'],
-                engineOptions : { elemJsInstances : true }
+                elemJsInstances : true
             }],
 
             // js

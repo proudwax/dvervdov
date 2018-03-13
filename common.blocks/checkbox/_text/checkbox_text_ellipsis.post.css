@@ -1,0 +1,10 @@
+:block(checkbox):mod(text ellipsis) {
+    white-space: nowrap;
+    
+    :block(checkbox):elem(text) {
+        white-space: nowrap;
+        overflow: hidden;
+        padding-right: 5px;
+        text-overflow: ellipsis;
+    }
+}

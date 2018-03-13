@@ -1,0 +1,19 @@
+:block(range) {
+    margin: 8px 0;
+
+    &:elem(title) {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        margin: 16px 0;
+        color: $text_dark;
+    }
+
+    &:elem(control) {
+        margin: 24px 0 32px;
+    }
+
+    &:elem(box) {
+
+    }
+}

@@ -1,0 +1,32 @@
+:block(checkbox):mod(image) {
+    :block(checkbox):elem(image) {
+        position: relative;
+
+        display: inline-block;
+        border-radius: 3px;
+        overflow: hidden;
+
+        font-size: 0;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 10px -5px rgba(0, 0, 0, 0.4);
+    }
+
+    &:block(checkbox):mod(size m) {
+        :block(checkbox):elem(image) {
+            top: 4px;
+
+            width: 18px;
+            height: 18px;
+            margin-right: 5px;
+        }
+    }
+
+    &:block(checkbox):mod(size l) {
+        :block(checkbox):elem(image) {
+            top: 5px;
+
+            width: 21px;
+            height: 21px;
+            margin-right: 7px;
+        }
+    }
+}

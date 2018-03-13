@@ -1,0 +1,17 @@
+:block(icon):mod(refresh) {
+    background-image: url(../images/refresh.svg);
+    background-size: 55%;
+    opacity: .7;
+
+    transition: opacity .1s ease-out;
+
+    &:hover{
+        opacity: 1;
+    }
+}
+
+:block(button):mod(view action){
+    :block(icon):mod(refresh) {
+        background-image: url(../images/refresh_white.svg);
+    }
+}

@@ -1,0 +1,13 @@
+:block(product) {
+    &:elem(row) {
+        display: flex;
+        align-items: center;
+    }
+
+    &:elem(col) {
+        &:mod(half) {
+            width: 50%;
+        }
+    }
+
+}

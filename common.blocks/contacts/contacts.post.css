@@ -1,0 +1,41 @@
+:block(contacts) {
+    &:elem(phone) {
+        position: relative; 
+        z-index: 10;
+
+        color: #568549;
+        text-decoration: none;
+        white-space: nowrap;
+
+        &:mod(header) {
+            display: inline-block;
+
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 32px;
+        }
+
+    }
+
+    &:elem(bg) {
+        display: block;
+        content: '';
+        background-color: #ccc;
+
+        position: absolute;
+        z-index: 1;
+        width: 230px;
+        height: 470px;
+        top: -215px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-45deg);
+    }
+}
+
+@media screen and (max-width: 40em) {
+    :block(contacts) {
+        &:elem(phone):mod(header) {
+            font-size: 18px;
+        }
+    }
+}

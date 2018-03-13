@@ -1,0 +1,27 @@
+:block(brands-list) {
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    padding: 16px 0;
+    
+    background-color: #fff;
+    /*border-left: 1px solid rgba(0,0,0,.2);*/
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 10px -5px rgba(0, 0, 0, 0.4);
+
+    &:elem(inner) {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &:elem(content) {
+        margin: 0 8px;
+    }
+
+    &:elem(title) {
+        margin-left: 16px;
+
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        color: $text_dark;
+    }
+}

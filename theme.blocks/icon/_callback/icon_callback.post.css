@@ -1,0 +1,11 @@
+:block(icon):mod(callback) {
+    background-image: url(../images/callback.svg);
+    background-size: 60%;
+    opacity: .7;
+
+    transition: opacity .1s ease-out;
+
+    &:hover{
+        opacity: 1;
+    }
+}

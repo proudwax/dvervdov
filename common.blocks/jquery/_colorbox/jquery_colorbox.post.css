@@ -1,0 +1,52 @@
+@import "../../../node_modules/jquery-colorbox/example2/colorbox.css";
+
+#cboxContent, #cboxLoadedContent, #cboxLoadingOverlay {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
+    border:0;
+    padding:0;
+    margin:0;
+    overflow:visible;
+    text-indent:-9999px;
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:-20px;
+    opacity: .2;
+    background-image: url(../../../theme.blocks/theme/_dver/close.svg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    transition: opacity ease-out .25s;
+    outline: none;
+
+    &:hover {
+        opacity: 1;
+        background-position: 50% 50%;
+    }
+}
+
+#cboxPrevious{
+    transform: rotate(90deg);
+    background-image: url(../../../theme.blocks/theme/_dver/arrow.svg);
+    background-position: 4px 50%;
+    right:44px;
+}
+
+#cboxPrevious:hover{
+    opacity: 1;
+    background-position: 4px 50%;
+}
+
+#cboxNext{
+    transform: rotate(270deg);
+    background-image: url(../../../theme.blocks/theme/_dver/arrow.svg);
+    background-position: 5px 50%;
+    right:22px;
+}
+
+#cboxNext:hover{
+    opacity: 1;
+    background-position: 5px 50%;
+}

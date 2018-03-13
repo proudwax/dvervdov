@@ -1,0 +1,15 @@
+:block(icon):mod(toggle) {
+    background-image: url(../images/toggle.svg);
+    background-size: 60%;
+    opacity: .7;
+
+    transition: opacity .1s ease-out;
+
+    &:hover{
+        opacity: 1;
+    }
+}
+
+:block(button):mod(view action) :block(icon):mod(toggle) {
+    background-image: url(../images/toggle_white.svg);
+}

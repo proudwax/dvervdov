@@ -1,0 +1,90 @@
+:block(product-card) {
+    position: relative;
+    margin: 8px;
+
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 10px -5px rgba(0, 0, 0, 0.4);
+
+    transition: box-shadow .25s ease-out;
+
+    &:hover {
+        box-shadow: 0 3px 9px rgba(0,0,0,.28);
+    }
+
+    &:elem(inner) {
+        box-sizing: border-box;
+        display: block;
+        margin: 8px;
+        padding: 24px;
+
+        color: $text_active;
+        text-align: center;
+        text-decoration: none;
+
+        transition: color .25s ease-out;
+
+        &:hover {
+            cursor: pointer;
+            color: $text_hover;
+        }
+    }
+
+    &:elem(image) {
+        margin-bottom: 16px;
+
+        &  > :block(image) {
+            max-height: 200px;
+        }
+    }
+
+    &:elem(vendor) {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        bottom: 92px;
+
+        text-align: center;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        color: $text_dark;
+        font-size: 12px;
+        line-height: 15px;
+        transition: color .25s ease-out;
+
+        &:hover {
+            color: $text_hover;
+        }
+    }
+
+    &:elem(title) {
+        width: 100%;
+
+        font-size: 18px;
+        line-height: 36px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &:elem(price) {
+        position: relative;
+
+        font-weight: 600;
+        color: $text_def;
+    }
+
+    &:elem(old) {
+        position: absolute;
+        top: -5px;
+        left: 0;
+        right: 0;
+
+        font-size: 10px;
+        line-height: 12px;
+        color: $text_light;
+        text-decoration: line-through;
+    }
+
+}

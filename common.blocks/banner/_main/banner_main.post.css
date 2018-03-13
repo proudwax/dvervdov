@@ -1,0 +1,7 @@
+:block(banner):mod(main) {
+    font-size: 0;
+}
+
+@media screen and (max-width: 40em) {
+
+}

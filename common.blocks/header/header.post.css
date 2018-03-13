@@ -1,0 +1,95 @@
+:block(header) {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 auto 16px;
+    padding: 8px 16px;
+    overflow: hidden;
+
+    background-color: rgba(255,255,255,.7);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 5px 10px -5px rgba(0, 0, 0, 0.4);
+
+    &:elem(logo) {
+        flex: 0 0;
+
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+
+        font-size: 0;
+        transition: all 0.1s ease-out;
+    }
+
+    &:elem(contacts) {
+        flex: 1 1;
+        margin-left: 16px;
+        text-align: center;
+
+        position: relative;
+        z-index: 1;
+    }
+
+    &:elem(action) {
+        position: relative;
+        z-index: 1;
+        
+        flex: 0 0;
+
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        margin-left: 8px;
+    }
+
+    &:elem(action-item) {
+        margin-right: 16px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:mod(toggle) {
+            display: none;
+        }
+    }
+
+    &:elem(nav) {
+        flex: 0 0;
+        flex-basis: 100%;
+        max-width: 100%;
+
+        z-index: 10;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    :block(header) {
+
+        &:elem(logo) {
+            position: absolute;
+
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &:elem(contacts) {
+            margin-left: 8px;
+            text-align: left;
+        }
+
+        &:elem(action-item) {
+            &:mod(toggle) {
+                display: inline-block;
+            }
+        }
+    }
+}

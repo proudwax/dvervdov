@@ -1,0 +1,11 @@
+:block(logo) {
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 1;
+    width: 240px;
+    height: 53px;
+
+    & > img {
+        width: 100%;
+    }
+}

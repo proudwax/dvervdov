@@ -1,0 +1,5 @@
+:block(promo):mod(main) {
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto 16px;
+}

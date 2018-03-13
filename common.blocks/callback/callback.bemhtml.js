@@ -1,0 +1,3 @@
+block('callback')(
+    js()(true)
+);

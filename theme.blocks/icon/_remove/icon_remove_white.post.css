@@ -1,0 +1,11 @@
+:block(icon):mod(remove white) {
+    background-image: url(../images/remove_white.svg);
+    background-size: 60%;
+    opacity: .7;
+
+    transition: opacity .1s ease-out;
+
+    &:hover{
+        opacity: 1;
+    }
+}
