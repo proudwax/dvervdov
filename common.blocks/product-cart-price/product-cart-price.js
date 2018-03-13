@@ -8,9 +8,9 @@ modules.define('product-cart-price', ['i-bem-dom', 'BEMHTML'], function (provide
             }
         },
 
-        redraw: function (count) {
-            if (count != this.params.count) {
-                var block = BEMHTML.apply({ block: 'product-cart-price', price: this.params.price, count: count, unit: this.params.unit });
+        redraw: function (data) {
+            if (data.Qty != this.params.count) {
+                var block = BEMHTML.apply({ block: 'product-cart-price', price: data.ItemPrice, count: data.Qty, unit: this.params.unit });
 
                 bemDom.replace(this.domElem, block);
             }

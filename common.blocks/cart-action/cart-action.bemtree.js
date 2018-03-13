@@ -1,4 +1,4 @@
-block('cart-action').content()(function() {
+block('cart-action').content()(function () {
     var data = this.data = this.ctx.data;
 
     return [
@@ -12,7 +12,7 @@ block('cart-action').content()(function() {
                 {
                     elem: 'cost',
                     content: data.reduce(function (prev, curr) {
-                        return prev + curr.price.current;
+                        return prev + curr.price;
                     }, 0) + ' руб.'
                 }
             ]

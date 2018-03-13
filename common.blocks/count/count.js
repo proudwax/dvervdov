@@ -14,15 +14,18 @@ modules.define('count', ['i-bem-dom', 'button', 'input'], function (provide, bem
         onSetMod: {
             'js': {
                 'inited': function () {
-                    this._minus = this.findChildBlock({ block: Button, modName: 'count', modVal: 'decrement' }),
-                        this._plus = this.findChildBlock({ block: Button, modName: 'count', modVal: 'increment' }),
-                        this._input = this.findChildBlock({ block: Input, modName: 'count', modVal: true });
+                    this._minus = this.findChildBlock({ block: Button, modName: 'count', modVal: 'decrement' });
+                    this._plus = this.findChildBlock({ block: Button, modName: 'count', modVal: 'increment' });
+                    this._input = this.findChildBlock({ block: Input, modName: 'count', modVal: true });
+                    this._val = this.getVal();
 
                     this._inputChange();
 
                     this._input._domEvents().on('change', function () {
-                        this._inputChange()
-                            ._emit('change', { val: this.getVal() });
+                        this._inputChange();
+                        if (this._val = this._val != this.getVal()) {
+                            this._emit('change', { val: this.getVal() });
+                        }
                     }.bind(this));
 
                     this._plus._events(Button).on('click', function () {
