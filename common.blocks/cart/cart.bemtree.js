@@ -1,4 +1,4 @@
-block('cart').content()(function() {
+block('cart').content()(function () {
     var data = [
         {
             'title': 'Александрия (Американский орех)',
@@ -24,27 +24,34 @@ block('cart').content()(function() {
 
     return [
         {
-            block: 'row',
+            block: 'form-simple',
+            action: '/server-cart.json',
+            method: 'get',
             content: [
                 {
-                    elem: 'col',
-                    elemMods: { lw: 9, mw: 12, sw: 12 },
+                    block: 'row',
                     content: [
                         {
-                            block: 'cart-list',
-                            mix: { block: 'content' },
-                            data: data
-                        }
-                    ]
-                },
-                {
-                    elem: 'col',
-                    elemMods: { lw: 3, mw: 12, sw: 12 },
-                    content: [
+                            elem: 'col',
+                            elemMods: { lw: 9, mw: 12, sw: 12 },
+                            content: [
+                                {
+                                    block: 'cart-list',
+                                    mix: { block: 'content' },
+                                    data: data
+                                }
+                            ]
+                        },
                         {
-                            block: 'cart-action',
-                            mix: { block: 'content' },
-                            data: data
+                            elem: 'col',
+                            elemMods: { lw: 3, mw: 12, sw: 12 },
+                            content: [
+                                {
+                                    block: 'cart-action',
+                                    mix: { block: 'content' },
+                                    data: data
+                                }
+                            ]
                         }
                     ]
                 }
