@@ -38,7 +38,7 @@ block('product-cart').content()(function () {
                         {
                             block: 'product-cart-price',
                             count: data.count,
-                            price: data.price.current,
+                            price: data.price,
                             unit: 'руб.'
                         }
                     ]

@@ -4,8 +4,10 @@ modules.define('form-simple', ['i-bem-dom'], function (provide, bemDom) {
         onSetMod: {
             js: {
                 inited: function () {
-                    var response = this.onSendForm();
-                    console.log(response);
+                    // var response = this.onSendForm().then(function (data) {
+                    //     console.log(JSON.parse(data));
+                    // });
+                    
                 }
             }
         },
@@ -19,46 +21,33 @@ modules.define('form-simple', ['i-bem-dom'], function (provide, bemDom) {
         },
 
         onSendForm: function () {
+            var _this = this,
+                domForm = this.domElem[0],
+                data = this.onSerialize(domForm);
 
             return new Promise(function (resolve, reject) {
                 var xhttp = new XMLHttpRequest();
-                xhttp.open('GET', url, true);
 
-                xhttp.onload = function () {
-                    if (this.status == 200) {
-                        resolve(this.response);
+                if (domForm.method.toLowerCase() == 'get') {
+                    xhttp.open(domForm.method, domForm.action + '?' + data, true);
+                    xhttp.send();
+                } else {
+                    xhttp.open(domForm.method, domForm.action, true);
+                    xhttp.send(data);
+                }
+
+                xhttp.onreadystatechange = function () {
+                    if (xhttp.readyState != 4) return;
+
+                    if (xhttp.status == 200) {
+                        resolve(xhttp.responseText);
                     } else {
-                        var error = new Error(this.statusText);
-                        error.code = this.status;
+                        var error = new Error(xhttp.statusText);
+                        error.code = xhttp.status;
                         reject(error);
                     }
                 };
-
-                xhttp.onerror = function () {
-                    reject(new Error("Network Error"));
-                };
-
-                xhttp.send();
             });
-
-            var _this = this,
-                domForm = this.domElem,
-                data = this.onSerialize(this.domElem[0]),
-                xhttp = new XMLHttpRequest();
-
-            if (domForm[0].method.toLowerCase() == 'get') {
-                xhttp.open(domForm[0].method, domForm[0].action + '?' + data, true);
-                xhttp.send();
-            } else {
-                xhttp.open(domForm[0].method, domForm[0].action, true);
-                xhttp.send(data);
-            }
-
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    return JSON.parse(this.responseText);
-                }
-            };
         }
     }));
 

@@ -1,43 +1,25 @@
-modules.define('cart', ['i-bem-dom'], function(provide, bemDom) {
+modules.define('cart', ['i-bem-dom', 'form', 'product-cart'], function(provide, bemDom, Form, ProductCart) {
 
 provide(bemDom.declBlock(this.name, {
     onSetMod: {
         'js': {
             'inited': function() {
-                console.log(this);
+                var _this = this;
+                this._form = this.findMixedBlock(Form);
+                this._products = this.findChildBlocks(ProductCart);
+
+                this._products.forEach(function (item) {
+                    item._events(ProductCart).on('change', function (e, data) {
+                        console.log(data);
+                        _this._form.onSendForm().then(function (json) {
+                            console.log(JSON.parse(json));
+                        });
+                    });
+                })
+                    // this.findChildBlock(PriceCart).redraw(data.val);
+                    // this._emit('change', { item: this });
             }
         }
-    },
-
-    onSendForm: function () {
-        var _this = this,
-            domForm = this.domElem,
-            data = this.onSerialize(this.domElem[0]),
-            xhttp = new XMLHttpRequest();
-
-        this.setMod('waiting');
-
-        if (domForm[0].method.toLowerCase() == 'get') {
-            xhttp.open(domForm[0].method, domForm[0].action + '?' + data, true);
-            xhttp.send();
-        } else {
-            xhttp.open(domForm[0].method, domForm[0].action, true);
-            xhttp.send(data);
-        }
-
-        xhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                console.log(JSON.parse(this.responseText));
-            }
-        };
-    },
-
-    onSerialize: function (form) {
-        var data = [].map.call(form.querySelectorAll('input, select, textarea'), function (field) {
-            return field.name + '=' + encodeURIComponent(field.value).replace(/%20/g, '+');
-        });
-
-        return data.join('&');
     },
 }));
 

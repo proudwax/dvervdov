@@ -29,6 +29,8 @@
     "enb-borschik": "^3.0.0",
     "enb-js": "^1.1.0",
     "enb-postcss": "^2.0.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
     "gulp": "gulpjs/gulp#4.0",
     "gulp-bem-bundle-builder": "^0.1.0",
     "gulp-bem-bundler-fs": "^0.0.10",

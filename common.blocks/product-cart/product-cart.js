@@ -7,7 +7,8 @@ modules.define('product-cart', ['i-bem-dom', 'count', 'product-cart-price'], fun
                     this._count = this.findChildBlock(Count);
 
                     this._count._events(Count).on('change', function (e, data) {
-                        this.findChildBlock(PriceCart).redraw(data.val);
+                        // this.findChildBlock(PriceCart).redraw(data.val);
+                        this._emit('change', { item: this });
                     }.bind(this));
                 }
             }
