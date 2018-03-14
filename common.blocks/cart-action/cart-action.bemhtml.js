@@ -1,7 +1,7 @@
 block('cart-action')(
-    js()(true),
-
-    elem('cost')(
-        tag()('span')
-    )
+    js()(function (node, ctx) {
+        return {
+            unit: ctx.unit
+        }
+    })
 );

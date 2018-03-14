@@ -46,6 +46,7 @@ block('cart').content()(function () {
                         {
                             block: 'cart-action',
                             mix: { block: 'content' },
+                            unit: 'руб.',
                             data: data
                         }
                     ]

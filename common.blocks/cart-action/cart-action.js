@@ -1,4 +1,4 @@
-modules.define('cart-action', ['i-bem-dom'], function (provide, bemDom) {
+modules.define('cart-action', ['i-bem-dom', 'BEMHTML'], function (provide, bemDom, BEMHTML) {
 
     provide(bemDom.declBlock(this.name, {
         onSetMod: {
@@ -7,7 +7,14 @@ modules.define('cart-action', ['i-bem-dom'], function (provide, bemDom) {
 
                 }
             }
-        }
+        },
+
+        updatePrice: function(data) {
+            var cost = data + ' ' + this.params.unit;
+            bemDom.update(this._elem('cost').domElem, BEMHTML.apply({ block: 'cart-action', elem: 'cost', tag: '', content: cost }));
+
+            return this;
+        } 
     }));
 
 });

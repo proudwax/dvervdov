@@ -8,7 +8,10 @@ block('cart-action').content()(function () {
         {
             elem: 'content',
             content: [
-                'Общая стоимость:',
+                {
+                    elem: 'description',
+                    content: 'Общая стоимость:'
+                },
                 {
                     elem: 'cost',
                     content: data.reduce(function (prev, curr) {
