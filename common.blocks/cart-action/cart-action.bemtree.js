@@ -22,11 +22,12 @@ block('cart-action').content()(function () {
             content: [
                 {
                     block: 'button',
-                    mods: { theme: 'dver', size: 'l', type: 'submit', view: 'action' },
+                    mods: { theme: 'dver', size: 'l', type: 'link', view: 'action' },
                     icon: {
                         block: 'icon',
                         mods: { cart: 'white' }
                     },
+                    url: '#1',
                     text: 'Оформить'
                 }
             ]
