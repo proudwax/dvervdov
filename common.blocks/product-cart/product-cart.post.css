@@ -36,16 +36,28 @@
     }
 
     &:elem(count) {
-        color: $text_light;
-        width: 100%; 
+        flex-grow: 1;
+        flex-shrink: 1;
 
-        padding: 8px 0;  
+        font-size: 0;
+
+        padding: 8px 0;
     }
 
     &:elem(price) {
-        width: 100%;
+        flex-grow: 1;
+        flex-shrink: 1;
+
+        font-size: 0;
 
         padding: 8px 0;
+    }
+
+    &:elem(remove) {
+        flex-grow: 0;
+        flex-shrink: 0;
+
+        font-size: 0;
     }
 }
 

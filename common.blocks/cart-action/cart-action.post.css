@@ -1,8 +1,14 @@
 :block(cart-action) {
-    box-sizing: border-box;
-    padding: 16px;
-
     width: 100%;
+    
+    &:elem(container){
+        box-sizing: border-box;
+        padding: 16px;
+    }
+
+    &:elem(cost) {
+        font-weight: 600;
+    }
 }
 
 @media (--large) {

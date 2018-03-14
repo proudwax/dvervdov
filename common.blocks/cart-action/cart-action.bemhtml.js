@@ -3,5 +3,12 @@ block('cart-action')(
         return {
             unit: ctx.unit
         }
+    }),
+
+    content()(function () {
+        return {
+            elem: 'container',
+            content: applyNext()
+        }
     })
 );

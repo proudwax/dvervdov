@@ -3,15 +3,12 @@ block('cart-action').content()(function () {
 
     return [
         {
-            elem: 'header'
+            elem: 'header',
+            content: 'Общая стоимость:'
         },
         {
             elem: 'content',
             content: [
-                {
-                    elem: 'description',
-                    content: 'Общая стоимость:'
-                },
                 {
                     elem: 'cost',
                     content: data.reduce(function (prev, curr) {
@@ -30,7 +27,7 @@ block('cart-action').content()(function () {
                         block: 'icon',
                         mods: { cart: 'white' }
                     },
-                    text: 'Отправить'
+                    text: 'Оформить'
                 }
             ]
         }
