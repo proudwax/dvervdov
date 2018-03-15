@@ -1,11 +1,10 @@
-modules.define('cart-list', ['i-bem-dom'], function(provide, bemDom) {
+modules.define('cart-list', ['i-bem-dom', 'BEMHTML'], function (provide, bemDom, BEMHTML) {
 
 provide(bemDom.declBlock(this.name, {
     onSetMod: {
         js: {
             inited: function() {
-                
-                console.log();
+
             }
         }
     },
@@ -19,7 +18,7 @@ provide(bemDom.declBlock(this.name, {
     },
 
     cartEmpty: function(text) {
-        this._elem('content').domElem.text(text || 'Ваша корзина пуста');
+        bemDom.update(this._elem('content').domElem, BEMHTML.apply({ block: 'cart-list', elem: 'empty', content: text || 'Ваша корзина пуста' }));
     }
 }));
 

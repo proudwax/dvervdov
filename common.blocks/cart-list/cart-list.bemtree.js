@@ -1,7 +1,7 @@
 block('cart-list')(
     content()(function () {
         var data = this.data = this.ctx.data;
-
+        
         return [
             {
                 elem: 'header',

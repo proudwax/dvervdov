@@ -2,6 +2,8 @@
     mustDeps : [
     ],
     shouldDeps: [
-        { elem: 'item' }
-    ]
+        { elem: 'item' },
+        { elem: 'empty' }
+    ],
+    
 })
