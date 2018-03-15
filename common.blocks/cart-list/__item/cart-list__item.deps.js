@@ -1,7 +1,8 @@
 ({
     mustDeps : [
+        'i-bem-dom',
     ],
     shouldDeps: [
-        { elem: 'item' }
+        'product-cart'
     ]
 })

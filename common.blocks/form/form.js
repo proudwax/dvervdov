@@ -11,8 +11,12 @@ modules.define('form', ['i-bem-dom'], function (provide, bemDom, Form) {
 
         onSendForm: function () {
             var _this = this,
+                addParams = arguments.length > 0 ? '&' + [].slice.call(arguments).map(function (item) {
+                    return item.name + '=' + item.value; 
+                }).join('&') : '',
                 domForm = this.domElem[0],
-                data = this.onSerialize(domForm);
+                data = this.onSerialize(domForm) + addParams;
+
 
             return new Promise(function (resolve, reject) {
                 var xhttp = new XMLHttpRequest();

@@ -20,8 +20,14 @@
         padding: 16px;
         border-bottom: 1px solid rgba(0,0,0,.2); 
 
+        transition: opacity .25s ease-out;
+
         &:last-child {
             border-bottom: 0;
+        }
+
+        &:mod(removing) {
+            opacity: .3;
         }
     }
 

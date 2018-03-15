@@ -1,3 +1,3 @@
 block('cart-list')(
-    // js()(true)
+    js()(true)
 );

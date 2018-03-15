@@ -52,7 +52,7 @@ block('product-cart')(
                         content: [
                             {
                                 block: 'button',
-                                mods: { theme: 'dver', size: 'm', type: 'submit' },
+                                mods: { theme: 'dver', size: 'm', type: 'submit', remove: true },
                                 name: ctx.data.name,
                                 val: 0,
                                 icon: {
