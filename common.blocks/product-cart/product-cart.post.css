@@ -61,21 +61,20 @@
     }
 }
 
-@media (--medium) {
-    :block(product-order) {
-        &:elem(title) {
-            width: 50%;
-        }
-
+@media (--small-only) {
+    :block(product-cart) {
         &:elem(count) {
-            width: 20%;
-            text-align: center;
+            width: 100%;
+            padding-bottom: 16px;
         }
         
         &:elem(price) {
-            width: 30%;
-            text-align: right;
+            width: 100%;
+            padding-bottom: 16px;
         }
-        
+
+        &:elem(remove) {
+            width: 100%;
+        }
     }
 }

@@ -30,7 +30,7 @@ block('cart').content()(function () {
             content: [
                 {
                     elem: 'col',
-                    elemMods: { lw: 9, mw: 12, sw: 12 },
+                    elemMods: { lw: 8, mw: 9, sw: 12 },
                     content: [
                         {
                             block: 'cart-list',
@@ -41,7 +41,7 @@ block('cart').content()(function () {
                 },
                 {
                     elem: 'col',
-                    elemMods: { lw: 3, mw: 12, sw: 12 },
+                    elemMods: { lw: 4, mw: 3, sw: 12 },
                     content: [
                         {
                             block: 'cart-action',
