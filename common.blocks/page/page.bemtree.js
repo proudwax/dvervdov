@@ -1157,18 +1157,18 @@ block('page').content()(function() {
         {
             block: 'main',
             // mods: { serp: true }
-            // mods: { product: true }
+            mods: { product: true }
             // mods: { order: true }
-            mods: { cart: true }
+            // mods: { cart: true }
             // mods: { catalog: true }
             // mods: { home: true }
         },
-        // {
-        //     block: 'service-offers'
-        // },
-        // { 
-        //     block: 'footer',
-        //     mods: { simle: true }
-        // }
+        {
+            block: 'service-offers'
+        },
+        { 
+            block: 'footer',
+            mods: { simle: true }
+        }
     ];
 });

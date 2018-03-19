@@ -1,5 +1,11 @@
 block('cart')(
-    js()(true),
+    match(function (node, ctx) { return !ctx.js; })(
+        js()(true)
+    ),
+
+    elem('link')(
+        addJs()(true),
+    ),
 
     // tag()('form'),
 

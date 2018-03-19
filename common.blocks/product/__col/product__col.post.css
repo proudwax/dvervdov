@@ -1,7 +1,6 @@
 :block(product) {
     &:elem(row) {
         display: flex;
-        align-items: center;
     }
 
     &:elem(col) {

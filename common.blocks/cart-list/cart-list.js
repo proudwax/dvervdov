@@ -18,6 +18,8 @@ provide(bemDom.declBlock(this.name, {
     },
 
     cartEmpty: function(text) {
+        this.setMod('empty');
+        
         bemDom.update(this._elem('content').domElem, BEMHTML.apply({ block: 'cart-list', elem: 'empty', content: text || 'Ваша корзина пуста' }));
     }
 }));

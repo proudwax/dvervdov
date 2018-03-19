@@ -40,6 +40,10 @@ modules.define('cart', ['i-bem-dom', 'form', 'product-cart', 'cart-action', 'car
 
                         });
                     });
+
+                    this._events(this._cartList).on({ modName: 'empty', modVal: true }, function (e) {
+                        this._elem('link').setMod('show', 'empty');
+                    });
                 }
             }
         },

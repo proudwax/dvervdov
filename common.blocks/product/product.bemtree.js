@@ -97,7 +97,25 @@ block('product').content()(function() {
                                     mix: { elem: 'col', elemMods: { half: true } },
                                     content: [
                                         {
-                                            block: 'product-buy'
+                                            block: 'product-buy',
+                                            mix: [{ block: 'cart', js: { id: 'cart' } }, { block: 'cart', elem: 'add' }],
+                                            method: 'get',
+                                            action: '/server-cart.json',
+                                            name: '540:2',
+                                            hiddenInputs: [
+                                                {
+                                                    name: 'cart_mode',
+                                                    value: 'add'
+                                                },
+                                                {
+                                                    name: 'redirect_url', 
+                                                    value: '/re/#1'
+                                                },
+                                                {
+                                                    name: 'cart[54][1]',
+                                                    value: 1
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
